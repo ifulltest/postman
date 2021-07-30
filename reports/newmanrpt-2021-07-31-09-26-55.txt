@@ -1,0 +1,237 @@
+newman
+
+tradeMeSandBox
+
+→ RetrieveGeneralCategories
+  GET https://api.tmsandbox.co.nz/v1/Categories.JSON?depth=1 [200 OK, 1.54KB, 11.5s]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofGivenSubcategory
+  │  Start'
+  │ 'Subcategories counts to: 27'
+  │ 'All subcategories name listed below: Trade Me Motors,
+  │ Trade Me Property,Trade Me Jobs,Antiques & collectable
+  │ s,Art,Baby gear,Books,Building & renovation,Business, 
+  │ farming & industry,Clothing & Fashion,Computers,Crafts
+  │ ,Electronics & photography,Flatmates wanted,Gaming,Hea
+  │ lth & beauty,Home & living,Jewellery & watches,Mobile 
+  │ phones,Movies & TV,Music & instruments,Pets & animals,
+  │ Pottery & glass,Services,Sports,Toys & models,Travel, 
+  │ events & activities'
+  │ 'Subcategory - Antiques & Collectables existed'
+  │ 'Post-Transaction: CheckingtheCountsofGivenSubcategory
+  │  Pass'
+  └
+  √  Checking all subcategories returned, and the given subcategory exists in
+
+→ RetrieveYourWatchlist
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/All.JSON [200 OK, 1.27KB, 20ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofWatchList Start'
+  │ 'Found 1 item in the watch list'
+  │ 'Post-Transaction: CheckingtheCountsofWatchList Pass'
+  └
+  √  Checking if there are any items in the watch list
+
+→ RemoveAListingFromYourWatchlist
+  ┌
+  │ 'Pre-Transaction: RetrieveYourWatchlist Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 1.27KB, 30ms]
+  ┌
+  │ 'All the can be deleted ListingId in the Watchlist: '
+  │ '2149294687'
+  │ 'Pre-Transaction: RetrieveYourWatchlist Pass'
+  └
+  √  Get all ListingId in the Watchlist
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149294687.JSON [200 OK, 346B, 48ms]
+  ┌
+  │ 'Post-Transaction: RetrieveYourWatchlist Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 375B, 13ms]
+  ┌
+  │ 'Current count of ListingId that can be deleted in the
+  │  watchlist: 0'
+  └
+  √  Checking LastListingId: 2149294687 has been deleted
+  ┌
+  │ 'Post-Transaction: RetrieveYourWatchlist Pass'
+  └
+
+→ RetrieveClosingSoonListings
+  GET https://api.tmsandbox.co.nz/v1/Listings/closing.JSON?rows=1000 [200 OK, 38.7KB, 205ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofClosingSoonListi
+  │ ngs Start'
+  │ 'Found 250 items in the Closing Soon Listings'
+  │ 'Post-Transaction: CheckingtheCountsofClosingSoonListi
+  │ ngs Pass'
+  └
+  √  Checking if there are any items in the Closing Soon Listings
+
+→ AddAListingToYourWatchlist
+  ┌
+  │ 'Pre-Transaction: RetrieveClosingSoonListings Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/Listings/closing.JSON?rows=1000 [200 OK, 38.64KB, 163ms]
+  ┌
+  │ 'Getting ListingIds below: '
+  │ '2149295506,2149295534,2149294673,2149294676,214929467
+  │ 7,2149294678,2149295554,2149296207,2149296208,21492962
+  │ 09,2149294679,2149294680,2149294681,2149294682,2149295
+  │ 960,2149295557,2149294683,2149294684,2149294685,214929
+  │ 4686,2149294687,2149294688,2149294689,2149295503,21492
+  │ 94690,2149294691,2149294692,2149294693,2149294694,2149
+  │ 294695,2149294696,2149294698,2149294699,2149294702,214
+  │ 9294703,2149294704,2149294705,2149294706,2149294707,21
+  │ 49294708,2149294709,2149294710,2149294711,2149294712,2
+  │ 149294713,2149294714,2149294715,2149294716,2149294718,
+  │ 2149294719,2149294720,2149294721,2149294723,2149294724
+  │ ,2149294725,2149294726,2149294727,2149294728,214929472
+  │ 9,2149294730,2149294731,2149294732,2149294733,21492947
+  │ 34,2149294735,2149294736,2149294738,2149294739,2149294
+  │ 740,2149294741,2149294742,2149294743,2149294744,214929
+  │ 4746,2149294747,2149294748,2149294749,2149294750,21492
+  │ 94751,2149294752,2149294753,2149294754,2149294755,2149
+  │ 294756,2149294757,2149294758,2149294759,2149294760,214
+  │ 9294761,2149294762,2149294763,2149295524,2149294765,21
+  │ 49295968,2149295518,2149294766,2149295969,2149295550,2
+  │ 149294770,2149294771,2149294772,2149294862,2149294880,
+  │ 2149295535,2149294891,2149294892,2149294893,2149294894
+  │ ,2149295548,2149294897,2149294898,2149294969,214929497
+  │ 0,2149294971,2149294972,2149296260,2149296992,21492969
+  │ 93,2149296994,2149296995,2149295566,2149295567,2149295
+  │ 515,2149296158,2149296278,2149296279,2149296280,214929
+  │ 6281,2149296282,2149295527,2149295529,2149295539,21492
+  │ 95542,2149295544,2149295546,2149295547,2149295549,2149
+  │ 296159,2149296160,2149296285,2149296286,2149295558,214
+  │ 9295563,2149296161,2149295559,2149295516,2149295561,21
+  │ 49295523,2149295509,2149295526,2149296210,2149296537,2
+  │ 149295009,2149295010,2149295011,2149295517,2149295012,
+  │ 2149295013,2149295014,2149295512,2149295528,2149295020
+  │ ,2149295022,2149295024,2149295025,2149295026,214929502
+  │ 7,2149295028,2149295029,2149295030,2149295643,21492956
+  │ 44,2149295645,2149295646,2149295647,2149295648,2149295
+  │ 649,2149295530,2149295031,2149295032,2149295033,214929
+  │ 5034,2149295035,2149295036,2149295037,2149295038,21492
+  │ 95039,2149295040,2149295041,2149295042,2149295043,2149
+  │ 295044,2149295045,2149295046,2149295047,2149295048,214
+  │ 9295049,2149295050,2149295051,2149295052,2149295053,21
+  │ 49295054,2149295513,2149296077,2149295055,2149295056,2
+  │ 149296252,2149296253,2149295097,2149295098,2149295099,
+  │ 2149295100,2149295101,2149295102,2149295103,2149295104
+  │ ,2149295105,2149295106,2149296805,2149296806,214929680
+  │ 7,2149296809,2149296810,2149296808,2149296811,21492968
+  │ 14,2149296812,2149296813,2149296815,2149296816,2149296
+  │ 817,2149296818,2149296819,2149296820,2149296821,214929
+  │ 6824,2149296822,2149296823,2149296825,2149296826,21492
+  │ 96827,2149296830,2149296828,2149296831,2149296829,2149
+  │ 296832,2149296833,2149296834,2149296835,2149296836'
+  └
+  √  Get all the closing soon ListingId
+  ┌
+  │ 'ListingId 2149295524 waiting to be added to the watch
+  │ list'
+  │ 'Pre-Transaction: RetrieveClosingSoonListings Pass'
+  └
+  POST https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149295524.JSON [200 OK, 346B, 155ms]
+  ┌
+  │ 'Post-Transaction: CheckingAddToWatchList Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 1.28KB, 16ms]
+  ┌
+  │ 'ListingId 2149295524 has been added to the watchlist'
+  └
+  √  Checking ListingId 2149295524 has been added
+  ┌
+  │ 'Post-Transaction: CheckingAddToWatchList Pass'
+  └
+
+→ RetrieveYourWonItems
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 1.34KB, 34ms]
+  ┌
+  │ 'Post-Transaction: CheckingWonListHaveItems Start'
+  │ 'WonPurchaseId counts to: 1, the purchaseId: 26280'
+  │ 'Post-Transaction: CheckingWonListHaveItems Pass'
+  └
+  √  CheckingWonListHasItems
+
+→ RemoveAPurchaseFromYourWonItemsList
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/26280.JSON [200 OK, 346B, 60ms]
+  ┌
+  │ 'Post-Transaction: CheckingDeleteWonItems Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 354B, 19ms]
+  ┌
+  │ 'Current items count on the won list: 0. All items hav
+  │ e been removed from the won list.'
+  │ 'Post-Transaction: CheckingDeleteWonItems Pass'
+  └
+  √  Checking LastWonPurchaseId: 26280 has been removed
+
+→ GeneralSearch
+  GET https://api.tmsandbox.co.nz/v1/Search/General.JSON?buy=All&rows=500&page=4 [200 OK, 745.74KB, 2.4s]
+  ┌
+  │ 'Post-Transaction: CheckingListingIdHasBuyNow Start'
+  │ 'GetListingIdHasBuyNow counts to: 23, details are as b
+  │ elow: 2149296208,2149296209,2149296279,2149295546,2149
+  │ 295512,2149295530,2149295054,2149296806,2149296809,214
+  │ 9296813,2149296818,2149295655,2149295787,2149296283,21
+  │ 49295910,2149295920,2149296269,2149296146,2149296261,2
+  │ 149296885,2149296272,2149296271,2149296883'
+  │ 'Get random SingleListingId: 2149295530'
+  │ 'Post-Transaction: CheckingListingIdHasBuyNow Pass'
+  └
+  √  GetListingIdHasBuyNow
+
+→ RetrieveTheDetailsOfASingleListing
+  GET https://api.tmsandbox.co.nz/v1/Listings/2149295530.JSON [200 OK, 1.91KB, 105ms]
+  ┌
+  │ 'Post-Transaction: CheckingSingleListingIdDetails Star
+  │ t'
+  │ 'Get ShippingId: 2, and Method: I intend to pick-up'
+  │ 'Post-Transaction: CheckingSingleListingIdDetails Pass
+  │ '
+  └
+  √  CheckingSingleListingIdDetails
+
+→ BuyAnAuctionUsingBuyNow
+  POST https://api.tmsandbox.co.nz/v1/Bidding/BuyNow.JSON [200 OK, 402B, 184ms]
+  ┌
+  │ 'Post-Transaction: CheckingBuyNow Start'
+  │ 'Get sucessful StatusCode: 0 (0-Success)'
+  │ 'Post-Transaction: CheckingBuyNow Pass'
+  └
+  √  CheckingBuyNowSuccess
+  ┌
+  │ 'Post-Transaction: CheckingPurchasedItemOnWonList Star
+  │ t'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 1.26KB, 20ms]
+  ┌
+  │ 'ListingId: 2149295530, PurchaseId: 26281'
+  │ 'Found PurchaseId 26281 and ListingId 2149295530 exist
+  │ s in the won list details'
+  │ 'Post-Transaction: CheckingPurchasedItemOnWonList Pass
+  │ '
+  └
+  √  Checking NewPurchasedListId existed in the won list
+
+┌─────────────────────────┬────────────────────┬───────────────────┐
+│                         │           executed │            failed │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│              iterations │                  1 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│                requests │                 16 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│            test-scripts │                 20 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│      prerequest-scripts │                 19 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│              assertions │                 13 │                 0 │
+├─────────────────────────┴────────────────────┴───────────────────┤
+│ total run duration: 16.9s                                        │
+├──────────────────────────────────────────────────────────────────┤
+│ total data received: 829.9KB (approx)                            │
+├──────────────────────────────────────────────────────────────────┤
+│ average response time: 938ms [min: 13ms, max: 11.5s, s.d.: 2.7s] │
+└──────────────────────────────────────────────────────────────────┘
