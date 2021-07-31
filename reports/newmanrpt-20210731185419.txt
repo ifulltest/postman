@@ -1,0 +1,604 @@
+newman
+
+tradeMeSandBox
+
+→ RetrieveGeneralCategories
+  GET https://api.tmsandbox.co.nz/v1/Categories.JSON?depth=1 [200 OK, 1.54KB, 320ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofGivenSubcategory
+  │  Start'
+  │ 'Subcategories counts to: 27'
+  │ 'All subcategories name listed below: '
+  │ [
+  │   'Trade Me Motors',
+  │   'Trade Me Property',
+  │   'Trade Me Jobs',
+  │   'Antiques & collectables',
+  │   'Art',
+  │   'Baby gear',
+  │   'Books',
+  │   'Building & renovation',
+  │   'Business, farming & industry',
+  │   'Clothing & Fashion',
+  │   'Computers',
+  │   'Crafts',
+  │   'Electronics & photography',
+  │   'Flatmates wanted',
+  │   'Gaming',
+  │   'Health & beauty',
+  │   'Home & living',
+  │   'Jewellery & watches',
+  │   'Mobile phones',
+  │   'Movies & TV',
+  │   'Music & instruments',
+  │   'Pets & animals',
+  │   'Pottery & glass',
+  │   'Services',
+  │   'Sports',
+  │   'Toys & models',
+  │   'Travel, events & activities'
+  │ ]
+  │ 'Subcategory - Antiques & collectables existed'
+  │ 'Post-Transaction: CheckingtheCountsofGivenSubcategory
+  │  Pass'
+  └
+  √  Checking all subcategories returned, and the given subcategory exists in
+
+→ RetrieveYourWatchlist
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/All.JSON [200 OK, 1.29KB, 66ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofWatchList Start'
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149296817,
+  │       Title: 'testg',
+  │       Category: '0153-0438-3756-',
+  │       StartPrice: 0,
+  │       BuyNowPrice: 1,
+  │       StartDate: '/Date(1627618032673)/',
+  │       EndDate: '/Date(1627790832673)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627714464198)/',
+  │       CategoryPath: '/Clothing-Fashion/Men/Tshirts',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4189479.jpg',
+  │       PhotoId: 4189479,
+  │       IsNew: true,
+  │       RegionId: 12,
+  │       Region: 'Wellington',
+  │       Suburb: 'Kapiti',
+  │       HasBuyNow: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'T-shirts',
+  │       ReserveState: 3,
+  │       Attributes: [],
+  │       IsBuyNowOnly: true,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       Options: [
+  │         {
+  │           Name: 'Color',
+  │           Value: 'Red'
+  │         },
+  │         {
+  │           Name: 'Size',
+  │           Value: 'Small'
+  │         }
+  │       ],
+  │       ListingGroupId: 73393,
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0153-',
+  │       Name: 'Clothing & Fashion',
+  │       CategoryId: 153
+  │     }
+  │   ]
+  │ }
+  │ 'Found 1 item on the watch list'
+  │ 'Post-Transaction: CheckingtheCountsofWatchList Pass'
+  └
+  √  Checking if there are any items in the watch list
+
+→ RemoveAListingFromYourWatchlist
+  ┌
+  │ 'Pre-Transaction: RetrieveYourWatchlist Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 1.29KB, 53ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149296817,
+  │       Title: 'testg',
+  │       Category: '0153-0438-3756-',
+  │       StartPrice: 0,
+  │       BuyNowPrice: 1,
+  │       StartDate: '/Date(1627618032673)/',
+  │       EndDate: '/Date(1627790832673)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627714464401)/',
+  │       CategoryPath: '/Clothing-Fashion/Men/Tshirts',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4189479.jpg',
+  │       PhotoId: 4189479,
+  │       IsNew: true,
+  │       RegionId: 12,
+  │       Region: 'Wellington',
+  │       Suburb: 'Kapiti',
+  │       HasBuyNow: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'T-shirts',
+  │       ReserveState: 3,
+  │       Attributes: [],
+  │       IsBuyNowOnly: true,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       Options: [
+  │         {
+  │           Name: 'Color',
+  │           Value: 'Red'
+  │         },
+  │         {
+  │           Name: 'Size',
+  │           Value: 'Small'
+  │         }
+  │       ],
+  │       ListingGroupId: 73393,
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0153-',
+  │       Name: 'Clothing & Fashion',
+  │       CategoryId: 153
+  │     }
+  │   ]
+  │ }
+  │ 'All the can be deleted ListingId on the Watchlist: '
+  │ '2149296817'
+  │ 'Pre-Transaction: RetrieveYourWatchlist Pass'
+  └
+  √  Get all ListingId on the Watchlist
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149296817.JSON [200 OK, 346B, 87ms]
+  ┌
+  │ 'Post-Transaction: RetrieveYourWatchlist Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 375B, 60ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: [],
+  │   FoundCategories: []
+  │ }
+  │ 'Current count of ListingId that can be deleted in the
+  │  watchlist: 0'
+  └
+  √  Checking LastListingId: 2149296817 has been deleted
+  ┌
+  │ 'Post-Transaction: RetrieveYourWatchlist Pass'
+  └
+
+→ RetrieveClosingSoonListings
+  GET https://api.tmsandbox.co.nz/v1/Listings/closing.JSON?rows=1000 [200 OK, 38.98KB, 244ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofClosingSoonListi
+  │ ngs Start'
+  │ 'Found 250 items in the Closing Soon Listings'
+  │ 'Post-Transaction: CheckingtheCountsofClosingSoonListi
+  │ ngs Pass'
+  └
+  √  Checking if there are any items in the Closing Soon Listings
+
+→ AddAListingToYourWatchlist
+  ┌
+  │ 'Pre-Transaction: RetrieveClosingSoonListings Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/Listings/closing.JSON?rows=1000 [200 OK, 38.98KB, 217ms]
+  √  Get all the closing soon ListingId
+  ┌
+  │ 'From 250 closing soon items randomly choose the: 2149
+  │ 295608 waiting to be added to the watchlist'
+  │ 'Pre-Transaction: RetrieveClosingSoonListings Pass'
+  └
+  POST https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149295608.JSON [200 OK, 346B, 121ms]
+  ┌
+  │ 'Post-Transaction: CheckingAddToWatchList Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 1.22KB, 51ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149295608,
+  │       Title: 'UltraTub Washroom Super Tub',
+  │       Category: '0004-0373-0586-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1627259315557)/',
+  │       EndDate: '/Date(1627864115557)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627714465886)/',
+  │       CategoryPath: '/Home-living/Laundry/Other',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/8293844.jpg',
+  │       PhotoId: 8293844,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Other',
+  │       Attributes: [],
+  │       Subtitle: 'SKYLARC’S WINDFLOW TECHNOLOGY ONLINE 
+  │ AUCTION',
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0004-',
+  │       Name: 'Home & living',
+  │       CategoryId: 4
+  │     }
+  │   ]
+  │ }
+  │ 'ListingId 2149295608 has been added to the watchlist'
+  └
+  √  Checking ListingId 2149295608 has been added
+  ┌
+  │ 'Post-Transaction: CheckingAddToWatchList Pass'
+  └
+
+→ RetrieveYourWonItems
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 1.32KB, 56ms]
+  ┌
+  │ 'Post-Transaction: CheckingWonListHaveItems Start'
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149296269,
+  │       Title: 'Left Handed Scissors',
+  │       Category: '0004-0371-0562-6153-',
+  │       StartPrice: 5,
+  │       StartDate: '/Date(1627571921233)/',
+  │       EndDate: '/Date(1627714372487)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627714466011)/',
+  │       CategoryPath: '/Home-living/Kitchen/Cutlery-uten
+  │ sils/Other',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4550631.jpg',
+  │       PhotoId: 4550631,
+  │       Seller: {
+  │         MemberId: 4003082,
+  │         Nickname: 'conundrum',
+  │         DateAddressVerified: '/Date(1440676800000)/',
+  │         DateJoined: '/Date(1440676800000)/',
+  │         Email: 'mp70@abcde.com',
+  │         UniqueNegative: 3,
+  │         UniquePositive: 20,
+  │         FeedbackCount: 17,
+  │         IsAddressVerified: true
+  │       },
+  │       IsNew: true,
+  │       BidCount: 1,
+  │       IsReserveMet: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Other',
+  │       ReserveState: 3,
+  │       Quantity: 1,
+  │       StatusDate: '/Date(0)/',
+  │       AuctionAttribute: '260`TVL|3598337772352060467`0
+  │ ',
+  │       BuyerFeedbackPlaced: 0,
+  │       SellerFeedbackPlaced: 0,
+  │       DeliveryId: 0,
+  │       FpoDecisionViaMobile: false,
+  │       HasPaidByCreditCard: false,
+  │       InvoiceId: 0,
+  │       OfferId: 0,
+  │       PaymentInfo: 'Cash, NZ Bank Deposit',
+  │       Price: 11.75,
+  │       SelectedShipping: 'Buyer to pick-up',
+  │       ShippingPrice: 0,
+  │       ShippingType: 2,
+  │       SoldDate: '/Date(1627714372487)/',
+  │       SoldType: 'BUYNOW',
+  │       PaymentInstructions: '',
+  │       PurchaseId: 26306,
+  │       ReferenceNumber: 'P26306',
+  │       SubtotalPrice: 11.75,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 11.75,
+  │       TrackedParcels: [],
+  │       TaxSubTotal: 0,
+  │       HasPaidByDeferredPayment: false
+  │     }
+  │   ]
+  │ }
+  │ 'WonPurchaseId counts to: 1, the purchaseId: 26306'
+  │ 'Post-Transaction: CheckingWonListHaveItems Pass'
+  └
+  √  CheckingWonListHasItems
+
+→ RemoveAPurchaseFromYourWonItemsList
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/26306.JSON [200 OK, 346B, 105ms]
+  ┌
+  │ {
+  │   Success: true,
+  │   Description: 'Success'
+  │ }
+  │ 'Post-Transaction: CheckingDeleteWonItems Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 354B, 57ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: []
+  │ }
+  │ 'Current items count on the won list: 0. All items hav
+  │ e been removed from the won list.'
+  │ 'Post-Transaction: CheckingDeleteWonItems Pass'
+  └
+  √  Checking LastWonPurchaseId: 26306 has been removed
+
+→ GeneralSearch
+  GET https://api.tmsandbox.co.nz/v1/Search/General.JSON?buy=All&rows=500&page=4 [200 OK, 769.93KB, 1173ms]
+  ┌
+  │ 'Post-Transaction: CheckingListingIdHasBuyNow Start'
+  │ 'Page: 4, total items: 500'
+  │ "'HasBuyNow' items counts to: 9, ListingId details: "
+  │ [
+  │   2149295546, 2149295530,
+  │   2149295054, 2149296806,
+  │   2149296809, 2149296813,
+  │   2149296818, 2149296146,
+  │   2149296189
+  │ ]
+  │ 'Get random SingleListingId: 2149296146'
+  │ 'Post-Transaction: CheckingListingIdHasBuyNow Pass'
+  └
+  √  GetListingIdHasBuyNow
+
+→ RetrieveTheDetailsOfASingleListing
+  GET https://api.tmsandbox.co.nz/v1/Listings/2149296146.JSON [200 OK, 1.71KB, 86ms]
+  ┌
+  │ 'Post-Transaction: CheckingSingleListingIdDetails Star
+  │ t'
+  │ {
+  │   ListingId: 2149296146,
+  │   Title: 'Black Sheep - MP70-15',
+  │   Category: '0347-3261-5579-5960-',
+  │   StartPrice: 9,
+  │   BuyNowPrice: 16.9,
+  │   StartDate: '/Date(1627450821013)/',
+  │   EndDate: '/Date(1628025000000)/',
+  │   ListingLength: null,
+  │   HasGallery: true,
+  │   AsAt: '/Date(1627714467901)/',
+  │   CategoryPath: '/Toys-models/Soft-toys-bears/Stuffed-
+  │ animals/Other',
+  │   PhotoId: 4550831,
+  │   IsNew: true,
+  │   RegionId: 12,
+  │   Region: 'Wellington',
+  │   SuburbId: 67,
+  │   Suburb: 'Wellington City',
+  │   HasReserve: true,
+  │   HasBuyNow: true,
+  │   NoteDate: '/Date(0)/',
+  │   CategoryName: 'Other',
+  │   ReserveState: 2,
+  │   Attributes: [],
+  │   OpenHomes: [],
+  │   MinimumNextBidAmount: 9,
+  │   PriceDisplay: '$9.00',
+  │   AdditionalData: { BulletPoints: [], Tags: [] },
+  │   Member: {
+  │     MemberId: 4003082,
+  │     Nickname: 'conundrum',
+  │     DateAddressVerified: '/Date(1440676800000)/',
+  │     DateJoined: '/Date(1440676800000)/',
+  │     UniqueNegative: 3,
+  │     UniquePositive: 20,
+  │     FeedbackCount: 17,
+  │     IsAddressVerified: true,
+  │     Suburb: 'Wellington City',
+  │     Region: 'Wellington',
+  │     IsAuthenticated: true,
+  │     IsInTrade: true,
+  │     IsTopSeller: true
+  │   },
+  │   Body: 'Soft toy. Black sheep.\r\n' +
+  │     'Reserve = 13.00',
+  │   Photos: [
+  │     {
+  │       Key: 4550831,
+  │       Value: {
+  │         Thumbnail: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4550831.jpg',
+  │         List: 'https://images.tmsandbox.co.nz/photoser
+  │ ver/lv2/4550831.jpg',
+  │         Medium: 'https://images.tmsandbox.co.nz/photos
+  │ erver/med/4550831.jpg',
+  │         Gallery: 'https://images.tmsandbox.co.nz/photo
+  │ server/gv/4550831.jpg',
+  │         Large: 'https://images.tmsandbox.co.nz/photose
+  │ rver/tq/4550831.jpg',
+  │         FullSize: 'https://images.tmsandbox.co.nz/phot
+  │ oserver/full/4550831.jpg',
+  │         PhotoId: 4550831,
+  │         OriginalWidth: 1000,
+  │         OriginalHeight: 793
+  │       }
+  │     }
+  │   ],
+  │   AllowsPickups: 1,
+  │   ShippingOptions: [
+  │     {
+  │       Type: 4,
+  │       Price: 3.5,
+  │       Method: 'Tracked metro courier',
+  │       ShippingId: 4
+  │     },
+  │     {
+  │       Type: 4,
+  │       Price: 5.75,
+  │       Method: 'Tracked rural courier',
+  │       ShippingId: 5
+  │     },
+  │     {
+  │       Type: 2,
+  │       Price: 0,
+  │       Method: 'I intend to pick-up',
+  │       ShippingId: 2
+  │     }
+  │   ],
+  │   PaymentOptions: 'Cash, NZ Bank Deposit',
+  │   Store: {
+  │     Name: 'MP70',
+  │     LogoImageUri: 'https://images.tmsandbox.co.nz/tm/s
+  │ tores/none_30.png',
+  │     BannerImageUri: 'https://images.tmsandbox.co.nz/tm
+  │ /stores/none_27.png',
+  │     ShortDescription: '',
+  │     StorePath: 'MP70',
+  │     Location: 'Wellington City, Wellington',
+  │     PhoneNumber: '',
+  │     Website: ''
+  │   },
+  │   IsInTradeProtected: true,
+  │   CanAddToCart: false,
+  │   EmbeddedContent: {},
+  │   SupportsQuestionsAndAnswers: true,
+  │   PaymentMethods: [
+  │     { Id: 4, Name: 'Cash' },
+  │     {
+  │       Id: 1,
+  │       Name: 'NZ Bank Deposit'
+  │     }
+  │   ],
+  │   BoundaryImage: {
+  │     Thumbnail: null,
+  │     List: null,
+  │     Medium: null,
+  │     Gallery: null,
+  │     Large: null,
+  │     FullSize: null,
+  │     PhotoId: 0
+  │   },
+  │   RenderOptions: [ 2 ],
+  │   AreaOfBusiness: 1
+  │ }
+  │ 'ListingId: 2149296146, ShippingId: 2, and Method: I i
+  │ ntend to pick-up'
+  │ 'Post-Transaction: CheckingSingleListingIdDetails Pass
+  │ '
+  └
+  √  CheckingSingleListingIdDetails
+
+→ BuyAnAuctionUsingBuyNow
+  POST https://api.tmsandbox.co.nz/v1/Bidding/BuyNow.JSON [200 OK, 402B, 188ms]
+  ┌
+  │ 'Post-Transaction: CheckingBuyNow Start'
+  │ {
+  │   Success: true,
+  │   Description: "Seller's email mp70@abcde.com",
+  │   StatusCode: 0,
+  │   PurchaseId: 26307
+  │ }
+  │ 'Get sucessful StatusCode: 0 (0-Success)'
+  │ 'Post-Transaction: CheckingBuyNow Pass'
+  └
+  √  CheckingBuyNowSuccess
+  ┌
+  │ 'Post-Transaction: CheckingPurchasedItemOnWonList Star
+  │ t'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 354B, 44ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: []
+  │ }
+  │ 'Not Found any PurchaseId and ListingId exist on the w
+  │ on list.'
+  │ 'Post-Transaction: CheckingPurchasedItemOnWonList Fail
+  │ ed'
+  └
+  √  Checking NewPurchasedListId existed in the won list
+
+┌─────────────────────────┬─────────────────────┬────────────────────┐
+│                         │            executed │             failed │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              iterations │                   1 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│                requests │                  16 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│            test-scripts │                  20 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│      prerequest-scripts │                  19 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              assertions │                  13 │                  0 │
+├─────────────────────────┴─────────────────────┴────────────────────┤
+│ total run duration: 4.8s                                           │
+├────────────────────────────────────────────────────────────────────┤
+│ total data received: 853.59KB (approx)                             │
+├────────────────────────────────────────────────────────────────────┤
+│ average response time: 183ms [min: 44ms, max: 1173ms, s.d.: 267ms] │
+└────────────────────────────────────────────────────────────────────┘
