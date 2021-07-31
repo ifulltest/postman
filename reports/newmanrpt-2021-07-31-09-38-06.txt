@@ -1,0 +1,560 @@
+newman
+
+tradeMeSandBox
+
+→ RetrieveGeneralCategories
+  GET https://api.tmsandbox.co.nz/v1/Categories.JSON?depth=1 [200 OK, 1.54KB, 139ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofGivenSubcategory
+  │  Start'
+  │ 'Subcategories counts to: 27'
+  │ 'All subcategories name listed below: Trade Me Motors,
+  │ Trade Me Property,Trade Me Jobs,Antiques & collectable
+  │ s,Art,Baby gear,Books,Building & renovation,Business, 
+  │ farming & industry,Clothing & Fashion,Computers,Crafts
+  │ ,Electronics & photography,Flatmates wanted,Gaming,Hea
+  │ lth & beauty,Home & living,Jewellery & watches,Mobile 
+  │ phones,Movies & TV,Music & instruments,Pets & animals,
+  │ Pottery & glass,Services,Sports,Toys & models,Travel, 
+  │ events & activities'
+  │ 'Subcategory - Antiques & Collectables existed'
+  │ 'Post-Transaction: CheckingtheCountsofGivenSubcategory
+  │  Pass'
+  └
+  √  Checking all subcategories returned, and the given subcategory exists in
+
+→ RetrieveYourWatchlist
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/All.JSON [200 OK, 1.21KB, 23ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofWatchList Start'
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149295647,
+  │       Title: 'Moisturizing Hand Cream',
+  │       Category: '0351-2489-6443-',
+  │       StartPrice: 80,
+  │       BuyNowPrice: 80,
+  │       StartDate: '/Date(1627267626837)/',
+  │       EndDate: '/Date(1627786026837)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627699090657)/',
+  │       CategoryPath: '/Baby-gear/Baby-carriers/Backpack
+  │ s',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/6011251.jpg',
+  │       PhotoId: 6011251,
+  │       IsNew: true,
+  │       RegionId: 12,
+  │       Region: 'Wellington',
+  │       Suburb: 'Kapiti',
+  │       HasBuyNow: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Backpacks',
+  │       Attributes: [],
+  │       MinimumNextBidAmount: 80,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$80.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0351-',
+  │       Name: 'Baby gear',
+  │       CategoryId: 351
+  │     }
+  │   ]
+  │ }
+  │ 'Found 1 item on the watch list'
+  │ 'Post-Transaction: CheckingtheCountsofWatchList Pass'
+  └
+  √  Checking if there are any items in the watch list
+
+→ RemoveAListingFromYourWatchlist
+  ┌
+  │ 'Pre-Transaction: RetrieveYourWatchlist Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 1.21KB, 24ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149295647,
+  │       Title: 'Moisturizing Hand Cream',
+  │       Category: '0351-2489-6443-',
+  │       StartPrice: 80,
+  │       BuyNowPrice: 80,
+  │       StartDate: '/Date(1627267626837)/',
+  │       EndDate: '/Date(1627786026837)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627699090797)/',
+  │       CategoryPath: '/Baby-gear/Baby-carriers/Backpack
+  │ s',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/6011251.jpg',
+  │       PhotoId: 6011251,
+  │       IsNew: true,
+  │       RegionId: 12,
+  │       Region: 'Wellington',
+  │       Suburb: 'Kapiti',
+  │       HasBuyNow: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Backpacks',
+  │       Attributes: [],
+  │       MinimumNextBidAmount: 80,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$80.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0351-',
+  │       Name: 'Baby gear',
+  │       CategoryId: 351
+  │     }
+  │   ]
+  │ }
+  │ 'All the can be deleted ListingId on the Watchlist: '
+  │ '2149295647'
+  │ 'Pre-Transaction: RetrieveYourWatchlist Pass'
+  └
+  √  Get all ListingId in the Watchlist
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149295647.JSON [200 OK, 347B, 45ms]
+  ┌
+  │ 'Post-Transaction: RetrieveYourWatchlist Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 376B, 18ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: [],
+  │   FoundCategories: []
+  │ }
+  │ 'Current count of ListingId that can be deleted in the
+  │  watchlist: 0'
+  └
+  √  Checking LastListingId: 2149295647 has been deleted
+  ┌
+  │ 'Post-Transaction: RetrieveYourWatchlist Pass'
+  └
+
+→ RetrieveClosingSoonListings
+  GET https://api.tmsandbox.co.nz/v1/Listings/closing.JSON?rows=1000 [200 OK, 39.63KB, 446ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofClosingSoonListi
+  │ ngs Start'
+  │ 'Found 250 items in the Closing Soon Listings'
+  │ 'Post-Transaction: CheckingtheCountsofClosingSoonListi
+  │ ngs Pass'
+  └
+  √  Checking if there are any items in the Closing Soon Listings
+
+→ AddAListingToYourWatchlist
+  ┌
+  │ 'Pre-Transaction: RetrieveClosingSoonListings Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/Listings/closing.JSON?rows=1000 [200 OK, 39.67KB, 165ms]
+  √  Get all the closing soon ListingId
+  ┌
+  │ 'From 250 closing soon items randomly choose the: 2149
+  │ 295040 waiting to be added to the watchlist'
+  │ 'Pre-Transaction: RetrieveClosingSoonListings Pass'
+  └
+  POST https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149295040.JSON [200 OK, 347B, 115ms]
+  ┌
+  │ 'Post-Transaction: CheckingAddToWatchList Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 1.3KB, 24ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149295040,
+  │       Title: '2x Ramset R3 Masonry Drill Bits',
+  │       Category: '5964-5999-6015-6354-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1626922409043)/',
+  │       EndDate: '/Date(1627786409043)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627699092297)/',
+  │       CategoryPath: '/Building-renovation/Tools/Power-
+  │ tools/Accessories-consumables',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/7818535.jpg',
+  │       PhotoId: 7818535,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Accessories & consumables',
+  │       Attributes: [],
+  │       Subtitle: "SKYLARC'S ENGINEERING PLANT AND MACHI
+  │ NERY AUCTION",
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '5964-',
+  │       Name: 'Building & renovation',
+  │       CategoryId: 5964
+  │     }
+  │   ]
+  │ }
+  │ 'ListingId 2149295040 has been added to the watchlist'
+  └
+  √  Checking ListingId 2149295040 has been added
+  ┌
+  │ 'Post-Transaction: CheckingAddToWatchList Pass'
+  └
+
+→ RetrieveYourWonItems
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 1.29KB, 24ms]
+  ┌
+  │ 'Post-Transaction: CheckingWonListHaveItems Start'
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149296883,
+  │       Title: 'Princess Pink of Ballerina',
+  │       Category: '0347-1417-6174-',
+  │       StartPrice: 9,
+  │       StartDate: '/Date(1627626196170)/',
+  │       EndDate: '/Date(1627698726293)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627699092391)/',
+  │       CategoryPath: '/Toys-models/Pretend-playing/Othe
+  │ r',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4549071.jpg',
+  │       PhotoId: 4549071,
+  │       Seller: {
+  │         MemberId: 4003082,
+  │         Nickname: 'conundrum',
+  │         DateAddressVerified: '/Date(1440676800000)/',
+  │         DateJoined: '/Date(1440676800000)/',
+  │         Email: 'mp70@abcde.com',
+  │         UniqueNegative: 3,
+  │         UniquePositive: 20,
+  │         FeedbackCount: 17,
+  │         IsAddressVerified: true
+  │       },
+  │       IsNew: true,
+  │       BidCount: 1,
+  │       IsReserveMet: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Other',
+  │       ReserveState: 3,
+  │       Quantity: 1,
+  │       StatusDate: '/Date(0)/',
+  │       AuctionAttribute: '260`TVL|3593167202779475783`0
+  │ ',
+  │       BuyerFeedbackPlaced: 0,
+  │       SellerFeedbackPlaced: 0,
+  │       DeliveryId: 0,
+  │       FpoDecisionViaMobile: false,
+  │       HasPaidByCreditCard: false,
+  │       InvoiceId: 0,
+  │       OfferId: 0,
+  │       PaymentInfo: 'NZ Bank Deposit',
+  │       Price: 16.75,
+  │       SelectedShipping: 'Buyer to pick-up',
+  │       ShippingPrice: 0,
+  │       ShippingType: 2,
+  │       SoldDate: '/Date(1627698726293)/',
+  │       SoldType: 'BUYNOW',
+  │       PaymentInstructions: '',
+  │       PurchaseId: 26291,
+  │       ReferenceNumber: 'P26291',
+  │       SubtotalPrice: 16.75,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 16.75,
+  │       TrackedParcels: [],
+  │       TaxSubTotal: 0,
+  │       HasPaidByDeferredPayment: false
+  │     }
+  │   ]
+  │ }
+  │ 'WonPurchaseId counts to: 1, the purchaseId: 26291'
+  │ 'Post-Transaction: CheckingWonListHaveItems Pass'
+  └
+  √  CheckingWonListHasItems
+
+→ RemoveAPurchaseFromYourWonItemsList
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/26291.JSON [200 OK, 347B, 42ms]
+  ┌
+  │ {
+  │   Success: true,
+  │   Description: 'Success'
+  │ }
+  │ 'Post-Transaction: CheckingDeleteWonItems Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 355B, 22ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: []
+  │ }
+  │ 'Current items count on the won list: 0. All items hav
+  │ e been removed from the won list.'
+  │ 'Post-Transaction: CheckingDeleteWonItems Pass'
+  └
+  √  Checking LastWonPurchaseId: 26291 has been removed
+
+→ GeneralSearch
+  GET https://api.tmsandbox.co.nz/v1/Search/General.JSON?buy=All&rows=500&page=4 [200 OK, 761.62KB, 1113ms]
+  ┌
+  │ 'Post-Transaction: CheckingListingIdHasBuyNow Start'
+  │ "Page: 4, total items: 500, 'HasBuyNow' items counts t
+  │ o: 16, ListingId details: 2149296279,2149295546,214929
+  │ 5512,2149295530,2149295054,2149296806,2149296809,21492
+  │ 96813,2149296818,2149296283,2149295920,2149296269,2149
+  │ 296146,2149296885,2149296272,2149296271"
+  │ 'Get random SingleListingId: 2149296272'
+  │ 'Post-Transaction: CheckingListingIdHasBuyNow Pass'
+  └
+  √  GetListingIdHasBuyNow
+
+→ RetrieveTheDetailsOfASingleListing
+  GET https://api.tmsandbox.co.nz/v1/Listings/2149296272.JSON [200 OK, 1.76KB, 52ms]
+  ┌
+  │ 'Post-Transaction: CheckingSingleListingIdDetails Star
+  │ t'
+  │ {
+  │   ListingId: 2149296272,
+  │   Title: 'Pencil Sharpener 52',
+  │   Category: '0010-0397-0663-8867-',
+  │   StartPrice: 9,
+  │   BuyNowPrice: 16.3,
+  │   StartDate: '/Date(1627571923373)/',
+  │   EndDate: '/Date(1628176723373)/',
+  │   ListingLength: null,
+  │   HasGallery: true,
+  │   AsAt: '/Date(1627699094141)/',
+  │   CategoryPath: '/Business-farming-industry/Office-equ
+  │ ipment-supplies/Stationery-supplies/Pencils-sharpeners
+  │ ',
+  │   PhotoId: 4549076,
+  │   RegionId: 12,
+  │   Region: 'Wellington',
+  │   SuburbId: 67,
+  │   Suburb: 'Wellington City',
+  │   HasReserve: true,
+  │   HasBuyNow: true,
+  │   NoteDate: '/Date(0)/',
+  │   CategoryName: 'Pencils & sharpeners',
+  │   ReserveState: 2,
+  │   Attributes: [],
+  │   OpenHomes: [],
+  │   MinimumNextBidAmount: 9,
+  │   PriceDisplay: '$9.00',
+  │   AdditionalData: { BulletPoints: [], Tags: [] },
+  │   Member: {
+  │     MemberId: 4003082,
+  │     Nickname: 'conundrum',
+  │     DateAddressVerified: '/Date(1440676800000)/',
+  │     DateJoined: '/Date(1440676800000)/',
+  │     UniqueNegative: 3,
+  │     UniquePositive: 20,
+  │     FeedbackCount: 17,
+  │     IsAddressVerified: true,
+  │     Suburb: 'Wellington City',
+  │     Region: 'Wellington',
+  │     IsAuthenticated: true,
+  │     IsInTrade: true,
+  │     IsTopSeller: true
+  │   },
+  │   Body: 'Start = 9.00, reserve = 12.50, Buy Now = 16.3
+  │ 0\r\n' +
+  │     '\r\n' +
+  │     'Check out our other hot listings!',
+  │   Photos: [
+  │     {
+  │       Key: 4549076,
+  │       Value: {
+  │         Thumbnail: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4549076.jpg',
+  │         List: 'https://images.tmsandbox.co.nz/photoser
+  │ ver/lv2/4549076.jpg',
+  │         Medium: 'https://images.tmsandbox.co.nz/photos
+  │ erver/med/4549076.jpg',
+  │         Gallery: 'https://images.tmsandbox.co.nz/photo
+  │ server/gv/4549076.jpg',
+  │         Large: 'https://images.tmsandbox.co.nz/photose
+  │ rver/tq/4549076.jpg',
+  │         FullSize: 'https://images.tmsandbox.co.nz/phot
+  │ oserver/full/4549076.jpg',
+  │         PhotoId: 4549076,
+  │         OriginalWidth: 1000,
+  │         OriginalHeight: 1000
+  │       }
+  │     }
+  │   ],
+  │   AllowsPickups: 1,
+  │   ShippingOptions: [
+  │     {
+  │       Type: 4,
+  │       Price: 3.5,
+  │       Method: 'Tracked metro courier',
+  │       ShippingId: 4
+  │     },
+  │     {
+  │       Type: 4,
+  │       Price: 5.75,
+  │       Method: 'Tracked rural courier',
+  │       ShippingId: 5
+  │     },
+  │     {
+  │       Type: 2,
+  │       Price: 0,
+  │       Method: 'I intend to pick-up',
+  │       ShippingId: 2
+  │     }
+  │   ],
+  │   PaymentOptions: 'Cash, NZ Bank Deposit',
+  │   Store: {
+  │     Name: 'MP70',
+  │     LogoImageUri: 'https://images.tmsandbox.co.nz/tm/s
+  │ tores/none_30.png',
+  │     BannerImageUri: 'https://images.tmsandbox.co.nz/tm
+  │ /stores/none_27.png',
+  │     ShortDescription: '',
+  │     StorePath: 'MP70',
+  │     Location: 'Wellington City, Wellington',
+  │     PhoneNumber: '',
+  │     Website: ''
+  │   },
+  │   IsInTradeProtected: true,
+  │   CanAddToCart: false,
+  │   EmbeddedContent: {},
+  │   SupportsQuestionsAndAnswers: true,
+  │   PaymentMethods: [
+  │     { Id: 4, Name: 'Cash' },
+  │     {
+  │       Id: 1,
+  │       Name: 'NZ Bank Deposit'
+  │     }
+  │   ],
+  │   BoundaryImage: {
+  │     Thumbnail: null,
+  │     List: null,
+  │     Medium: null,
+  │     Gallery: null,
+  │     Large: null,
+  │     FullSize: null,
+  │     PhotoId: 0
+  │   },
+  │   RenderOptions: [ 2 ],
+  │   AreaOfBusiness: 1
+  │ }
+  │ 'ListingId: 2149296272, ShippingId: 2, and Method: I i
+  │ ntend to pick-up'
+  │ 'Post-Transaction: CheckingSingleListingIdDetails Pass
+  │ '
+  └
+  √  CheckingSingleListingIdDetails
+
+→ BuyAnAuctionUsingBuyNow
+  POST https://api.tmsandbox.co.nz/v1/Bidding/BuyNow.JSON [200 OK, 403B, 149ms]
+  ┌
+  │ 'Post-Transaction: CheckingBuyNow Start'
+  │ {
+  │   Success: true,
+  │   Description: "Seller's email mp70@abcde.com",
+  │   StatusCode: 0,
+  │   PurchaseId: 26292
+  │ }
+  │ 'Get sucessful StatusCode: 0 (0-Success)'
+  │ 'Post-Transaction: CheckingBuyNow Pass'
+  └
+  √  CheckingBuyNowSuccess
+  ┌
+  │ 'Post-Transaction: CheckingPurchasedItemOnWonList Star
+  │ t'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 355B, 24ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: []
+  │ }
+  │ 'Not Found any PurchaseId and ListingId exist on the w
+  │ on list.'
+  │ 'Post-Transaction: CheckingPurchasedItemOnWonList Fail
+  │ ed'
+  └
+  √  Checking NewPurchasedListId existed in the won list
+
+┌─────────────────────────┬─────────────────────┬────────────────────┐
+│                         │            executed │             failed │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              iterations │                   1 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│                requests │                  16 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│            test-scripts │                  20 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│      prerequest-scripts │                  19 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              assertions │                  13 │                  0 │
+├─────────────────────────┴─────────────────────┴────────────────────┤
+│ total run duration: 4.3s                                           │
+├────────────────────────────────────────────────────────────────────┤
+│ total data received: 846.56KB (approx)                             │
+├────────────────────────────────────────────────────────────────────┤
+│ average response time: 151ms [min: 18ms, max: 1113ms, s.d.: 269ms] │
+└────────────────────────────────────────────────────────────────────┘
