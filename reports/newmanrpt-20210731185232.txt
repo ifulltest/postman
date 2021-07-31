@@ -1,0 +1,983 @@
+newman
+
+tradeMeSandBox
+
+→ RetrieveGeneralCategories
+  GET https://api.tmsandbox.co.nz/v1/Categories.JSON?depth=1 [200 OK, 1.54KB, 322ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofGivenSubcategory
+  │  Start'
+  │ 'Subcategories counts to: 27'
+  │ 'All subcategories name listed below: '
+  │ [
+  │   'Trade Me Motors',
+  │   'Trade Me Property',
+  │   'Trade Me Jobs',
+  │   'Antiques & collectables',
+  │   'Art',
+  │   'Baby gear',
+  │   'Books',
+  │   'Building & renovation',
+  │   'Business, farming & industry',
+  │   'Clothing & Fashion',
+  │   'Computers',
+  │   'Crafts',
+  │   'Electronics & photography',
+  │   'Flatmates wanted',
+  │   'Gaming',
+  │   'Health & beauty',
+  │   'Home & living',
+  │   'Jewellery & watches',
+  │   'Mobile phones',
+  │   'Movies & TV',
+  │   'Music & instruments',
+  │   'Pets & animals',
+  │   'Pottery & glass',
+  │   'Services',
+  │   'Sports',
+  │   'Toys & models',
+  │   'Travel, events & activities'
+  │ ]
+  │ 'Subcategory - Antiques & collectables existed'
+  │ 'Post-Transaction: CheckingtheCountsofGivenSubcategory
+  │  Pass'
+  └
+  √  Checking all subcategories returned, and the given subcategory exists in
+
+→ RetrieveYourWatchlist
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/All.JSON [200 OK, 1.23KB, 53ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofWatchList Start'
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149295662,
+  │       Title: 'British Army Westland Scout Helicopter',
+  │       Category: '0347-0924-1193-7772-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1627268058877)/',
+  │       EndDate: '/Date(1627872858877)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627714357718)/',
+  │       CategoryPath: '/Toys-models/Models/Aircraft/1:72
+  │ ',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/6909042.jpg',
+  │       PhotoId: 6909042,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: '1:72',
+  │       Attributes: [],
+  │       Subtitle: 'SKYLARC’S MASSIVE MODEL AUCTION',
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0347-',
+  │       Name: 'Toys & models',
+  │       CategoryId: 347
+  │     }
+  │   ]
+  │ }
+  │ 'Found 1 item on the watch list'
+  │ 'Post-Transaction: CheckingtheCountsofWatchList Pass'
+  └
+  √  Checking if there are any items in the watch list
+
+→ RemoveAListingFromYourWatchlist
+  ┌
+  │ 'Pre-Transaction: RetrieveYourWatchlist Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 1.23KB, 62ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149295662,
+  │       Title: 'British Army Westland Scout Helicopter',
+  │       Category: '0347-0924-1193-7772-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1627268058877)/',
+  │       EndDate: '/Date(1627872858877)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627714357906)/',
+  │       CategoryPath: '/Toys-models/Models/Aircraft/1:72
+  │ ',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/6909042.jpg',
+  │       PhotoId: 6909042,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: '1:72',
+  │       Attributes: [],
+  │       Subtitle: 'SKYLARC’S MASSIVE MODEL AUCTION',
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0347-',
+  │       Name: 'Toys & models',
+  │       CategoryId: 347
+  │     }
+  │   ]
+  │ }
+  │ 'All the can be deleted ListingId on the Watchlist: '
+  │ '2149295662'
+  │ 'Pre-Transaction: RetrieveYourWatchlist Pass'
+  └
+  √  Get all ListingId on the Watchlist
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149295662.JSON [200 OK, 346B, 82ms]
+  ┌
+  │ 'Post-Transaction: RetrieveYourWatchlist Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 375B, 45ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: [],
+  │   FoundCategories: []
+  │ }
+  │ 'Current count of ListingId that can be deleted in the
+  │  watchlist: 0'
+  └
+  √  Checking LastListingId: 2149295662 has been deleted
+  ┌
+  │ 'Post-Transaction: RetrieveYourWatchlist Pass'
+  └
+
+→ RetrieveClosingSoonListings
+  GET https://api.tmsandbox.co.nz/v1/Listings/closing.JSON?rows=1000 [200 OK, 38.98KB, 271ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofClosingSoonListi
+  │ ngs Start'
+  │ 'Found 250 items in the Closing Soon Listings'
+  │ 'Post-Transaction: CheckingtheCountsofClosingSoonListi
+  │ ngs Pass'
+  └
+  √  Checking if there are any items in the Closing Soon Listings
+
+→ AddAListingToYourWatchlist
+  ┌
+  │ 'Pre-Transaction: RetrieveClosingSoonListings Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/Listings/closing.JSON?rows=1000 [200 OK, 38.97KB, 209ms]
+  √  Get all the closing soon ListingId
+  ┌
+  │ 'From 250 closing soon items randomly choose the: 2149
+  │ 295666 waiting to be added to the watchlist'
+  │ 'Pre-Transaction: RetrieveClosingSoonListings Pass'
+  └
+  POST https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149295666.JSON [200 OK, 346B, 118ms]
+  ┌
+  │ 'Post-Transaction: CheckingAddToWatchList Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 1.22KB, 56ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149295666,
+  │       Title: '2 x Kriegsmarine Destroyers',
+  │       Category: '0347-0924-1196-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1627268072550)/',
+  │       EndDate: '/Date(1627872872550)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627714359281)/',
+  │       CategoryPath: '/Toys-models/Models/Ships-boats',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/6672880.jpg',
+  │       PhotoId: 6672880,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Ships & boats',
+  │       Attributes: [],
+  │       Subtitle: 'SKYLARC’S MASSIVE MODEL AUCTION',
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0347-',
+  │       Name: 'Toys & models',
+  │       CategoryId: 347
+  │     }
+  │   ]
+  │ }
+  │ 'ListingId 2149295666 has been added to the watchlist'
+  └
+  √  Checking ListingId 2149295666 has been added
+  ┌
+  │ 'Post-Transaction: CheckingAddToWatchList Pass'
+  └
+
+→ RetrieveYourWonItems
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 1.81KB, 82ms]
+  ┌
+  │ 'Post-Transaction: CheckingWonListHaveItems Start'
+  │ {
+  │   TotalCount: 2,
+  │   Page: 1,
+  │   PageSize: 2,
+  │   List: [
+  │     {
+  │       ListingId: 2149296885,
+  │       Title: 'Au de Toilette 76 by Junk 1C',
+  │       Category: '0004-1511-2375-8259-',
+  │       StartPrice: 5,
+  │       StartDate: '/Date(1627627039553)/',
+  │       EndDate: '/Date(1627714033847)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627714359484)/',
+  │       CategoryPath: '/Home-living/Home-décor/Ornaments
+  │ -sculptures/Pixies-fairies',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4550688.jpg',
+  │       PhotoId: 4550688,
+  │       Seller: {
+  │         MemberId: 4000435,
+  │         Nickname: 'junk1c',
+  │         DateAddressVerified: '/Date(1380798000000)/',
+  │         DateJoined: '/Date(1343131200000)/',
+  │         Email: 'junk1c@abcde.com',
+  │         UniqueNegative: 6,
+  │         UniquePositive: 27,
+  │         FeedbackCount: 21,
+  │         IsAddressVerified: true
+  │       },
+  │       BidCount: 1,
+  │       IsReserveMet: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Pixies & fairies',
+  │       ReserveState: 3,
+  │       Subtitle: 'J1C F6d - FPO address verified',
+  │       Quantity: 1,
+  │       StatusDate: '/Date(0)/',
+  │       AuctionAttribute: '260`TV|3504600620538188409`0'
+  │ ,
+  │       BuyerFeedbackPlaced: 0,
+  │       SellerFeedbackPlaced: 0,
+  │       DeliveryId: 0,
+  │       FpoDecisionViaMobile: false,
+  │       HasPaidByCreditCard: false,
+  │       InvoiceId: 0,
+  │       OfferId: 0,
+  │       PaymentInfo: 'NZ Bank Deposit',
+  │       Price: 9.57,
+  │       SelectedShipping: 'Buyer to pick-up',
+  │       ShippingPrice: 0,
+  │       ShippingType: 2,
+  │       SoldDate: '/Date(1627714033847)/',
+  │       SoldType: 'BUYNOW',
+  │       PaymentInstructions: '',
+  │       PurchaseId: 26304,
+  │       ReferenceNumber: 'P26304',
+  │       SubtotalPrice: 9.57,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 9.57,
+  │       TrackedParcels: [],
+  │       TaxSubTotal: 0,
+  │       HasPaidByDeferredPayment: false
+  │     },
+  │     {
+  │       ListingId: 2149296271,
+  │       Title: 'Trivot - Red Man - Iron',
+  │       Category: '0004-0371-0563-6149-',
+  │       StartPrice: 8,
+  │       StartDate: '/Date(1627571923013)/',
+  │       EndDate: '/Date(1627714025267)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627714359484)/',
+  │       CategoryPath: '/Home-living/Kitchen/Pots-pans-ba
+  │ keware/Other',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4550832.jpg',
+  │       PhotoId: 4550832,
+  │       Seller: {
+  │         MemberId: 4003082,
+  │         Nickname: 'conundrum',
+  │         DateAddressVerified: '/Date(1440676800000)/',
+  │         DateJoined: '/Date(1440676800000)/',
+  │         Email: 'mp70@abcde.com',
+  │         UniqueNegative: 3,
+  │         UniquePositive: 20,
+  │         FeedbackCount: 17,
+  │         IsAddressVerified: true
+  │       },
+  │       IsNew: true,
+  │       BidCount: 1,
+  │       IsReserveMet: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Other',
+  │       ReserveState: 3,
+  │       Quantity: 1,
+  │       StatusDate: '/Date(0)/',
+  │       AuctionAttribute: '260`TVL|3595313462459433559`0
+  │ ',
+  │       BuyerFeedbackPlaced: 0,
+  │       SellerFeedbackPlaced: 0,
+  │       DeliveryId: 0,
+  │       FpoDecisionViaMobile: false,
+  │       HasPaidByCreditCard: false,
+  │       InvoiceId: 0,
+  │       OfferId: 0,
+  │       PaymentInfo: 'NZ Bank Deposit',
+  │       Price: 14.5,
+  │       SelectedShipping: 'Buyer to pick-up',
+  │       ShippingPrice: 0,
+  │       ShippingType: 2,
+  │       SoldDate: '/Date(1627714025267)/',
+  │       SoldType: 'BUYNOW',
+  │       PaymentInstructions: '',
+  │       PurchaseId: 26303,
+  │       ReferenceNumber: 'P26303',
+  │       SubtotalPrice: 14.5,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 14.5,
+  │       TrackedParcels: [],
+  │       TaxSubTotal: 0,
+  │       HasPaidByDeferredPayment: false
+  │     }
+  │   ]
+  │ }
+  │ 'WonPurchaseId counts to: 2, the purchaseId: 26304,263
+  │ 03'
+  │ 'Post-Transaction: CheckingWonListHaveItems Pass'
+  └
+  √  CheckingWonListHasItems
+
+→ RemoveAPurchaseFromYourWonItemsList
+  ┌
+  │ 'Pre-Transaction: RemoveAPurchaseFromYourWonItemsList 
+  │ Start'
+  │ 'LastWonPurchaseId: 26303'
+  └
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/26304.JSON [200 OK, 346B, 74ms]
+  ┌
+  │ {
+  │   Success: true,
+  │   Description: 'Success'
+  │ }
+  └
+  √  Delete PurchaseId from the Wonlist, but leave the LastPurchaseId: 26303
+  ┌
+  │ 'Pre-Transaction: RemoveAPurchaseFromYourWonItemsList 
+  │ Pass'
+  └
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/26303.JSON [200 OK, 346B, 77ms]
+  ┌
+  │ {
+  │   Success: true,
+  │   Description: 'Success'
+  │ }
+  │ 'Post-Transaction: CheckingDeleteWonItems Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 354B, 56ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: []
+  │ }
+  │ 'Current items count on the won list: 0. All items hav
+  │ e been removed from the won list.'
+  │ 'Post-Transaction: CheckingDeleteWonItems Pass'
+  └
+  √  Checking LastWonPurchaseId: 26303 has been removed
+
+→ GeneralSearch
+  GET https://api.tmsandbox.co.nz/v1/Search/General.JSON?buy=All&rows=500&page=4 [200 OK, 769.07KB, 1305ms]
+  ┌
+  │ 'Post-Transaction: CheckingListingIdHasBuyNow Start'
+  │ 'Page: 4, total items: 500'
+  │ "'HasBuyNow' items counts to: 10, ListingId details: "
+  │ [
+  │   2149295546, 2149295530,
+  │   2149295054, 2149296806,
+  │   2149296809, 2149296813,
+  │   2149296818, 2149296269,
+  │   2149296146, 2149296189
+  │ ]
+  │ 'Get random SingleListingId: 2149296809'
+  │ 'Post-Transaction: CheckingListingIdHasBuyNow Pass'
+  └
+  √  GetListingIdHasBuyNow
+
+→ RetrieveTheDetailsOfASingleListing
+  GET https://api.tmsandbox.co.nz/v1/Listings/2149296809.JSON [200 OK, 3.46KB, 120ms]
+  ┌
+  │ 'Post-Transaction: CheckingSingleListingIdDetails Star
+  │ t'
+  │ {
+  │   ListingId: 2149296809,
+  │   Title: 'Samsung Galaxy BV Weaving S9 Case',
+  │   Category: '0344-0899-1135-5537-',
+  │   StartPrice: 0,
+  │   BuyNowPrice: 12.99,
+  │   StartDate: '/Date(1627618031970)/',
+  │   EndDate: '/Date(1627790831970)/',
+  │   ListingLength: null,
+  │   HasGallery: true,
+  │   AsAt: '/Date(1627714363564)/',
+  │   CategoryPath: '/Mobile-phones/Accessories/Cases-cove
+  │ rs/Samsung',
+  │   PhotoId: 4676323,
+  │   IsNew: true,
+  │   RegionId: 12,
+  │   Region: 'Wellington',
+  │   SuburbId: 63,
+  │   Suburb: 'Kapiti',
+  │   ViewCount: 2,
+  │   HasBuyNow: true,
+  │   NoteDate: '/Date(0)/',
+  │   CategoryName: 'Samsung',
+  │   ReserveState: 3,
+  │   Attributes: [
+  │     {
+  │       Name: 'Colour',
+  │       DisplayName: 'Colour',
+  │       Value: 'Black',
+  │       Type: 4,
+  │       DisplayValue: 'Black'
+  │     }
+  │   ],
+  │   OpenHomes: [],
+  │   IsBuyNowOnly: true,
+  │   HasMultiple: true,
+  │   IsFlatShippingCharge: true,
+  │   PriceDisplay: '$12.99 per item',
+  │   AvailableToBuy: '3',
+  │   ListingGroupId: 73390,
+  │   AdditionalData: { BulletPoints: [], Tags: [] },
+  │   UnansweredQuestionCount: 0,
+  │   Member: {
+  │     MemberId: 4000334,
+  │     Nickname: 'paperclip4',
+  │     DateAddressVerified: '/Date(1338811200000)/',
+  │     DateJoined: '/Date(1338811200000)/',
+  │     Email: 'owen4@snipesoft.net.nz',
+  │     UniqueNegative: 0,
+  │     UniquePositive: 4,
+  │     FeedbackCount: 4,
+  │     IsAddressVerified: true,
+  │     Suburb: 'Kapiti',
+  │     Region: 'Wellington',
+  │     IsAuthenticated: true
+  │   },
+  │   Body: 'BASEUS BV Weaving Case Gel TPU Cover with Wea
+  │ ve Texture Design for Samsung Galaxy S9 - Brand New\r\
+  │ n' +
+  │     '\r\n' +
+  │     'This item available in 3 colours. Black,Red and B
+  │ lue.\r\n' +
+  │     '\r\n' +
+  │     '==  FEATURES  ==\r\n' +
+  │     '\r\n' +
+  │     'This Samsung Galaxy S9 Cover is Extremely thin an
+  │ d light, characterized by braid style design. \r\n' +
+  │     '\r\n' +
+  │     'This Samsung Galaxy S9 Cover not only a fashion a
+  │ ccessory, but also a guarantee of perfect protection.\
+  │ r\n' +
+  │     '\r\n' +
+  │     'Samsung Galaxy S9 Cover is made of the highest qu
+  │ ality plastic,while maintaining exceptional elasticity
+  │  and flexibility.\r\n' +
+  │     '\r\n' +
+  │     'Material of Samsung Galaxy S9 Cover is TPU Materi
+  │ al.\r\n' +
+  │     '\r\n' +
+  │     'Item is Flexible and resilient also Samsung Galax
+  │ y S9 Cover is High scratch and impact resistance.\r\n'
+  │  +
+  │     '\r\n' +
+  │     'Samsung Galaxy S9 Cover is an amazing phone cover
+  │  with unique design that not only provides great prote
+  │ ction from scratches, drops, and dirt, but also from o
+  │ verheating.\r\n' +
+  │     '\r\n' +
+  │     'Samsung Galaxy S9 Cover has raised lip around the
+  │  camera, independent buttons and precise cut-outs for 
+  │ easy access to all ports.\r\n' +
+  │     '\r\n' +
+  │     'The type of this Samsung Galaxy S9 Cover is Back 
+  │ cover.\r\n' +
+  │     '\r\n' +
+  │     'The brand of this attractive Samsung Galaxy S9 co
+  │ ver is BASEUS.\r\n' +
+  │     '\r\n' +
+  │     'The product Samsung Galaxy S9 Cover comes in a at
+  │ tractive packing.\r\n' +
+  │     '\r\n' +
+  │     '==  Contents  ==\r\n' +
+  │     '\r\n' +
+  │     '1 x Samsung Galaxy S9 Cover.\r\n' +
+  │     '\r\n' +
+  │     '** All of our Samsung Galaxy S9 Cover and all BAS
+  │ EUS products we sell are 100% genuine and have the scr
+  │ atch authentication on the back **\r\n' +
+  │     '** BASEUS products, this Samsung Galaxy S9 Cover 
+  │ and every other BASEUS product we sell comes with a 12
+  │  month warranty **',
+  │   Questions: {
+  │     TotalCount: 2,
+  │     Page: 1,
+  │     PageSize: 2,
+  │     List: [
+  │       {
+  │         ListingId: 2149296809,
+  │         ListingQuestionId: 357241,
+  │         Comment: 'this is a test universal auction com
+  │ ment 1',
+  │         CommentDate: '/Date(1627618267690)/',
+  │         IsSellerComment: true,
+  │         Answer: '',
+  │         AnswerDate: '/Date(0)/',
+  │         AskingMember: {
+  │           MemberId: 4000334,
+  │           Nickname: 'paperclip4',
+  │           DateAddressVerified: '/Date(1338811200000)/'
+  │ ,
+  │           DateJoined: '/Date(1338811200000)/',
+  │           UniqueNegative: 0,
+  │           UniquePositive: 4,
+  │           FeedbackCount: 4,
+  │           IsAddressVerified: true,
+  │           IsAuthenticated: true
+  │         }
+  │       },
+  │       {
+  │         ListingId: 2149296809,
+  │         ListingQuestionId: 357255,
+  │         Comment: 'this is a test universal auction com
+  │ ment 2',
+  │         CommentDate: '/Date(1627618314393)/',
+  │         IsSellerComment: true,
+  │         Answer: '',
+  │         AnswerDate: '/Date(0)/',
+  │         AskingMember: {
+  │           MemberId: 4000334,
+  │           Nickname: 'paperclip4',
+  │           DateAddressVerified: '/Date(1338811200000)/'
+  │ ,
+  │           DateJoined: '/Date(1338811200000)/',
+  │           UniqueNegative: 0,
+  │           UniquePositive: 4,
+  │           FeedbackCount: 4,
+  │           IsAddressVerified: true,
+  │           IsAuthenticated: true
+  │         }
+  │       }
+  │     ]
+  │   },
+  │   Photos: [
+  │     {
+  │       Key: 4676323,
+  │       Value: {
+  │         Thumbnail: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4676323.jpg',
+  │         List: 'https://images.tmsandbox.co.nz/photoser
+  │ ver/lv2/4676323.jpg',
+  │         Medium: 'https://images.tmsandbox.co.nz/photos
+  │ erver/med/4676323.jpg',
+  │         Gallery: 'https://images.tmsandbox.co.nz/photo
+  │ server/gv/4676323.jpg',
+  │         Large: 'https://images.tmsandbox.co.nz/photose
+  │ rver/tq/4676323.jpg',
+  │         FullSize: 'https://images.tmsandbox.co.nz/phot
+  │ oserver/full/4676323.jpg',
+  │         PhotoId: 4676323,
+  │         OriginalWidth: 1200,
+  │         OriginalHeight: 1200
+  │       }
+  │     },
+  │     {
+  │       Key: 4676326,
+  │       Value: {
+  │         Thumbnail: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4676326.jpg',
+  │         List: 'https://images.tmsandbox.co.nz/photoser
+  │ ver/lv2/4676326.jpg',
+  │         Medium: 'https://images.tmsandbox.co.nz/photos
+  │ erver/med/4676326.jpg',
+  │         Gallery: 'https://images.tmsandbox.co.nz/photo
+  │ server/gv/4676326.jpg',
+  │         Large: 'https://images.tmsandbox.co.nz/photose
+  │ rver/tq/4676326.jpg',
+  │         FullSize: 'https://images.tmsandbox.co.nz/phot
+  │ oserver/full/4676326.jpg',
+  │         PhotoId: 4676326,
+  │         OriginalWidth: 1200,
+  │         OriginalHeight: 1200
+  │       }
+  │     },
+  │     {
+  │       Key: 4676329,
+  │       Value: {
+  │         Thumbnail: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4676329.jpg',
+  │         List: 'https://images.tmsandbox.co.nz/photoser
+  │ ver/lv2/4676329.jpg',
+  │         Medium: 'https://images.tmsandbox.co.nz/photos
+  │ erver/med/4676329.jpg',
+  │         Gallery: 'https://images.tmsandbox.co.nz/photo
+  │ server/gv/4676329.jpg',
+  │         Large: 'https://images.tmsandbox.co.nz/photose
+  │ rver/tq/4676329.jpg',
+  │         FullSize: 'https://images.tmsandbox.co.nz/phot
+  │ oserver/full/4676329.jpg',
+  │         PhotoId: 4676329,
+  │         OriginalWidth: 1200,
+  │         OriginalHeight: 1200
+  │       }
+  │     },
+  │     {
+  │       Key: 4676332,
+  │       Value: {
+  │         Thumbnail: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4676332.jpg',
+  │         List: 'https://images.tmsandbox.co.nz/photoser
+  │ ver/lv2/4676332.jpg',
+  │         Medium: 'https://images.tmsandbox.co.nz/photos
+  │ erver/med/4676332.jpg',
+  │         Gallery: 'https://images.tmsandbox.co.nz/photo
+  │ server/gv/4676332.jpg',
+  │         Large: 'https://images.tmsandbox.co.nz/photose
+  │ rver/tq/4676332.jpg',
+  │         FullSize: 'https://images.tmsandbox.co.nz/phot
+  │ oserver/full/4676332.jpg',
+  │         PhotoId: 4676332,
+  │         OriginalWidth: 1200,
+  │         OriginalHeight: 1200
+  │       }
+  │     },
+  │     {
+  │       Key: 4676335,
+  │       Value: {
+  │         Thumbnail: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4676335.jpg',
+  │         List: 'https://images.tmsandbox.co.nz/photoser
+  │ ver/lv2/4676335.jpg',
+  │         Medium: 'https://images.tmsandbox.co.nz/photos
+  │ erver/med/4676335.jpg',
+  │         Gallery: 'https://images.tmsandbox.co.nz/photo
+  │ server/gv/4676335.jpg',
+  │         Large: 'https://images.tmsandbox.co.nz/photose
+  │ rver/tq/4676335.jpg',
+  │         FullSize: 'https://images.tmsandbox.co.nz/phot
+  │ oserver/full/4676335.jpg',
+  │         PhotoId: 4676335,
+  │         OriginalWidth: 1200,
+  │         OriginalHeight: 1200
+  │       }
+  │     },
+  │     {
+  │       Key: 4676337,
+  │       Value: {
+  │         Thumbnail: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4676337.jpg',
+  │         List: 'https://images.tmsandbox.co.nz/photoser
+  │ ver/lv2/4676337.jpg',
+  │         Medium: 'https://images.tmsandbox.co.nz/photos
+  │ erver/med/4676337.jpg',
+  │         Gallery: 'https://images.tmsandbox.co.nz/photo
+  │ server/gv/4676337.jpg',
+  │         Large: 'https://images.tmsandbox.co.nz/photose
+  │ rver/tq/4676337.jpg',
+  │         FullSize: 'https://images.tmsandbox.co.nz/phot
+  │ oserver/full/4676337.jpg',
+  │         PhotoId: 4676337,
+  │         OriginalWidth: 1200,
+  │         OriginalHeight: 1200
+  │       }
+  │     },
+  │     {
+  │       Key: 4676339,
+  │       Value: {
+  │         Thumbnail: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4676339.jpg',
+  │         List: 'https://images.tmsandbox.co.nz/photoser
+  │ ver/lv2/4676339.jpg',
+  │         Medium: 'https://images.tmsandbox.co.nz/photos
+  │ erver/med/4676339.jpg',
+  │         Gallery: 'https://images.tmsandbox.co.nz/photo
+  │ server/gv/4676339.jpg',
+  │         Large: 'https://images.tmsandbox.co.nz/photose
+  │ rver/tq/4676339.jpg',
+  │         FullSize: 'https://images.tmsandbox.co.nz/phot
+  │ oserver/full/4676339.jpg',
+  │         PhotoId: 4676339,
+  │         OriginalWidth: 1200,
+  │         OriginalHeight: 1200
+  │       }
+  │     },
+  │     {
+  │       Key: 4676341,
+  │       Value: {
+  │         Thumbnail: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4676341.jpg',
+  │         List: 'https://images.tmsandbox.co.nz/photoser
+  │ ver/lv2/4676341.jpg',
+  │         Medium: 'https://images.tmsandbox.co.nz/photos
+  │ erver/med/4676341.jpg',
+  │         Gallery: 'https://images.tmsandbox.co.nz/photo
+  │ server/gv/4676341.jpg',
+  │         Large: 'https://images.tmsandbox.co.nz/photose
+  │ rver/tq/4676341.jpg',
+  │         FullSize: 'https://images.tmsandbox.co.nz/phot
+  │ oserver/full/4676341.jpg',
+  │         PhotoId: 4676341,
+  │         OriginalWidth: 1200,
+  │         OriginalHeight: 1200
+  │       }
+  │     }
+  │   ],
+  │   AllowsPickups: 3,
+  │   ShippingOptions: [
+  │     {
+  │       Type: 4,
+  │       Price: 4.99,
+  │       Method: 'nationwide non-rural',
+  │       ShippingId: 4
+  │     },
+  │     {
+  │       Type: 4,
+  │       Price: 9.99,
+  │       Method: 'rural',
+  │       ShippingId: 5
+  │     },
+  │     {
+  │       Type: 4,
+  │       Price: 0,
+  │       Method: 'test free shipping',
+  │       ShippingId: 6
+  │     }
+  │   ],
+  │   PaymentOptions: 'NZ Bank Deposit',
+  │   Sales: [
+  │     {
+  │       PurchaseId: 26283,
+  │       ReferenceNumber: 'P26283',
+  │       SoldDate: '/Date(1627686149237)/',
+  │       Method: 1,
+  │       SelectedShipping: 'rural',
+  │       ShippingPrice: 9.99,
+  │       ShippingType: 4,
+  │       QuantitySold: 1,
+  │       Price: 12.99,
+  │       SubtotalPrice: 12.99,
+  │       TotalShippingPrice: 9.99,
+  │       TotalSalePrice: 22.98,
+  │       TaxSubTotals: []
+  │     }
+  │   ],
+  │   CanAddToCart: false,
+  │   EmbeddedContent: {},
+  │   SupportsQuestionsAndAnswers: true,
+  │   PaymentMethods: [
+  │     { Id: 2, Name: 'Credit Card' },
+  │     {
+  │       Id: 1,
+  │       Name: 'NZ Bank Deposit'
+  │     }
+  │   ],
+  │   BoundaryImage: {
+  │     Thumbnail: null,
+  │     List: null,
+  │     Medium: null,
+  │     Gallery: null,
+  │     Large: null,
+  │     FullSize: null,
+  │     PhotoId: 0
+  │   },
+  │   RenderOptions: [ 2 ],
+  │   AreaOfBusiness: 1
+  │ }
+  │ 'ListingId: 2149296809, ShippingId: 6, and Method: tes
+  │ t free shipping'
+  │ 'Post-Transaction: CheckingSingleListingIdDetails Pass
+  │ '
+  └
+  √  CheckingSingleListingIdDetails
+
+→ BuyAnAuctionUsingBuyNow
+  POST https://api.tmsandbox.co.nz/v1/Bidding/BuyNow.JSON [200 OK, 411B, 180ms]
+  ┌
+  │ 'Post-Transaction: CheckingBuyNow Start'
+  │ {
+  │   Success: true,
+  │   Description: "Seller's email owen4@snipesoft.net.nz"
+  │ ,
+  │   StatusCode: 0,
+  │   PurchaseId: 26305
+  │ }
+  │ 'Get sucessful StatusCode: 0 (0-Success)'
+  │ 'Post-Transaction: CheckingBuyNow Pass'
+  └
+  √  CheckingBuyNowSuccess
+  ┌
+  │ 'Post-Transaction: CheckingPurchasedItemOnWonList Star
+  │ t'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 1.35KB, 64ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149296809,
+  │       Title: 'Samsung Galaxy BV Weaving S9 Case',
+  │       Category: '0344-0899-1135-5537-',
+  │       StartPrice: 0,
+  │       StartDate: '/Date(1627618031970)/',
+  │       EndDate: '/Date(1627714363923)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627714364080)/',
+  │       CategoryPath: '/Mobile-phones/Accessories/Cases-
+  │ covers/Samsung',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4676323.jpg',
+  │       PhotoId: 4676323,
+  │       Seller: {
+  │         MemberId: 4000334,
+  │         Nickname: 'paperclip4',
+  │         DateAddressVerified: '/Date(1338811200000)/',
+  │         DateJoined: '/Date(1338811200000)/',
+  │         Email: 'owen4@snipesoft.net.nz',
+  │         UniqueNegative: 0,
+  │         UniquePositive: 4,
+  │         FeedbackCount: 4,
+  │         IsAddressVerified: true
+  │       },
+  │       IsNew: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Samsung',
+  │       ReserveState: 3,
+  │       IsBuyNowOnly: true,
+  │       Quantity: 1,
+  │       IsFlatShippingCharge: true,
+  │       Options: [
+  │         {
+  │           Name: 'Colour',
+  │           Value: 'Black'
+  │         }
+  │       ],
+  │       ListingGroupId: 73390,
+  │       StatusDate: '/Date(0)/',
+  │       AuctionAttribute: '',
+  │       BuyerFeedbackPlaced: 0,
+  │       SellerFeedbackPlaced: 0,
+  │       DeliveryId: 0,
+  │       FpoDecisionViaMobile: false,
+  │       HasPaidByCreditCard: false,
+  │       InvoiceId: 0,
+  │       OfferId: 0,
+  │       PaymentInfo: 'NZ Bank Deposit',
+  │       Price: 12.99,
+  │       SelectedShipping: 'test free shipping',
+  │       ShippingPrice: 0,
+  │       ShippingType: 3,
+  │       SoldDate: '/Date(1627714363923)/',
+  │       SoldType: 'BUYNOW',
+  │       PaymentInstructions: '',
+  │       PurchaseId: 26305,
+  │       ReferenceNumber: 'P26305',
+  │       SubtotalPrice: 12.99,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 12.99,
+  │       TrackedParcels: [],
+  │       TaxSubTotal: 0,
+  │       HasPaidByDeferredPayment: false
+  │     }
+  │   ]
+  │ }
+  │ 'Found PurchaseId 26305 and ListingId 2149296809 exist
+  │ s on the won list'
+  │ 'Post-Transaction: CheckingPurchasedItemOnWonList Pass
+  │ '
+  └
+  √  Checking NewPurchasedListId existed in the won list
+
+┌─────────────────────────┬─────────────────────┬────────────────────┐
+│                         │            executed │             failed │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              iterations │                   1 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│                requests │                  17 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│            test-scripts │                  20 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│      prerequest-scripts │                  19 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              assertions │                  14 │                  0 │
+├─────────────────────────┴─────────────────────┴────────────────────┤
+│ total run duration: 7s                                             │
+├────────────────────────────────────────────────────────────────────┤
+│ total data received: 855.85KB (approx)                             │
+├────────────────────────────────────────────────────────────────────┤
+│ average response time: 186ms [min: 45ms, max: 1305ms, s.d.: 290ms] │
+└────────────────────────────────────────────────────────────────────┘
