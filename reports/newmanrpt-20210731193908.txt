@@ -1,0 +1,837 @@
+newman
+
+tradeMeSandBox
+
+→ RetrieveGeneralCategories
+  GET https://api.tmsandbox.co.nz/v1/Categories.JSON?depth=1 [200 OK, 1.54KB, 235ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofGivenSubcategory
+  │  Start'
+  │ 'Subcategories counts to: 27'
+  │ 'All subcategories name listed below: '
+  │ [
+  │   'Trade Me Motors',
+  │   'Trade Me Property',
+  │   'Trade Me Jobs',
+  │   'Antiques & collectables',
+  │   'Art',
+  │   'Baby gear',
+  │   'Books',
+  │   'Building & renovation',
+  │   'Business, farming & industry',
+  │   'Clothing & Fashion',
+  │   'Computers',
+  │   'Crafts',
+  │   'Electronics & photography',
+  │   'Flatmates wanted',
+  │   'Gaming',
+  │   'Health & beauty',
+  │   'Home & living',
+  │   'Jewellery & watches',
+  │   'Mobile phones',
+  │   'Movies & TV',
+  │   'Music & instruments',
+  │   'Pets & animals',
+  │   'Pottery & glass',
+  │   'Services',
+  │   'Sports',
+  │   'Toys & models',
+  │   'Travel, events & activities'
+  │ ]
+  │ 'Subcategory - Antiques & collectables existed'
+  │ 'Post-Transaction: CheckingtheCountsofGivenSubcategory
+  │  Pass'
+  └
+  √  Checking all subcategories returned, and the given subcategory exists in
+
+→ RetrieveYourWatchlist
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/All.JSON [200 OK, 1.24KB, 64ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofWatchList Start'
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149295528,
+  │       Title: 'Red Kettle RK04',
+  │       Category: '0004-0371-0045-2541-',
+  │       StartPrice: 0,
+  │       BuyNowPrice: 49,
+  │       StartDate: '/Date(1627240699917)/',
+  │       EndDate: '/Date(1627782900000)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627717153101)/',
+  │       CategoryPath: '/Home-living/Kitchen/Small-applia
+  │ nces/Kettles-jugs',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4548977.jpg',
+  │       PhotoId: 4548977,
+  │       IsNew: true,
+  │       RegionId: 12,
+  │       Region: 'Wellington',
+  │       Suburb: 'Wellington City',
+  │       HasBuyNow: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Kettles & jugs',
+  │       ReserveState: 3,
+  │       Attributes: [],
+  │       IsBuyNowOnly: true,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$49.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0004-',
+  │       Name: 'Home & living',
+  │       CategoryId: 4
+  │     }
+  │   ]
+  │ }
+  │ 'Found 1 item on the watch list'
+  │ 'Post-Transaction: CheckingtheCountsofWatchList Pass'
+  └
+  √  Checking if there are any items in the watch list
+
+→ RemoveAListingFromYourWatchlist
+  ┌
+  │ 'Pre-Transaction: RetrieveYourWatchlist Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 1.24KB, 57ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149295528,
+  │       Title: 'Red Kettle RK04',
+  │       Category: '0004-0371-0045-2541-',
+  │       StartPrice: 0,
+  │       BuyNowPrice: 49,
+  │       StartDate: '/Date(1627240699917)/',
+  │       EndDate: '/Date(1627782900000)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627717153289)/',
+  │       CategoryPath: '/Home-living/Kitchen/Small-applia
+  │ nces/Kettles-jugs',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4548977.jpg',
+  │       PhotoId: 4548977,
+  │       IsNew: true,
+  │       RegionId: 12,
+  │       Region: 'Wellington',
+  │       Suburb: 'Wellington City',
+  │       HasBuyNow: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Kettles & jugs',
+  │       ReserveState: 3,
+  │       Attributes: [],
+  │       IsBuyNowOnly: true,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$49.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0004-',
+  │       Name: 'Home & living',
+  │       CategoryId: 4
+  │     }
+  │   ]
+  │ }
+  │ 'All the can be deleted ListingId on the Watchlist: '
+  │ '2149295528'
+  │ 'Pre-Transaction: RetrieveYourWatchlist Pass'
+  └
+  √  Get all ListingId on the Watchlist
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149295528.JSON [200 OK, 347B, 85ms]
+  ┌
+  │ 'Post-Transaction: RetrieveYourWatchlist Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 376B, 46ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: [],
+  │   FoundCategories: []
+  │ }
+  │ 'Current count of ListingId that can be deleted in the
+  │  watchlist: 0'
+  └
+  √  Checking LastListingId: 2149295528 has been deleted
+  ┌
+  │ 'Post-Transaction: RetrieveYourWatchlist Pass'
+  └
+
+→ RetrieveClosingSoonListings
+  GET https://api.tmsandbox.co.nz/v1/Listings/closing.JSON?rows=1000 [200 OK, 39.06KB, 232ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofClosingSoonListi
+  │ ngs Start'
+  │ 'Found 250 items in the Closing Soon Listings'
+  │ 'Post-Transaction: CheckingtheCountsofClosingSoonListi
+  │ ngs Pass'
+  └
+  √  Checking if there are any items in the Closing Soon Listings
+
+→ AddAListingToYourWatchlist
+  ┌
+  │ 'Pre-Transaction: RetrieveClosingSoonListings Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/Listings/closing.JSON?rows=1000 [200 OK, 39.01KB, 213ms]
+  √  Get all the closing soon ListingId
+  ┌
+  │ 'From 250 closing soon items randomly choose the: 2149
+  │ 295037 waiting to be added to the watchlist'
+  │ 'Pre-Transaction: RetrieveClosingSoonListings Pass'
+  └
+  POST https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149295037.JSON [200 OK, 347B, 119ms]
+  ┌
+  │ 'Post-Transaction: CheckingAddToWatchList Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 1.09KB, 53ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149295037,
+  │       Title: 'Dual Signal Mechanical 160Nm (120ft/lbs)
+  │  Torque Wrench by Warren & Brown',
+  │       Category: '5964-5999-6004-6013-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1626922399607)/',
+  │       EndDate: '/Date(1627786399607)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627717154679)/',
+  │       CategoryPath: '/Building-renovation/Tools/Hand-t
+  │ ools/Spanners-wrenches',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/6682107.jpg',
+  │       PhotoId: 6682107,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Spanners & wrenches',
+  │       Attributes: [],
+  │       Subtitle: "SKYLARC'S ENGINE RECONDITIONERS AUCTI
+  │ ON",
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '5964-',
+  │       Name: 'Building & renovation',
+  │       CategoryId: 5964
+  │     }
+  │   ]
+  │ }
+  │ 'ListingId 2149295037 has been added to the watchlist'
+  └
+  √  Checking ListingId 2149295037 has been added
+  ┌
+  │ 'Post-Transaction: CheckingAddToWatchList Pass'
+  └
+
+→ RetrieveYourWonItems
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 1.35KB, 67ms]
+  ┌
+  │ 'Post-Transaction: CheckingWonListHaveItems Start'
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149296813,
+  │       Title: 'Samsung Galaxy BV Weaving S9 Case',
+  │       Category: '0344-0899-1135-5537-',
+  │       StartPrice: 0,
+  │       StartDate: '/Date(1627618032483)/',
+  │       EndDate: '/Date(1627716945447)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627717154851)/',
+  │       CategoryPath: '/Mobile-phones/Accessories/Cases-
+  │ covers/Samsung',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4676325.jpg',
+  │       PhotoId: 4676325,
+  │       Seller: {
+  │         MemberId: 4000334,
+  │         Nickname: 'paperclip4',
+  │         DateAddressVerified: '/Date(1338811200000)/',
+  │         DateJoined: '/Date(1338811200000)/',
+  │         Email: 'owen4@snipesoft.net.nz',
+  │         UniqueNegative: 0,
+  │         UniquePositive: 4,
+  │         FeedbackCount: 4,
+  │         IsAddressVerified: true
+  │       },
+  │       IsNew: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Samsung',
+  │       ReserveState: 3,
+  │       IsBuyNowOnly: true,
+  │       Quantity: 1,
+  │       IsFlatShippingCharge: true,
+  │       Options: [
+  │         {
+  │           Name: 'Colour',
+  │           Value: 'Blue'
+  │         }
+  │       ],
+  │       ListingGroupId: 73390,
+  │       StatusDate: '/Date(0)/',
+  │       AuctionAttribute: '',
+  │       BuyerFeedbackPlaced: 0,
+  │       SellerFeedbackPlaced: 0,
+  │       DeliveryId: 0,
+  │       FpoDecisionViaMobile: false,
+  │       HasPaidByCreditCard: false,
+  │       InvoiceId: 0,
+  │       OfferId: 0,
+  │       PaymentInfo: 'NZ Bank Deposit',
+  │       Price: 12.99,
+  │       SelectedShipping: 'rural',
+  │       ShippingPrice: 9.99,
+  │       ShippingType: 4,
+  │       SoldDate: '/Date(1627716945447)/',
+  │       SoldType: 'BUYNOW',
+  │       PaymentInstructions: '',
+  │       PurchaseId: 26318,
+  │       ReferenceNumber: 'P26318',
+  │       SubtotalPrice: 12.99,
+  │       TotalShippingPrice: 9.99,
+  │       TotalSalePrice: 22.98,
+  │       TrackedParcels: [],
+  │       TaxSubTotal: 0,
+  │       HasPaidByDeferredPayment: false
+  │     }
+  │   ]
+  │ }
+  │ 'WonPurchaseId counts to: 1, the purchaseId: 26318'
+  │ 'Post-Transaction: CheckingWonListHaveItems Pass'
+  └
+  √  CheckingWonListHasItems
+
+→ RemoveAPurchaseFromYourWonItemsList
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/26318.JSON [200 OK, 347B, 85ms]
+  ┌
+  │ {
+  │   Success: true,
+  │   Description: 'Success'
+  │ }
+  │ 'Post-Transaction: CheckingDeleteWonItems Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 355B, 59ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: []
+  │ }
+  │ 'Current items count on the won list: 0. All items hav
+  │ e been removed from the won list.'
+  │ 'Post-Transaction: CheckingDeleteWonItems Pass'
+  └
+  √  Checking LastWonPurchaseId: 26318 has been removed
+
+→ GeneralSearch
+  GET https://api.tmsandbox.co.nz/v1/Search/General.JSON?buy=All&rows=500&page=4 [200 OK, 770.05KB, 2.4s]
+  ┌
+  │ 'Post-Transaction: CheckingListingIdHasBuyNow Start'
+  │ 'Page: 4, total items: 500'
+  │ "'HasBuyNow' items counts to: 7, ListingId details: "
+  │ [
+  │   2149295546,
+  │   2149295530,
+  │   2149295054,
+  │   2149296806,
+  │   2149296809,
+  │   2149296813,
+  │   2149296818
+  │ ]
+  │ 'Get random SingleListingId: 2149296806'
+  │ 'Post-Transaction: CheckingListingIdHasBuyNow Pass'
+  └
+  √  GetListingIdHasBuyNow
+
+→ RetrieveTheDetailsOfASingleListing
+  GET https://api.tmsandbox.co.nz/v1/Listings/2149296806.JSON [200 OK, 3.39KB, 114ms]
+  ┌
+  │ 'Post-Transaction: CheckingSingleListingIdDetails Star
+  │ t'
+  │ {
+  │   ListingId: 2149296806,
+  │   Title: 'Samsung Galaxy Note 9 Airbags Case Transpare
+  │ nt',
+  │   Category: '0344-0899-1135-5537-',
+  │   StartPrice: 0,
+  │   BuyNowPrice: 20,
+  │   StartDate: '/Date(1627618031907)/',
+  │   EndDate: '/Date(1627790831907)/',
+  │   ListingLength: null,
+  │   HasGallery: true,
+  │   AsAt: '/Date(1627717158039)/',
+  │   CategoryPath: '/Mobile-phones/Accessories/Cases-cove
+  │ rs/Samsung',
+  │   IsNew: true,
+  │   RegionId: 12,
+  │   Region: 'Wellington',
+  │   SuburbId: 63,
+  │   Suburb: 'Kapiti',
+  │   ViewCount: 7,
+  │   HasBuyNow: true,
+  │   NoteDate: '/Date(0)/',
+  │   CategoryName: 'Samsung',
+  │   ReserveState: 3,
+  │   Attributes: [
+  │     {
+  │       Name: 'Watts',
+  │       DisplayName: 'Watts',
+  │       Value: '5w',
+  │       Type: 4,
+  │       DisplayValue: '5w'
+  │     },
+  │     {
+  │       Name: 'Size',
+  │       DisplayName: 'Size',
+  │       Value: '2pin 16.5 x 3.2 cm',
+  │       Type: 4,
+  │       DisplayValue: '2pin 16.5 x 3.2 cm'
+  │     }
+  │   ],
+  │   OpenHomes: [],
+  │   IsBuyNowOnly: true,
+  │   HasMultiple: true,
+  │   IsFlatShippingCharge: true,
+  │   PriceDisplay: '$20.00 per item',
+  │   AvailableToBuy: '3',
+  │   ListingGroupId: 73389,
+  │   AdditionalData: { BulletPoints: [], Tags: [] },
+  │   UnansweredQuestionCount: 0,
+  │   Member: {
+  │     MemberId: 4000334,
+  │     Nickname: 'paperclip4',
+  │     DateAddressVerified: '/Date(1338811200000)/',
+  │     DateJoined: '/Date(1338811200000)/',
+  │     Email: 'owen4@snipesoft.net.nz',
+  │     UniqueNegative: 0,
+  │     UniquePositive: 4,
+  │     FeedbackCount: 4,
+  │     IsAddressVerified: true,
+  │     Suburb: 'Kapiti',
+  │     Region: 'Wellington',
+  │     IsAuthenticated: true
+  │   },
+  │   Body: 'Samsung Galaxy Note 9 Life Protection Transpa
+  │ rent Shock Proof Case - Brand New\r\n' +
+  │     '\r\n' +
+  │     'BASEUS - Award Winning High-Quality Brand\r\n' +
+  │     '\r\n' +
+  │     '\r\n' +
+  │     '== Baseus Airbag Samsung Galaxy Note 9 Case - Exc
+  │ ellent Cushion Design! ==\r\n' +
+  │     '\r\n' +
+  │     '\r\n' +
+  │     '== Contents ==\r\n' +
+  │     '1x Samsung Galaxy Note 9 Case\r\n' +
+  │     '\r\n' +
+  │     '== Features ==\r\n' +
+  │     '\r\n' +
+  │     'SLIM: Slim Fitting and specifically designed for 
+  │ the Samsung Galaxy Note 9, this case looks perfect on 
+  │ your phone\r\n' +
+  │     'SHOCK PROTECTION: The TPU material combined with 
+  │ Built-in Airbags provides a Shock and Knock Resistance
+  │  by dispersing the energy across the frame of the case
+  │ , adding a little cushioning to your Samsung Galaxy No
+  │ te 9\r\n' +
+  │     'SIMPLE DESIGN: Smooth Transparent TPU and a Logo 
+  │ Placement that has your Samsung Galaxy Note 9 Case Loo
+  │ king Stylishly Protected\r\n' +
+  │     'QUALITY MATERIAL: The High-Quality Imported Germa
+  │ n Buyer TPU combines Flexibility and Strength. This Sa
+  │ msung Galaxy Note 9 case will Protect your phone while
+  │  the Slim design will add little Bulk\r\n' +
+  │     'ANTI-SWEAT CASE: The Premium TPU material Protect
+  │ s from Watermarks, Fingerprints and has Anti-Yellowing
+  │  properties, keeping the Samsung Galaxy Note 9 Case lo
+  │ oking Fresh\r\n' +
+  │     'WIRELESS CHARGING CAPABLE: You can Still Wireless
+  │ ly charge your phone with this Samsung Galaxy Note 9 C
+  │ ase still on\r\n' +
+  │     'EASY INSTALLATION: The soft TPU allows for Easy I
+  │ nstallation and Disassembly with this Samsung Galaxy N
+  │ ote 9 Case without harming the phone\r\n' +
+  │     'CAMERA PROTECTION: This Samsung Galaxy Note 9 cas
+  │ e sits higher than the Camera to Protect from scrapes 
+  │ and scratches\r\n' +
+  │     'ALL-AROUND PROTECTION: Tough and durable, this Sa
+  │ msung Galaxy Note 9 Case provides All-side Protection 
+  │ against Daily Wear and Tear\r\n' +
+  │     'PERFECT FIT: The Samsung Galaxy Note 9 case fits 
+  │ Perfectly around your phone with Precise Cutouts and A
+  │ ligned Buttons\r\n' +
+  │     'PROFESSIONAL PACKAGING: Professional Baseus packa
+  │ ging protects this Samsung Galaxy Note 9 Case during p
+  │ ostage',
+  │   Questions: {
+  │     TotalCount: 2,
+  │     Page: 1,
+  │     PageSize: 2,
+  │     List: [
+  │       {
+  │         ListingId: 2149296806,
+  │         ListingQuestionId: 357231,
+  │         Comment: 'this is a test universal auction com
+  │ ment 1',
+  │         CommentDate: '/Date(1627618267270)/',
+  │         IsSellerComment: true,
+  │         Answer: '',
+  │         AnswerDate: '/Date(0)/',
+  │         AskingMember: {
+  │           MemberId: 4000334,
+  │           Nickname: 'paperclip4',
+  │           DateAddressVerified: '/Date(1338811200000)/'
+  │ ,
+  │           DateJoined: '/Date(1338811200000)/',
+  │           UniqueNegative: 0,
+  │           UniquePositive: 4,
+  │           FeedbackCount: 4,
+  │           IsAddressVerified: true,
+  │           IsAuthenticated: true
+  │         }
+  │       },
+  │       {
+  │         ListingId: 2149296806,
+  │         ListingQuestionId: 357250,
+  │         Comment: 'this is a test universal auction com
+  │ ment 2',
+  │         CommentDate: '/Date(1627618313940)/',
+  │         IsSellerComment: true,
+  │         Answer: '',
+  │         AnswerDate: '/Date(0)/',
+  │         AskingMember: {
+  │           MemberId: 4000334,
+  │           Nickname: 'paperclip4',
+  │           DateAddressVerified: '/Date(1338811200000)/'
+  │ ,
+  │           DateJoined: '/Date(1338811200000)/',
+  │           UniqueNegative: 0,
+  │           UniquePositive: 4,
+  │           FeedbackCount: 4,
+  │           IsAddressVerified: true,
+  │           IsAuthenticated: true
+  │         }
+  │       }
+  │     ]
+  │   },
+  │   Photos: [],
+  │   AllowsPickups: 3,
+  │   ShippingOptions: [
+  │     {
+  │       Type: 4,
+  │       Price: 6,
+  │       Method: 'non rural',
+  │       ShippingId: 4
+  │     },
+  │     {
+  │       Type: 4,
+  │       Price: 10,
+  │       Method: 'rural',
+  │       ShippingId: 5
+  │     }
+  │   ],
+  │   PaymentOptions: 'Cash, NZ Bank Deposit',
+  │   Sales: [
+  │     {
+  │       PurchaseId: 26263,
+  │       ReferenceNumber: 'P26263',
+  │       SoldDate: '/Date(1627619756110)/',
+  │       Method: 1,
+  │       SelectedShipping: 'non rural',
+  │       ShippingPrice: 6,
+  │       ShippingType: 4,
+  │       QuantitySold: 1,
+  │       Price: 20,
+  │       SubtotalPrice: 20,
+  │       TotalShippingPrice: 6,
+  │       TotalSalePrice: 26,
+  │       TaxSubTotals: []
+  │     },
+  │     {
+  │       PurchaseId: 26264,
+  │       ReferenceNumber: 'P26264',
+  │       SoldDate: '/Date(1627620741857)/',
+  │       Method: 1,
+  │       SelectedShipping: 'rural',
+  │       ShippingPrice: 10,
+  │       ShippingType: 4,
+  │       QuantitySold: 1,
+  │       Price: 20,
+  │       SubtotalPrice: 20,
+  │       TotalShippingPrice: 10,
+  │       TotalSalePrice: 30,
+  │       TaxSubTotals: []
+  │     },
+  │     {
+  │       PurchaseId: 26276,
+  │       ReferenceNumber: 'P26276',
+  │       SoldDate: '/Date(1627634770907)/',
+  │       Method: 1,
+  │       SelectedShipping: 'rural',
+  │       ShippingPrice: 10,
+  │       ShippingType: 4,
+  │       QuantitySold: 1,
+  │       Price: 20,
+  │       SubtotalPrice: 20,
+  │       TotalShippingPrice: 10,
+  │       TotalSalePrice: 30,
+  │       TaxSubTotals: []
+  │     },
+  │     {
+  │       PurchaseId: 26288,
+  │       ReferenceNumber: 'P26288',
+  │       SoldDate: '/Date(1627689347667)/',
+  │       Method: 1,
+  │       SelectedShipping: 'rural',
+  │       ShippingPrice: 10,
+  │       ShippingType: 4,
+  │       QuantitySold: 1,
+  │       Price: 20,
+  │       SubtotalPrice: 20,
+  │       TotalShippingPrice: 10,
+  │       TotalSalePrice: 30,
+  │       TaxSubTotals: []
+  │     },
+  │     {
+  │       PurchaseId: 26293,
+  │       ReferenceNumber: 'P26293',
+  │       SoldDate: '/Date(1627710146093)/',
+  │       Method: 1,
+  │       SelectedShipping: 'non rural',
+  │       ShippingPrice: 6,
+  │       ShippingType: 4,
+  │       QuantitySold: 1,
+  │       Price: 20,
+  │       SubtotalPrice: 20,
+  │       TotalShippingPrice: 6,
+  │       TotalSalePrice: 26,
+  │       TaxSubTotals: []
+  │     },
+  │     {
+  │       PurchaseId: 26299,
+  │       ReferenceNumber: 'P26299',
+  │       SoldDate: '/Date(1627711633557)/',
+  │       Method: 1,
+  │       SelectedShipping: 'rural',
+  │       ShippingPrice: 10,
+  │       ShippingType: 4,
+  │       QuantitySold: 1,
+  │       Price: 20,
+  │       SubtotalPrice: 20,
+  │       TotalShippingPrice: 10,
+  │       TotalSalePrice: 30,
+  │       TaxSubTotals: []
+  │     }
+  │   ],
+  │   CanAddToCart: false,
+  │   EmbeddedContent: {},
+  │   SupportsQuestionsAndAnswers: true,
+  │   PaymentMethods: [
+  │     { Id: 2, Name: 'Credit Card' },
+  │     { Id: 4, Name: 'Cash' },
+  │     {
+  │       Id: 1,
+  │       Name: 'NZ Bank Deposit'
+  │     }
+  │   ],
+  │   BoundaryImage: {
+  │     Thumbnail: null,
+  │     List: null,
+  │     Medium: null,
+  │     Gallery: null,
+  │     Large: null,
+  │     FullSize: null,
+  │     PhotoId: 0
+  │   },
+  │   RenderOptions: [ 2 ],
+  │   AreaOfBusiness: 1
+  │ }
+  │ 'ListingId: 2149296806, ShippingId: 4, and Method: non
+  │  rural'
+  │ 'Post-Transaction: CheckingSingleListingIdDetails Pass
+  │ '
+  └
+  √  CheckingSingleListingIdDetails
+
+→ BuyAnAuctionUsingBuyNow
+  POST https://api.tmsandbox.co.nz/v1/Bidding/BuyNow.JSON [200 OK, 412B, 200ms]
+  ┌
+  │ 'Post-Transaction: CheckingBuyNow Start'
+  │ {
+  │   Success: true,
+  │   Description: "Seller's email owen4@snipesoft.net.nz"
+  │ ,
+  │   StatusCode: 0,
+  │   PurchaseId: 26319
+  │ }
+  │ 'Get sucessful StatusCode: 0 (0-Success)'
+  │ 'Post-Transaction: CheckingBuyNow Pass'
+  └
+  √  CheckingBuyNowSuccess
+  ┌
+  │ 'Post-Transaction: CheckingPurchasedItemOnWonList Star
+  │ t'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 1.31KB, 59ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149296806,
+  │       Title: 'Samsung Galaxy Note 9 Airbags Case Trans
+  │ parent',
+  │       Category: '0344-0899-1135-5537-',
+  │       StartPrice: 0,
+  │       StartDate: '/Date(1627618031907)/',
+  │       EndDate: '/Date(1627717158400)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627717158523)/',
+  │       CategoryPath: '/Mobile-phones/Accessories/Cases-
+  │ covers/Samsung',
+  │       Seller: {
+  │         MemberId: 4000334,
+  │         Nickname: 'paperclip4',
+  │         DateAddressVerified: '/Date(1338811200000)/',
+  │         DateJoined: '/Date(1338811200000)/',
+  │         Email: 'owen4@snipesoft.net.nz',
+  │         UniqueNegative: 0,
+  │         UniquePositive: 4,
+  │         FeedbackCount: 4,
+  │         IsAddressVerified: true
+  │       },
+  │       IsNew: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Samsung',
+  │       ReserveState: 3,
+  │       IsBuyNowOnly: true,
+  │       Quantity: 1,
+  │       IsFlatShippingCharge: true,
+  │       Options: [
+  │         {
+  │           Name: 'Watts',
+  │           Value: '5w'
+  │         },
+  │         {
+  │           Name: 'Size',
+  │           Value: '2pin 16.5 x 3.2 cm'
+  │         }
+  │       ],
+  │       ListingGroupId: 73389,
+  │       StatusDate: '/Date(0)/',
+  │       AuctionAttribute: '',
+  │       BuyerFeedbackPlaced: 0,
+  │       SellerFeedbackPlaced: 0,
+  │       DeliveryId: 0,
+  │       FpoDecisionViaMobile: false,
+  │       HasPaidByCreditCard: false,
+  │       InvoiceId: 0,
+  │       OfferId: 0,
+  │       PaymentInfo: 'Cash, NZ Bank Deposit',
+  │       Price: 20,
+  │       SelectedShipping: 'non rural',
+  │       ShippingPrice: 6,
+  │       ShippingType: 4,
+  │       SoldDate: '/Date(1627717158400)/',
+  │       SoldType: 'BUYNOW',
+  │       PaymentInstructions: '',
+  │       PurchaseId: 26319,
+  │       ReferenceNumber: 'P26319',
+  │       SubtotalPrice: 20,
+  │       TotalShippingPrice: 6,
+  │       TotalSalePrice: 26,
+  │       TrackedParcels: [],
+  │       TaxSubTotal: 0,
+  │       HasPaidByDeferredPayment: false
+  │     }
+  │   ]
+  │ }
+  │ 'Found PurchaseId 26319 and ListingId 2149296806 exist
+  │ s on the won list'
+  │ 'Post-Transaction: CheckingPurchasedItemOnWonList Pass
+  │ '
+  └
+  √  Checking NewPurchasedListId existed in the won list
+
+┌─────────────────────────┬────────────────────┬───────────────────┐
+│                         │           executed │            failed │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│              iterations │                  1 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│                requests │                 16 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│            test-scripts │                 20 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│      prerequest-scripts │                 19 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│              assertions │                 13 │                 0 │
+├─────────────────────────┴────────────────────┴───────────────────┤
+│ total run duration: 5.9s                                         │
+├──────────────────────────────────────────────────────────────────┤
+│ total data received: 856.18KB (approx)                           │
+├──────────────────────────────────────────────────────────────────┤
+│ average response time: 261ms [min: 46ms, max: 2.4s, s.d.: 581ms] │
+└──────────────────────────────────────────────────────────────────┘
