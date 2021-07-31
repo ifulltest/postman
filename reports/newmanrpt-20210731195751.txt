@@ -1,0 +1,704 @@
+newman
+
+tradeMeSandBox
+
+→ RetrieveGeneralCategories
+  GET https://api.tmsandbox.co.nz/v1/Categories.JSON?depth=1 [200 OK, 1.54KB, 11.4s]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofGivenSubcategory
+  │  Start'
+  │ 'Subcategories counts to: 27'
+  │ 'All subcategories name listed below: '
+  │ [
+  │   'Trade Me Motors',
+  │   'Trade Me Property',
+  │   'Trade Me Jobs',
+  │   'Antiques & collectables',
+  │   'Art',
+  │   'Baby gear',
+  │   'Books',
+  │   'Building & renovation',
+  │   'Business, farming & industry',
+  │   'Clothing & Fashion',
+  │   'Computers',
+  │   'Crafts',
+  │   'Electronics & photography',
+  │   'Flatmates wanted',
+  │   'Gaming',
+  │   'Health & beauty',
+  │   'Home & living',
+  │   'Jewellery & watches',
+  │   'Mobile phones',
+  │   'Movies & TV',
+  │   'Music & instruments',
+  │   'Pets & animals',
+  │   'Pottery & glass',
+  │   'Services',
+  │   'Sports',
+  │   'Toys & models',
+  │   'Travel, events & activities'
+  │ ]
+  │ 'Subcategory - Antiques & collectables existed'
+  │ 'Post-Transaction: CheckingtheCountsofGivenSubcategory
+  │  Pass'
+  └
+  √  Checking all subcategories returned, and the given subcategory exists in
+
+→ RetrieveYourWatchlist
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/All.JSON [200 OK, 1.27KB, 61ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofWatchList Start'
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149295683,
+  │       Title: 'New Ican Hand Lubricant Pump',
+  │       Category: '0010-0396-3796-8815-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1627268092630)/',
+  │       EndDate: '/Date(1627872892630)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627718286817)/',
+  │       CategoryPath: '/Business-farming-industry/Indust
+  │ rial/Compressors-pumps/Pumps',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/6718168.jpg',
+  │       PhotoId: 6718168,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Pumps',
+  │       Attributes: [],
+  │       Subtitle: "SKYLARC'S ENGINE RECONDITIONERS AUCTI
+  │ ON",
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0010-',
+  │       Name: 'Business, farming & industry',
+  │       CategoryId: 10
+  │     }
+  │   ]
+  │ }
+  │ 'Found 1 item on the watch list'
+  │ 'Post-Transaction: CheckingtheCountsofWatchList Pass'
+  └
+  √  Checking if there are any items in the watch list
+
+→ RemoveAListingFromYourWatchlist
+  ┌
+  │ 'Pre-Transaction: RetrieveYourWatchlist Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 1.27KB, 54ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149295683,
+  │       Title: 'New Ican Hand Lubricant Pump',
+  │       Category: '0010-0396-3796-8815-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1627268092630)/',
+  │       EndDate: '/Date(1627872892630)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627718287036)/',
+  │       CategoryPath: '/Business-farming-industry/Indust
+  │ rial/Compressors-pumps/Pumps',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/6718168.jpg',
+  │       PhotoId: 6718168,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Pumps',
+  │       Attributes: [],
+  │       Subtitle: "SKYLARC'S ENGINE RECONDITIONERS AUCTI
+  │ ON",
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0010-',
+  │       Name: 'Business, farming & industry',
+  │       CategoryId: 10
+  │     }
+  │   ]
+  │ }
+  │ 'All the can be deleted ListingId on the Watchlist: '
+  │ '2149295683'
+  │ 'Pre-Transaction: RetrieveYourWatchlist Pass'
+  └
+  √  Get all ListingId on the Watchlist
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149295683.JSON [200 OK, 346B, 90ms]
+  ┌
+  │ 'Post-Transaction: RetrieveYourWatchlist Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 375B, 63ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: [],
+  │   FoundCategories: []
+  │ }
+  │ 'Current count of ListingId that can be deleted in the
+  │  watchlist: 0'
+  └
+  √  Checking LastListingId: 2149295683 has been deleted
+  ┌
+  │ 'Post-Transaction: RetrieveYourWatchlist Pass'
+  └
+
+→ RetrieveClosingSoonListings
+  GET https://api.tmsandbox.co.nz/v1/Listings/closing.JSON?rows=1000 [200 OK, 39KB, 257ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofClosingSoonListi
+  │ ngs Start'
+  │ 'Found 250 items in the Closing Soon Listings'
+  │ 'Post-Transaction: CheckingtheCountsofClosingSoonListi
+  │ ngs Pass'
+  └
+  √  Checking if there are any items in the Closing Soon Listings
+
+→ AddAListingToYourWatchlist
+  ┌
+  │ 'Pre-Transaction: RetrieveClosingSoonListings Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/Listings/closing.JSON?rows=1000 [200 OK, 39.02KB, 200ms]
+  √  Get all the closing soon ListingId
+  ┌
+  │ 'From 250 closing soon items randomly choose the: 2149
+  │ 296839 waiting to be added to the watchlist'
+  │ 'Pre-Transaction: RetrieveClosingSoonListings Pass'
+  └
+  POST https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149296839.JSON [200 OK, 346B, 143ms]
+  ┌
+  │ 'Post-Transaction: CheckingAddToWatchList Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 1.08KB, 63ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149296839,
+  │       Title: 'testing testing virtual for MVL-qty list
+  │ ing-automatic',
+  │       Category: '0153-0438-3756-',
+  │       StartPrice: 0,
+  │       BuyNowPrice: 22,
+  │       StartDate: '/Date(1627618034343)/',
+  │       EndDate: '/Date(1627790834343)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627718288536)/',
+  │       CategoryPath: '/Clothing-Fashion/Men/Tshirts',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4192296.jpg',
+  │       PhotoId: 4192296,
+  │       IsNew: true,
+  │       RegionId: 12,
+  │       Region: 'Wellington',
+  │       Suburb: 'Kapiti',
+  │       HasBuyNow: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'T-shirts',
+  │       ReserveState: 3,
+  │       Attributes: [],
+  │       IsBuyNowOnly: true,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$22.00 per item',
+  │       Options: [
+  │         {
+  │           Name: 'Color',
+  │           Value: 'Blue'
+  │         },
+  │         {
+  │           Name: 'Size',
+  │           Value: 'S'
+  │         }
+  │       ],
+  │       ListingGroupId: 73396,
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0153-',
+  │       Name: 'Clothing & Fashion',
+  │       CategoryId: 153
+  │     }
+  │   ]
+  │ }
+  │ 'ListingId 2149296839 has been added to the watchlist'
+  └
+  √  Checking ListingId 2149296839 has been added
+  ┌
+  │ 'Post-Transaction: CheckingAddToWatchList Pass'
+  └
+
+→ RetrieveYourWonItems
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 1.33KB, 55ms]
+  ┌
+  │ 'Post-Transaction: CheckingWonListHaveItems Start'
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149295054,
+  │       Title: 'MP63-02 - Blue Hare',
+  │       Category: '0004-1511-2375-4228-',
+  │       StartPrice: 0,
+  │       StartDate: '/Date(1626922696263)/',
+  │       EndDate: '/Date(1627717240617)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627718288724)/',
+  │       CategoryPath: '/Home-living/Home-décor/Ornaments
+  │ -sculptures/Other-animals',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4550302.jpg',
+  │       PhotoId: 4550302,
+  │       Seller: {
+  │         MemberId: 4001915,
+  │         Nickname: 'myprodo63',
+  │         DateAddressVerified: '/Date(1414666800000)/',
+  │         DateJoined: '/Date(1414666800000)/',
+  │         Email: 'myprodo63@abcde.com',
+  │         UniqueNegative: 3,
+  │         UniquePositive: 29,
+  │         FeedbackCount: 26,
+  │         IsAddressVerified: true
+  │       },
+  │       IsNew: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Other animals',
+  │       ReserveState: 3,
+  │       IsBuyNowOnly: true,
+  │       Quantity: 1,
+  │       IsClearance: true,
+  │       WasPrice: 19.9,
+  │       PercentageOff: 35,
+  │       StatusDate: '/Date(0)/',
+  │       AuctionAttribute: '',
+  │       BuyerFeedbackPlaced: 0,
+  │       SellerFeedbackPlaced: 0,
+  │       DeliveryId: 0,
+  │       FpoDecisionViaMobile: false,
+  │       HasPaidByCreditCard: false,
+  │       InvoiceId: 0,
+  │       OfferId: 0,
+  │       PaymentInfo: 'Cash, NZ Bank Deposit',
+  │       Price: 13,
+  │       SelectedShipping: 'Buyer to pick-up',
+  │       ShippingPrice: 0,
+  │       ShippingType: 2,
+  │       SoldDate: '/Date(1627717240617)/',
+  │       SoldType: 'BUYNOW',
+  │       PaymentInstructions: '',
+  │       PurchaseId: 26322,
+  │       ReferenceNumber: 'P26322',
+  │       SubtotalPrice: 13,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 13,
+  │       TrackedParcels: [],
+  │       TaxSubTotal: 0,
+  │       HasPaidByDeferredPayment: false
+  │     }
+  │   ]
+  │ }
+  │ 'WonPurchaseId counts to: 1, the purchaseId: 26322'
+  │ 'Post-Transaction: CheckingWonListHaveItems Pass'
+  └
+  √  CheckingWonListHasItems
+
+→ RemoveAPurchaseFromYourWonItemsList
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/26322.JSON [200 OK, 346B, 67ms]
+  ┌
+  │ {
+  │   Success: true,
+  │   Description: 'Success'
+  │ }
+  │ 'Post-Transaction: CheckingDeleteWonItems Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 354B, 50ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: []
+  │ }
+  │ 'Current items count on the won list: 0. All items hav
+  │ e been removed from the won list.'
+  │ 'Post-Transaction: CheckingDeleteWonItems Pass'
+  └
+  √  Checking LastWonPurchaseId: 26322 has been removed
+
+→ GeneralSearch
+  GET https://api.tmsandbox.co.nz/v1/Search/General.JSON?buy=All&rows=500&page=4 [200 OK, 770.05KB, 2.5s]
+  ┌
+  │ 'Post-Transaction: CheckingListingIdHasBuyNow Start'
+  │ 'Page: 4, total items: 500'
+  │ "'HasBuyNow' items counts to: 7, ListingId details: "
+  │ [
+  │   2149295546,
+  │   2149295530,
+  │   2149295054,
+  │   2149296806,
+  │   2149296809,
+  │   2149296813,
+  │   2149296818
+  │ ]
+  │ 'Get random SingleListingId: 2149295530'
+  │ 'Post-Transaction: CheckingListingIdHasBuyNow Pass'
+  └
+  √  GetListingIdHasBuyNow
+
+→ RetrieveTheDetailsOfASingleListing
+  GET https://api.tmsandbox.co.nz/v1/Listings/2149295530.JSON [200 OK, 2.02KB, 127ms]
+  ┌
+  │ 'Post-Transaction: CheckingSingleListingIdDetails Star
+  │ t'
+  │ {
+  │   ListingId: 2149295530,
+  │   Title: 'WTF Mug',
+  │   Category: '0004-0371-3448-5881-',
+  │   StartPrice: 0,
+  │   BuyNowPrice: 17.25,
+  │   StartDate: '/Date(1627240700667)/',
+  │   EndDate: '/Date(1627786080000)/',
+  │   ListingLength: null,
+  │   HasGallery: true,
+  │   AsAt: '/Date(1627718291896)/',
+  │   CategoryPath: '/Home-living/Kitchen/Cups-glasses/Mug
+  │ s',
+  │   PhotoId: 4549038,
+  │   IsNew: true,
+  │   RegionId: 12,
+  │   Region: 'Wellington',
+  │   SuburbId: 67,
+  │   Suburb: 'Wellington City',
+  │   ViewCount: 4,
+  │   HasBuyNow: true,
+  │   NoteDate: '/Date(0)/',
+  │   CategoryName: 'Mugs',
+  │   ReserveState: 3,
+  │   Attributes: [],
+  │   OpenHomes: [],
+  │   IsBuyNowOnly: true,
+  │   HasMultiple: true,
+  │   IsFlatShippingCharge: true,
+  │   PriceDisplay: '$17.25 per item',
+  │   AvailableToBuy: '2',
+  │   AdditionalData: { BulletPoints: [], Tags: [] },
+  │   Member: {
+  │     MemberId: 4003082,
+  │     Nickname: 'conundrum',
+  │     DateAddressVerified: '/Date(1440676800000)/',
+  │     DateJoined: '/Date(1440676800000)/',
+  │     Email: 'mp70@abcde.com',
+  │     UniqueNegative: 3,
+  │     UniquePositive: 20,
+  │     FeedbackCount: 17,
+  │     IsAddressVerified: true,
+  │     Suburb: 'Wellington City',
+  │     Region: 'Wellington',
+  │     IsAuthenticated: true,
+  │     IsInTrade: true,
+  │     IsTopSeller: true
+  │   },
+  │   Body: 'After Monday and Tuesday comes ...\r\n' +
+  │     '\r\n' +
+  │     'Check out our other hot listings!',
+  │   Photos: [
+  │     {
+  │       Key: 4549038,
+  │       Value: {
+  │         Thumbnail: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4549038.jpg',
+  │         List: 'https://images.tmsandbox.co.nz/photoser
+  │ ver/lv2/4549038.jpg',
+  │         Medium: 'https://images.tmsandbox.co.nz/photos
+  │ erver/med/4549038.jpg',
+  │         Gallery: 'https://images.tmsandbox.co.nz/photo
+  │ server/gv/4549038.jpg',
+  │         Large: 'https://images.tmsandbox.co.nz/photose
+  │ rver/tq/4549038.jpg',
+  │         FullSize: 'https://images.tmsandbox.co.nz/phot
+  │ oserver/full/4549038.jpg',
+  │         PhotoId: 4549038,
+  │         OriginalWidth: 612,
+  │         OriginalHeight: 613
+  │       }
+  │     }
+  │   ],
+  │   AllowsPickups: 1,
+  │   ShippingOptions: [
+  │     {
+  │       Type: 4,
+  │       Price: 3.5,
+  │       Method: 'Tracked metro courier',
+  │       ShippingId: 4
+  │     },
+  │     {
+  │       Type: 4,
+  │       Price: 5.75,
+  │       Method: 'Tracked rural courier',
+  │       ShippingId: 5
+  │     },
+  │     {
+  │       Type: 2,
+  │       Price: 0,
+  │       Method: 'I intend to pick-up',
+  │       ShippingId: 2
+  │     }
+  │   ],
+  │   PaymentOptions: 'NZ Bank Deposit',
+  │   Store: {
+  │     Name: 'MP70',
+  │     LogoImageUri: 'https://images.tmsandbox.co.nz/tm/s
+  │ tores/none_30.png',
+  │     BannerImageUri: 'https://images.tmsandbox.co.nz/tm
+  │ /stores/none_27.png',
+  │     ShortDescription: '',
+  │     StorePath: 'MP70',
+  │     Location: 'Wellington City, Wellington',
+  │     PhoneNumber: '',
+  │     Website: ''
+  │   },
+  │   Sales: [
+  │     {
+  │       PurchaseId: 26238,
+  │       ReferenceNumber: 'P26238',
+  │       SoldDate: '/Date(1627377997040)/',
+  │       Method: 1,
+  │       SelectedShipping: 'Buyer to pick-up',
+  │       ShippingType: 2,
+  │       QuantitySold: 1,
+  │       Price: 17.25,
+  │       SubtotalPrice: 17.25,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 17.25,
+  │       TaxSubTotals: []
+  │     },
+  │     {
+  │       PurchaseId: 26281,
+  │       ReferenceNumber: 'P26281',
+  │       SoldDate: '/Date(1627685836630)/',
+  │       Method: 1,
+  │       SelectedShipping: 'Buyer to pick-up',
+  │       ShippingType: 2,
+  │       QuantitySold: 1,
+  │       Price: 17.25,
+  │       SubtotalPrice: 17.25,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 17.25,
+  │       TaxSubTotals: []
+  │     },
+  │     {
+  │       PurchaseId: 26320,
+  │       ReferenceNumber: 'P26320',
+  │       SoldDate: '/Date(1627717166900)/',
+  │       Method: 1,
+  │       SelectedShipping: 'Buyer to pick-up',
+  │       ShippingType: 2,
+  │       QuantitySold: 1,
+  │       Price: 17.25,
+  │       SubtotalPrice: 17.25,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 17.25,
+  │       TaxSubTotals: []
+  │     }
+  │   ],
+  │   IsInTradeProtected: true,
+  │   CanAddToCart: false,
+  │   EmbeddedContent: {},
+  │   SupportsQuestionsAndAnswers: true,
+  │   PaymentMethods: [
+  │     {
+  │       Id: 1,
+  │       Name: 'NZ Bank Deposit'
+  │     }
+  │   ],
+  │   BoundaryImage: {
+  │     Thumbnail: null,
+  │     List: null,
+  │     Medium: null,
+  │     Gallery: null,
+  │     Large: null,
+  │     FullSize: null,
+  │     PhotoId: 0
+  │   },
+  │   RenderOptions: [ 2 ],
+  │   AreaOfBusiness: 1
+  │ }
+  │ 'ListingId: 2149295530, ShippingId: 2, and Method: I i
+  │ ntend to pick-up'
+  │ 'Post-Transaction: CheckingSingleListingIdDetails Pass
+  │ '
+  └
+  √  CheckingSingleListingIdDetails
+
+→ BuyAnAuctionUsingBuyNow
+  POST https://api.tmsandbox.co.nz/v1/Bidding/BuyNow.JSON [200 OK, 402B, 240ms]
+  ┌
+  │ 'Post-Transaction: CheckingBuyNow Start'
+  │ {
+  │   Success: true,
+  │   Description: "Seller's email mp70@abcde.com",
+  │   StatusCode: 0,
+  │   PurchaseId: 26323
+  │ }
+  │ 'Get sucessful StatusCode: 0 (0-Success)'
+  │ 'Post-Transaction: CheckingBuyNow Pass'
+  └
+  √  CheckingBuyNowSuccess
+  ┌
+  │ 'Post-Transaction: CheckingPurchasedItemOnWonList Star
+  │ t'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 1.26KB, 55ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149295530,
+  │       Title: 'WTF Mug',
+  │       Category: '0004-0371-3448-5881-',
+  │       StartPrice: 0,
+  │       StartDate: '/Date(1627240700667)/',
+  │       EndDate: '/Date(1627718292287)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1627718292411)/',
+  │       CategoryPath: '/Home-living/Kitchen/Cups-glasses
+  │ /Mugs',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4549038.jpg',
+  │       PhotoId: 4549038,
+  │       Seller: {
+  │         MemberId: 4003082,
+  │         Nickname: 'conundrum',
+  │         DateAddressVerified: '/Date(1440676800000)/',
+  │         DateJoined: '/Date(1440676800000)/',
+  │         Email: 'mp70@abcde.com',
+  │         UniqueNegative: 3,
+  │         UniquePositive: 20,
+  │         FeedbackCount: 17,
+  │         IsAddressVerified: true
+  │       },
+  │       IsNew: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Mugs',
+  │       ReserveState: 3,
+  │       IsBuyNowOnly: true,
+  │       Quantity: 1,
+  │       StatusDate: '/Date(0)/',
+  │       AuctionAttribute: '',
+  │       BuyerFeedbackPlaced: 0,
+  │       SellerFeedbackPlaced: 0,
+  │       DeliveryId: 0,
+  │       FpoDecisionViaMobile: false,
+  │       HasPaidByCreditCard: false,
+  │       InvoiceId: 0,
+  │       OfferId: 0,
+  │       PaymentInfo: 'NZ Bank Deposit',
+  │       Price: 17.25,
+  │       SelectedShipping: 'Buyer to pick-up',
+  │       ShippingPrice: 0,
+  │       ShippingType: 2,
+  │       SoldDate: '/Date(1627718292287)/',
+  │       SoldType: 'BUYNOW',
+  │       PaymentInstructions: '',
+  │       PurchaseId: 26323,
+  │       ReferenceNumber: 'P26323',
+  │       SubtotalPrice: 17.25,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 17.25,
+  │       TrackedParcels: [],
+  │       TaxSubTotal: 0,
+  │       HasPaidByDeferredPayment: false
+  │     }
+  │   ]
+  │ }
+  │ 'Found PurchaseId 26323 and ListingId 2149295530 exist
+  │ s on the won list'
+  │ 'Post-Transaction: CheckingPurchasedItemOnWonList Pass
+  │ '
+  └
+  √  Checking NewPurchasedListId existed in the won list
+
+┌─────────────────────────┬────────────────────┬───────────────────┐
+│                         │           executed │            failed │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│              iterations │                  1 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│                requests │                 16 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│            test-scripts │                 20 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│      prerequest-scripts │                 19 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│              assertions │                 13 │                 0 │
+├─────────────────────────┴────────────────────┴───────────────────┤
+│ total run duration: 17.4s                                        │
+├──────────────────────────────────────────────────────────────────┤
+│ total data received: 854.72KB (approx)                           │
+├──────────────────────────────────────────────────────────────────┤
+│ average response time: 966ms [min: 50ms, max: 11.4s, s.d.: 2.7s] │
+└──────────────────────────────────────────────────────────────────┘
