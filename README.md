@@ -1,3 +1,31 @@
+## Repository Instructions of Trademe API Automation Practice realized by Postman
+
+- #### [GitHub repository entry](https://github.com/ifulltest/postman)
+
+- #### [Repository instructions entry](https://ifulltest.github.io/postman/)
+
+- #### This repository stores the Trade Me API automation practice-related documents.
+
+- #### **[Trade Me](https://www.trademe.co.nz/)** is New Zealand's largest online auction and classifieds website.
+
+- #### This practice aims to represent the API automation testing plus the CI process.
+
+- #### The main tools and their usage used in the practice are as below:
+
+  **Postman** - API testing tool, 
+
+  **Newman** - Postman API testing reports generating tool, 
+
+  **Git Bash** - Transfers files between local and GitHub.
+
+  **GitHub** - Stores the repository of this practice.
+
+  **JDK** - Jenkins runtime environment, 
+
+  **Jenkins** - CICD tool, 
+
+  **Node.js** - back-end JavaScript runtime environment.
+
 ## Repository structure
 
 ![](https://ifulltest.github.io/images/tm-readme-repository-structure1.webp)
