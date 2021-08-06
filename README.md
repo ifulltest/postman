@@ -1,8 +1,8 @@
-## Repository Instructions of Trademe API Automation Practice realized by Postman
+## Repository instructions of trademe API automation practice realized by Postman
 
-- #### [GitHub repository entry](https://github.com/ifulltest/postman)
+- #### [GitHub repository entrance](https://github.com/ifulltest/postman)
 
-- #### [Repository instructions entry](https://ifulltest.github.io/postman/)
+- #### [Repository instructions entrance](https://ifulltest.github.io/postman/)
 
 - #### This repository stores the Trade Me API automation practice-related documents.
 
@@ -44,7 +44,7 @@
 
   ##### 	Temporary data, such as the timestamp when generating positive or negative case reports, will be stored in other data files. 
 
-- #### node_modules
+- #### node_modules - Node.js component, Jenkins email-related method stores here
 
   ##### 		...
 
@@ -149,7 +149,7 @@ Demo product selection -> Demo product API instruction documents -> Demo product
 - #### Demo product API instruction documents
 
 
-#####  [Trademe development documents entry](https://developer.trademe.co.nz/)
+#####  [Trademe development documents entrance](https://developer.trademe.co.nz/)
 
 ![](https://ifulltest.github.io/images/tm-development-documents.webp)
 
