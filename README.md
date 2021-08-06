@@ -32,41 +32,47 @@
 
 - #### Collections - store API automation testing related scripts
 
-  ##### 		nodemailer.js - email stakeholder the testing reports by this script
+![](https://ifulltest.github.io/images/tm-readme-collections.webp)
 
-  ##### 		tradeMeSandBox.postman_collection.json - Postman positive cases script
+##### 			nodemailer.js - email stakeholder the testing reports by this script
 
-  ##### 		tradeMeSandBox-Negative.postman_collection.json - Postman negative cases script
+##### 			tradeMeSandBox.postman_collection.json - Postman positive cases script
+
+##### 			tradeMeSandBox-Negative.postman_collection.json - Postman negative cases script
+
+##### 	Related scripts in the process of completing the API automation testing will all be stored here. 
 
 - #### data - store API automation testing related environment variables and temp data
 
-  ##### 		tradeMeSandBox.postman_environment.json - Postman environment variables
+##### 		    tradeMeSandBox.postman_environment.json - Postman environment variables
 
-  ##### 	Temporary data, such as the timestamp when generating positive or negative case reports, will be stored in other data files. 
+##### 		Related temporary data will all be stored here. 
 
 - #### node_modules - Node.js component, Jenkins email-related method stores here
 
-  ##### 		...
+![](https://ifulltest.github.io/images/tm-readme-node_modules.webp)
 
-  ##### 		moment - As one of the Node.js modules, it is invoked by the nodemailer.js when getting the current time.
+##### 			moment - As one of the Node.js modules, it is invoked by the nodemailer.js when getting the current time.
 
-  ##### 		...
+##### 			nodemailer - As one of the Node.js modules, it is invoked by the nodemailer.js when sending the email to stakeholders.
 
-  ##### 		nodemailer - As one of the Node.js modules, it is invoked by the nodemailer.js when sending the email to stakeholders.
+##### 	Node.js-related method will all be stored here.
+
+...
 
 - #### reports
 
-  ##### 		newmanrpt-yyyymmddhhmimiss.html - Postman positive cases HTML report file.
-
-  ##### 		newmanrpt-yyyymmddhhmimiss.txt - Postman positive cases TXT report file.
-
-  ##### 		newmanrpt-yyyymmddhhmimiss-neg.html - Postman negative cases HTML report file.
-
-  ##### 		newmanrpt-yyyymmddhhmimiss-neg.txt - Postman negative cases TXT report file.
-
-  ##### 	...
-
   ![](https://ifulltest.github.io/images/tm-readme-reports.webp)
+
+  ##### 		newmanrpt-20210804211407.html - Postman positive cases HTML report file.
+
+  ##### 		newmanrpt-20210804211407.txt - Postman positive cases TXT report file.
+
+  ##### 		newmanrpt-20210804211418-neg.html - Postman negative cases HTML report file.
+
+  ##### 		newmanrpt-20210804211418-neg.txt - Postman negative cases TXT report file.
+
+  ##### 	API automation testing-related reports will all be stored here.
 
 - #### README.md - repository instructions
 
