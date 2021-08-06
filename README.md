@@ -30,7 +30,7 @@
 
 ![](https://ifulltest.github.io/images/tm-readme-repository-structure1.webp)
 
-- #### Collections - store API automation testing related scripts
+- #### Collections - API automation testing-related scripts will all be stored here
 
 ![](https://ifulltest.github.io/images/tm-readme-collections.webp)
 
@@ -40,15 +40,11 @@
 
 ##### 			tradeMeSandBox-Negative.postman_collection.json - Postman negative cases script
 
-##### 	Related scripts in the process of completing the API automation testing will all be stored here. 
-
-- #### data - store API automation testing related environment variables and temp data
+- #### data - related temporary data will all be stored here
 
 ##### 		    tradeMeSandBox.postman_environment.json - Postman environment variables
 
-##### 		Related temporary data will all be stored here. 
-
-- #### node_modules - Node.js component, Jenkins email-related method stores here
+- #### node_modules - Node.js component, Node.js-related method will all be stored here.
 
 ![](https://ifulltest.github.io/images/tm-readme-node_modules.webp)
 
@@ -56,11 +52,9 @@
 
 ##### 			nodemailer - As one of the Node.js modules, it is invoked by the nodemailer.js when sending the email to stakeholders.
 
-##### 	Node.js-related method will all be stored here.
-
 ...
 
-- #### reports
+- #### reports - API automation testing-related reports will all be stored here
 
   ![](https://ifulltest.github.io/images/tm-readme-reports.webp)
 
@@ -71,8 +65,6 @@
   ##### 		newmanrpt-20210804211418-neg.html - Postman negative cases HTML report file.
 
   ##### 		newmanrpt-20210804211418-neg.txt - Postman negative cases TXT report file.
-
-  ##### 	API automation testing-related reports will all be stored here.
 
 - #### README.md - repository instructions
 
