@@ -8,21 +8,21 @@
 
 - #### **[Trade Me](https://www.trademe.co.nz/)** is New Zealand's largest online auction and classifieds website.
 
-- #### This practice aims to represent the API automation testing plus the CI process.
+- #### This practice aims to demonstrate the API automation testing plus the CI process.
 
 - #### The main tools and their usage used in the practice are as below:
 
-  **Postman** - API testing tool, 
+  **Postman** - API testing tool.
 
-  **Newman** - Postman API testing reports generating tool, 
+  **Newman** - Postman API testing reports generating tool.
 
   **Git Bash** - Transfers files between local and GitHub.
 
   **GitHub** - Stores the repository of this practice.
 
-  **JDK** - Jenkins runtime environment, 
+  **JDK** - Jenkins runtime environment.
 
-  **Jenkins** - CICD tool, 
+  **Jenkins** - CICD tool.
 
   **Node.js** - back-end JavaScript runtime environment.
 
@@ -133,9 +133,9 @@ Trademe environment preparations includes 'sandbox front-end user register', 'Tr
 - #### Create Jenkins job to get reports, push reports onto GitHub, and email stakeholders the reports info
 
 
-##### Jenkins CI process realization refers to: **[Jenkins CI process Practice](http://localhost:1314/en/posts/tm-api-jenkins-cicd-process/#jenkins-ci-process-practice)**
+##### Jenkins CI process realization refers to: **[Jenkins CI process Practice](https://ifulltest.github.io/en/posts/tm-api-jenkins-cicd-process/#jenkins-ci-process-practice)**
 
-## Process of publishing the above TradeMe API automation testing full practice
+## Process of publishing the above TradeMe API automation testing practice
 
 Demo product selection -> Demo product API instruction documents -> Demo product front-end website typical transaction selection -> Postman scripting -> Newman reports -> Jenkins CI -> Practice process documenting
 
