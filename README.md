@@ -142,7 +142,7 @@ Demo product selection -> Demo product API instruction documents -> Demo product
 - #### Demo product selection
 
 
-##### Please refer to: [Why I choose the Trademe?](https://ifulltest.github.io/en/posts/tm-api-first-demo/#why-i-choose-the-trademe)
+##### Please refer to: [Why choose the Trademe?](https://ifulltest.github.io/en/posts/tm-api-first-demo/#why-choose-the-trademe)
 
 - #### Demo product API instruction documents
 
@@ -172,52 +172,51 @@ Demo product selection -> Demo product API instruction documents -> Demo product
 
 ##### [Typical transaction selection](https://ifulltest.github.io/en/posts/tm-api-typical-transactions/)
 
-Selected typical transactions detailed explanation:
+##### Selected typical transactions detailed explanation
 
-##### [Trade Me-3-Retrieve general categories API testing](https://ifulltest.github.io/en/posts/tm-api-retrieve-general-categories/)
+##### 	[Trade Me-3-Retrieve general categories API testing](https://ifulltest.github.io/en/posts/tm-api-retrieve-general-categories/)
 
-##### [Trade Me-4-Retrieve your watchlist API testing](https://ifulltest.github.io/en/posts/tm-api-retrieve-watchlist/)
+##### 	[Trade Me-4-Retrieve your watchlist API testing](https://ifulltest.github.io/en/posts/tm-api-retrieve-watchlist/)
 
-##### [Trade Me-5-Remove a listing from your watchlist API testing](https://ifulltest.github.io/en/posts/tm-api-rm-a-listing-from-watchlist/)
+##### 	[Trade Me-5-Remove a listing from your watchlist API testing](https://ifulltest.github.io/en/posts/tm-api-rm-a-listing-from-watchlist/)
 
-##### [Trade Me-6-Retrieve closing soon listings API testing](https://ifulltest.github.io/en/posts/tm-api-retrieve-closing-soon-listings/)
+##### 	[Trade Me-6-Retrieve closing soon listings API testing](https://ifulltest.github.io/en/posts/tm-api-retrieve-closing-soon-listings/)
 
-##### [Trade Me-7-Add a listing to your watchlist API testing](https://ifulltest.github.io/en/posts/tm-api-add-a-listing-to-watchlist/)
+##### 	[Trade Me-7-Add a listing to your watchlist API testing](https://ifulltest.github.io/en/posts/tm-api-add-a-listing-to-watchlist/)
 
-##### [Trade Me-8-Retrieve your won items API testing](https://ifulltest.github.io/en/posts/tm-api-retrieve-won-items/)
+##### 	[Trade Me-8-Retrieve your won items API testing](https://ifulltest.github.io/en/posts/tm-api-retrieve-won-items/)
 
-##### [Trade Me-9-Remove a purchase from your won items list API testing](https://ifulltest.github.io/en/posts/tm-api-rm-a-purchase-from-won-list/)
+##### 	[Trade Me-9-Remove a purchase from your won items list API testing](https://ifulltest.github.io/en/posts/tm-api-rm-a-purchase-from-won-list/)
 
-##### [Trade Me-10-General search API testing](https://ifulltest.github.io/en/posts/tm-api-general-search/)
+##### 	[Trade Me-10-General search API testing](https://ifulltest.github.io/en/posts/tm-api-general-search/)
 
-##### [Trade Me-11-Retrieve the details of a single listing API testing](https://ifulltest.github.io/en/posts/tm-api-retrieve-listings-details/)
+##### 	[Trade Me-11-Retrieve the details of a single listing API testing](https://ifulltest.github.io/en/posts/tm-api-retrieve-listings-details/)
 
-##### [Trade Me-12-Buy an auction using Buy Now API testing](https://ifulltest.github.io/en/posts/tm-api-buy-an-auction-using-buy-now/)
+##### 	[Trade Me-12-Buy an auction using Buy Now API testing](https://ifulltest.github.io/en/posts/tm-api-buy-an-auction-using-buy-now/)
 
 - #### Postman scripting
 
+##### Postman scripting refers to:
 
-Postman scripting refers to:
+##### 	[Trade Me-3-Retrieve general categories API scripting](https://ifulltest.github.io/en/posts/tm-api-retrieve-general-categories/#api-testing-script-debugging)
 
-##### [Trade Me-3-Retrieve general categories API scripting](https://ifulltest.github.io/en/posts/tm-api-retrieve-general-categories/#api-testing-script-debugging)
+##### 	[Trade Me-4-Retrieve your watchlist API scripting](https://ifulltest.github.io/en/posts/tm-api-retrieve-watchlist/#api-testing-script-debugging)
 
-##### [Trade Me-4-Retrieve your watchlist API scripting](https://ifulltest.github.io/en/posts/tm-api-retrieve-watchlist/#api-testing-script-debugging)
+##### 	[Trade Me-5-Remove a listing from your watchlist API scripting](https://ifulltest.github.io/en/posts/tm-api-rm-a-listing-from-watchlist/#api-testing-script-debugging)
 
-##### [Trade Me-5-Remove a listing from your watchlist API scripting](https://ifulltest.github.io/en/posts/tm-api-rm-a-listing-from-watchlist/#api-testing-script-debugging)
+##### 	[Trade Me-6-Retrieve closing soon listings API scripting](https://ifulltest.github.io/en/posts/tm-api-retrieve-closing-soon-listings/#api-testing-script-debugging)
 
-##### [Trade Me-6-Retrieve closing soon listings API scripting](https://ifulltest.github.io/en/posts/tm-api-retrieve-closing-soon-listings/#api-testing-script-debugging)
+##### 	[Trade Me-7-Add a listing to your watchlist API scripting](https://ifulltest.github.io/en/posts/tm-api-add-a-listing-to-watchlist/#api-testing-script-debugging)
 
-##### [Trade Me-7-Add a listing to your watchlist API scripting](https://ifulltest.github.io/en/posts/tm-api-add-a-listing-to-watchlist/#api-testing-script-debugging)
+##### 	[Trade Me-8-Retrieve your won items API scripting](https://ifulltest.github.io/en/posts/tm-api-retrieve-won-items/#api-testing-script-debugging)
 
-##### [Trade Me-8-Retrieve your won items API scripting](https://ifulltest.github.io/en/posts/tm-api-retrieve-won-items/#api-testing-script-debugging)
+##### 	[Trade Me-9-Remove a purchase from your won items list API scripting](https://ifulltest.github.io/en/posts/tm-api-rm-a-purchase-from-won-list/#api-testing-script-debugging)
 
-##### [Trade Me-9-Remove a purchase from your won items list API scripting](https://ifulltest.github.io/en/posts/tm-api-rm-a-purchase-from-won-list/#api-testing-script-debugging)
+##### 	[Trade Me-10-General search API scripting](https://ifulltest.github.io/en/posts/tm-api-general-search/#api-testing-script-debugging)
 
-##### [Trade Me-10-General search API scripting](https://ifulltest.github.io/en/posts/tm-api-general-search/#api-testing-script-debugging)
+##### 	[Trade Me-11-Retrieve the details of a single listing API scripting](https://ifulltest.github.io/en/posts/tm-api-retrieve-listings-details/#api-testing-script-debugging)
 
-##### [Trade Me-11-Retrieve the details of a single listing API scripting](https://ifulltest.github.io/en/posts/tm-api-retrieve-listings-details/#api-testing-script-debugging)
-
-##### [Trade Me-12-Buy an auction using Buy Now API scripting](https://ifulltest.github.io/en/posts/tm-api-buy-an-auction-using-buy-now/#api-testing-script-debugging)
+##### 	[Trade Me-12-Buy an auction using Buy Now API scripting](https://ifulltest.github.io/en/posts/tm-api-buy-an-auction-using-buy-now/#api-testing-script-debugging)
 
 - #### Newman reports
 

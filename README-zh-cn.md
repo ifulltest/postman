@@ -72,9 +72,9 @@
 
 - #### TradeMe API 测试步骤和 CI 流程
 
-本地环境准备 -> Trademe 环境准备 -> 将 Postman 集合和环境变量文件导入 Postman -> 将 Postman 的授权相关信息替换为你的个人信息 -> 运行 Postman collection runner 检查脚本是否正常 -> 运行 Newman 检查报告一切正常 -> 创建 Jenkins 作业以获取报告，将报告推送到 GitHub，并将报告信息通过电子邮件发送给利益相关者
+本地环境准备 -> Trademe 环境准备 -> 将 Postman 集合和环境变量文件导入 Postman -> 将 Postman 的授权相关信息替换为你的个人信息 -> 运行 Postman collection runner 检查脚本是否正常 -> 运行 Newman 检查报告一切正常 -> 创建 Jenkins 作业以获取报告，将报告推送到 GitHub，并将报告信息通过电子邮件发送给相关人员
 
-- #### 当地环境准备
+- #### 本地环境准备
 
 ##### *在执行完整的 API 自动化测试过程之前，您需要在本地环境中安装一些工具。如 Postman、Node.js、Newman、JDK、Jenkins、Git Bash 等。*
 
@@ -112,11 +112,11 @@ Trademe环境准备包括'沙箱前端用户注册'、'Trademe沙箱应用注册
 
 - #### 将 Postman 上的授权相关信息替换为您个人的信息
 
-***按照授权流程获取自己的认证相关的Consumer Key、Consumer Secret、Access Token、Token Secret。***
+***按照授权流程获取您自己认证相关的Consumer Key、Consumer Secret、Access Token、Token Secret。***
 
-##### [如何获得认证？(点我)](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#4authenticationhttpsdevelopertrademeconzapi-overviewauthentication)
+##### [如何获得认证？(点我)](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#4认证点我httpsdevelopertrademeconzapi-overviewauthentication)
 
-##### 将您的身份验证信息替换为 Postman 中“Authorization - OAuth 1.0”的相关字段。
+##### 将您的身份验证信息替换为 Postman 中“Authorization -> OAuth 1.0”的相关字段。
 
 ![img](https://ifulltest.github.io/images/tm-readme-postman-auth-replace.webp)
 
@@ -124,7 +124,7 @@ Trademe环境准备包括'沙箱前端用户注册'、'Trademe沙箱应用注册
 
 - #### [运行Newman检查报告一切正常](https://ifulltest.github.io/zh-cn/posts/tm-api-scenarios-and-newman-report/#通过newman运行您的场景)
 
-- #### 创建 Jenkins 作业以获取报告，将报告推送到 GitHub，并将报告信息通过电子邮件发送给利益相关者
+- #### 创建 Jenkins 作业以获取报告，将报告推送到 GitHub，并将报告信息通过电子邮件发送给相关人员
 
 ##### Jenkins CI流程实现参考：**[Jenkins CI流程实践](https://ifulltest.github.io/zh-cn/posts/tm-api-jenkins-cicd-process/#jenkins-ci-process-practice)**
 
@@ -134,7 +134,7 @@ Demo产品选择->Demo产品API说明文档->Demo产品前端网站典型交易�
 
 - #### 演示产品选择
 
-##### 请参考：[我为什么选择 Trademe？](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#why-i-choose-the-trademe)
+##### 请参考：[为什么选择 Trademe？](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#为什么选择-trademe)
 
 - #### 演示产品API说明文档
 
@@ -162,51 +162,51 @@ Demo产品选择->Demo产品API说明文档->Demo产品前端网站典型交易�
 
 ##### [典型交易选择](https://ifulltest.github.io/zh-cn/posts/tm-api-typical-transactions/)
 
-精选典型交易详解：
+##### 典型交易详解
 
-##### [Trade Me-3-检索一般类别 API 测试](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-general-categories/)
+##### 	[Trade Me-3-检索一般类别 API 测试](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-general-categories/)
 
-##### [Trade Me-4-检索您的监视列表 API 测试](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-watchlist/)
+##### 	[Trade Me-4-检索您的监视列表 API 测试](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-watchlist/)
 
-##### [Trade Me-5-从您的监视列表中删除列表 API 测试](https://ifulltest.github.io/zh-cn/posts/tm-api-rm-a-listing-from-watchlist/)
+##### 	[Trade Me-5-从您的监视列表中删除列表 API 测试](https://ifulltest.github.io/zh-cn/posts/tm-api-rm-a-listing-from-watchlist/)
 
-##### [Trade Me-6-检索即将关闭列表 API 测试](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-closing-soon-listings/)
+##### 	[Trade Me-6-检索即将关闭列表 API 测试](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-closing-soon-listings/)
 
-##### [Trade Me-7-将列表添加到您的监视列表 API 测试](https://ifulltest.github.io/zh-cn/posts/tm-api-add-a-listing-to-watchlist/)
+##### 	[Trade Me-7-将列表添加到您的监视列表 API 测试](https://ifulltest.github.io/zh-cn/posts/tm-api-add-a-listing-to-watchlist/)
 
-##### [Trade Me-8-检索您赢得的物品 API 测试](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-won-items/)
+##### 	[Trade Me-8-检索您赢得的物品 API 测试](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-won-items/)
 
-##### [Trade Me-9-从您赢得的物品列表中删除购买 API 测试](https://ifulltest.github.io/zh-cn/posts/tm-api-rm-a-purchase-from-won-list/)
+##### 	[Trade Me-9-从您赢得的物品列表中删除购买 API 测试](https://ifulltest.github.io/zh-cn/posts/tm-api-rm-a-purchase-from-won-list/)
 
-##### [Trade Me-10-通用搜索API测试](https://ifulltest.github.io/zh-cn/posts/tm-api-general-search/)
+##### 	[Trade Me-10-通用搜索API测试](https://ifulltest.github.io/zh-cn/posts/tm-api-general-search/)
 
-##### [Trade Me-11-检索单个列表 API 测试的详细信息](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-listings-details/)
+##### 	[Trade Me-11-检索单个列表 API 测试的详细信息](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-listings-details/)
 
-##### [Trade Me-12-使用 Buy Now API 测试购买拍卖](https://ifulltest.github.io/zh-cn/posts/tm-api-buy-an-auction-using-buy-now/)
+##### 	[Trade Me-12-使用 Buy Now API 测试购买拍卖](https://ifulltest.github.io/zh-cn/posts/tm-api-buy-an-auction-using-buy-now/)
 
 - #### Postman脚本
 
-Postman脚本参考：
+##### Postman脚本参考：
 
-##### [Trade Me-3-检索一般类别 API 脚本](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-general-categories/#api测试脚本调试)
+##### 	[Trade Me-3-检索一般类别 API 脚本](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-general-categories/#api测试脚本调试)
 
-##### [Trade Me-4-检索您的监视列表 API 脚本](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-watchlist/#api测试脚本调试)
+##### 	[Trade Me-4-检索您的监视列表 API 脚本](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-watchlist/#api测试脚本调试)
 
-##### [Trade Me-5-从您的监视列表中删除列表 API 脚本](https://ifulltest.github.io/zh-cn/posts/tm-api-rm-a-listing-from-watchlist/#api测试脚本调试)
+##### 	[Trade Me-5-从您的监视列表中删除列表 API 脚本](https://ifulltest.github.io/zh-cn/posts/tm-api-rm-a-listing-from-watchlist/#api测试脚本调试)
 
-##### [Trade Me-6-检索即将关闭列表 API 脚本](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-closing-soon-listings/#api测试脚本调试)
+##### 	[Trade Me-6-检索即将关闭列表 API 脚本](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-closing-soon-listings/#api测试脚本调试)
 
-##### [Trade Me-7-将列表添加到您的监视列表 API 脚本](https://ifulltest.github.io/zh-cn/posts/tm-api-add-a-listing-to-watchlist/#api测试脚本调试)
+##### 	[Trade Me-7-将列表添加到您的监视列表 API 脚本](https://ifulltest.github.io/zh-cn/posts/tm-api-add-a-listing-to-watchlist/#api测试脚本调试)
 
-##### [Trade Me-8-检索您赢得的物品 API 脚本](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-won-items/#api测试脚本调试)
+##### 	[Trade Me-8-检索您赢得的物品 API 脚本](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-won-items/#api测试脚本调试)
 
-##### [Trade Me-9-从您赢得的物品列表中删除购买 API 脚本](https://ifulltest.github.io/zh-cn/posts/tm-api-rm-a-purchase-from-won-list/#api测试脚本调试)
+##### 	[Trade Me-9-从您赢得的物品列表中删除购买 API 脚本](https://ifulltest.github.io/zh-cn/posts/tm-api-rm-a-purchase-from-won-list/#api测试脚本调试)
 
-##### [Trade Me-10-通用搜索 API 脚本](https://ifulltest.github.io/zh-cn/posts/tm-api-general-search/#api测试脚本调试)
+##### 	[Trade Me-10-通用搜索 API 脚本](https://ifulltest.github.io/zh-cn/posts/tm-api-general-search/#api测试脚本调试)
 
-##### [Trade Me-11-检索单个列表 API 脚本的详细信息](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-listings-details/#api测试脚本调试)
+##### 	[Trade Me-11-检索单个列表 API 脚本的详细信息](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-listings-details/#api测试脚本调试)
 
-##### [Trade Me-12-使用 Buy Now API 脚本购买拍卖](https://ifulltest.github.io/zh-cn/posts/tm-api-buy-an-auction-using-buy-now/#api测试脚本调试)
+##### 	[Trade Me-12-使用 Buy Now API 脚本购买拍卖](https://ifulltest.github.io/zh-cn/posts/tm-api-buy-an-auction-using-buy-now/#api测试脚本调试)
 
 - #### Postman报告
 
@@ -214,7 +214,7 @@ Postman脚本参考：
 
 - #### Jenkins CI
 
-##### Jenkins CI 流程参考：[Trade Me-14-Jenkins-CI-process](https://ifulltest.github.io/zh-cn/posts/tm-api-jenkins-cicd-process/)
+##### Jenkins CI 流程参考：[Trade Me-14-Jenkins-持续集成流程](https://ifulltest.github.io/zh-cn/posts/tm-api-jenkins-cicd-process/)
 
 - #### 实践过程文档
 
