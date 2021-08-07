@@ -142,7 +142,7 @@ Demo product selection -> Demo product API instruction documents -> Demo product
 - #### Demo product selection
 
 
-##### Please refer to: [Why choose the Trademe?](https://ifulltest.github.io/en/posts/tm-api-first-demo/#why-choose-the-trademe)
+##### [Why choose the Trademe?](https://ifulltest.github.io/en/posts/tm-api-first-demo/#why-choose-the-trademe)
 
 - #### Demo product API instruction documents
 
@@ -167,12 +167,12 @@ Demo product selection -> Demo product API instruction documents -> Demo product
 
 ![](https://ifulltest.github.io/images/tm-api-reference.webp)
 
-- #### Demo product front-end website typical transaction selection
+- #### Demo product front-end website typical transaction selection and details
 
 
 ##### [Typical transaction selection](https://ifulltest.github.io/en/posts/tm-api-typical-transactions/)
 
-##### Selected typical transactions detailed explanation
+##### Selected typical transactions details
 
 ##### 	[Trade Me-3-Retrieve general categories API testing](https://ifulltest.github.io/en/posts/tm-api-retrieve-general-categories/)
 
@@ -195,8 +195,6 @@ Demo product selection -> Demo product API instruction documents -> Demo product
 ##### 	[Trade Me-12-Buy an auction using Buy Now API testing](https://ifulltest.github.io/en/posts/tm-api-buy-an-auction-using-buy-now/)
 
 - #### Postman scripting
-
-##### Postman scripting refers to:
 
 ##### 	[Trade Me-3-Retrieve general categories API scripting](https://ifulltest.github.io/en/posts/tm-api-retrieve-general-categories/#api-testing-script-debugging)
 

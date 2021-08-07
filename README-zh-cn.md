@@ -134,7 +134,7 @@ Demo产品选择->Demo产品API说明文档->Demo产品前端网站典型交易�
 
 - #### 演示产品选择
 
-##### 请参考：[为什么选择 Trademe？](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#为什么选择-trademe)
+##### [为什么选择 Trademe？](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#为什么选择-trademe)
 
 - #### 演示产品API说明文档
 
@@ -158,7 +158,7 @@ Demo产品选择->Demo产品API说明文档->Demo产品前端网站典型交易�
 
 ![img](https://ifulltest.github.io/images/tm-api-reference.webp)
 
-- #### Demo产品前端网站典型交易选择
+- #### Demo产品前端网站典型交易选择及细节
 
 ##### [典型交易选择](https://ifulltest.github.io/zh-cn/posts/tm-api-typical-transactions/)
 
@@ -180,13 +180,11 @@ Demo产品选择->Demo产品API说明文档->Demo产品前端网站典型交易�
 
 ##### 		[Trade Me-10-通用搜索API测试](https://ifulltest.github.io/zh-cn/posts/tm-api-general-search/)
 
-##### 		[Trade Me-11-检索单个列表 API 测试的详细信息](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-listings-details/)
+##### 		[Trade Me-11-检索单个列表的详细信息 API 测试](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-listings-details/)
 
-##### 		[Trade Me-12-使用 Buy Now API 测试购买拍卖](https://ifulltest.github.io/zh-cn/posts/tm-api-buy-an-auction-using-buy-now/)
+##### 		[Trade Me-12-使用 Buy Now购买拍卖 API 测试](https://ifulltest.github.io/zh-cn/posts/tm-api-buy-an-auction-using-buy-now/)
 
 - #### Postman脚本
-
-##### Postman脚本参考：
 
 ##### 		[Trade Me-3-检索一般类别 API 脚本](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-general-categories/#api测试脚本调试)
 
@@ -204,9 +202,9 @@ Demo产品选择->Demo产品API说明文档->Demo产品前端网站典型交易�
 
 ##### 		[Trade Me-10-通用搜索 API 脚本](https://ifulltest.github.io/zh-cn/posts/tm-api-general-search/#api测试脚本调试)
 
-##### 		[Trade Me-11-检索单个列表 API 脚本的详细信息](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-listings-details/#api测试脚本调试)
+##### 		[Trade Me-11-检索单个列表的详细信息 API 脚本](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-listings-details/#api测试脚本调试)
 
-##### 		[Trade Me-12-使用 Buy Now API 脚本购买拍卖](https://ifulltest.github.io/zh-cn/posts/tm-api-buy-an-auction-using-buy-now/#api测试脚本调试)
+##### 		[Trade Me-12-使用 Buy Now购买拍卖 API 脚本](https://ifulltest.github.io/zh-cn/posts/tm-api-buy-an-auction-using-buy-now/#api测试脚本调试)
 
 - #### Postman报告
 
