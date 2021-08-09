@@ -158,7 +158,7 @@ copy %POSTMAN_HOME%\postman_github\postman\collections\* %POSTMAN_HOME%\collecti
 
 - #### 替换为您的 Postman 的“Authorization  - OAuth 1.0”上的身份验证信息。
 
-##### 身份验证信息获取参考：[Trade Me 沙箱应用注册](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#3注册您的api应用点我httpsdevelopertrademeconzapi-overviewregistering-an-application) 和 [Trade Me 沙箱授权](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#4认证点我httpsdeveloperTrade Meconzapi-overviewauthentication)
+##### 身份验证信息获取参考：[Trade Me 沙箱应用注册](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#3注册您的api应用点我httpsdevelopertrademeconzapi-overviewregistering-an-application) 和 [Trade Me 沙箱授权](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#4认证点我httpsdevelopertrademeconzapi-overviewauthentication)
 
 ![img](https://ifulltest.github.io/images/tm-readme-postman-auth-replace.webp)
 
