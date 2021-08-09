@@ -16,15 +16,15 @@
 
 - #### Trade Me UI 端
 
-##### [Trade Me沙箱前端用户注册](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#2注册Trade Me沙箱用户点我httpswwwtmsandboxconzmembersregisteraspx)
+##### [Trade Me沙箱前端用户注册](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#2注册trademe沙箱用户点我httpswwwtmsandboxconzmembersregisteraspx)
 
 - #### Trade Me API 端
 
-##### [Trade Me 沙箱应用注册](#3注册您的api应用点我httpsdeveloperTrade Meconzapi-overviewregistering-an-application)
+##### [Trade Me 沙箱应用注册](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#3注册您的api应用点我httpsdevelopertrademeconzapi-overviewregistering-an-application)
 
-##### [Trade Me 沙箱授权](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#4认证点我httpsdeveloperTrade Meconzapi-overviewauthentication)
+##### [Trade Me 沙箱授权](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#4认证点我httpsdevelopertrademeconzapi-overviewauthentication)
 
-- #### 当地环境准备
+- #### 本地环境准备
 
 ##### **Postman** - API 测试工具。[如何安装Postman？](https://ifulltest.github.io/zh-cn/posts/postman-installation/)
 
@@ -72,13 +72,13 @@
 
 - #### 开始您的第一个 API 测试
 
-##### [Trade Me-1-API 测试第一个演示](https://ifulltest.github.io/en/posts/tm-api-first-demo/)
+##### [Trade Me-1-API 测试第一个演示](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/)
 
 ## 脚本阶段
 
 - #### Trade Me UI 端
 
-##### [典型事务前端 UI 和后端 API 的关系](https://ifulltest.github.io/en/posts/tm-api-typical-transactions/)
+##### [典型事务前端 UI 和后端 API 的关系](https://ifulltest.github.io/zh-cn/posts/tm-api-typical-transactions/)
 
 - #### Trade Me API 端
 
@@ -157,6 +157,8 @@ copy %POSTMAN_HOME%\postman_github\postman\collections\* %POSTMAN_HOME%\collecti
 ![img](https://ifulltest.github.io/images/tm-readme-postman-import-4.webp)
 
 - #### 替换为您的 Postman 的“Authorization  - OAuth 1.0”上的身份验证信息。
+
+##### 身份验证信息获取参考：[Trade Me 沙箱应用注册](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#3注册您的api应用点我httpsdevelopertrademeconzapi-overviewregistering-an-application) 和 [Trade Me 沙箱授权](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#4认证点我httpsdeveloperTrade Meconzapi-overviewauthentication)
 
 ![img](https://ifulltest.github.io/images/tm-readme-postman-auth-replace.webp)
 

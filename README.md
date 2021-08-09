@@ -161,6 +161,8 @@ copy %POSTMAN_HOME%\postman_github\postman\collections\* %POSTMAN_HOME%\collecti
 
 - #### Replace with your authentication info on 'Authorization - OAuth 1.0' of your Postman. 
 
+##### Get the authentication info refers to: [Trade Me sandbox application register](https://ifulltest.github.io/en/posts/tm-api-first-demo/#3register-your-api-applicationhttpsdeveloperTrade Meconzapi-overviewregistering-an-application) and [Trade Me sandbox authorization](https://ifulltest.github.io/en/posts/tm-api-first-demo/#4authenticationhttpsdeveloperTrade Meconzapi-overviewauthentication)
+
 ![](https://ifulltest.github.io/images/tm-readme-postman-auth-replace.webp)
 
 - #### Replace with your email-related info in the '%POSTMAN_HOME%\data\nodemailer.js' file
