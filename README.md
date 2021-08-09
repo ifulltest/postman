@@ -6,7 +6,7 @@ This practice picks 10 typical Trade Me APIs aiming to demonstrate the API autom
 
 - #### [GitHub repository](https://github.com/ifulltest/postman)
 
-- #### [Repository instructions](https://ifulltest.github.io/postman/)
+- #### [Repository instructions](https://ifulltest.github.io/postman/) ([Chinese repository instructions](https://ifulltest.github.io/postman/README-zh-cn))
 
 - #### Testing technical structure for this practice
 

@@ -6,7 +6,7 @@
 
 - #### [GitHub 仓库](https://github.com/ifulltest/postman)
 
-- #### [仓库说明](https://ifulltest.github.io/postman/README-zh-cn)
+- #### [仓库说明](https://ifulltest.github.io/postman/README-zh-cn) ([英文仓库说明](https://ifulltest.github.io/postman/))
 
 - #### 该实践的技术架构图
 
