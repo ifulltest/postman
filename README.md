@@ -12,7 +12,7 @@ This practice picks 10 typical TradeMe APIs aiming to demonstrate the API automa
 
 ![](https://ifulltest.github.io/images/tm-api-automation-panorama.webp)
 
-## Preparations Stage
+## Preparation Stage
 
 - #### TradeMe UI side
 
@@ -26,19 +26,19 @@ This practice picks 10 typical TradeMe APIs aiming to demonstrate the API automa
 
 - #### Local environment preparations
 
-##### **Postman** - API testing tool. [How to install Postman?](https://ifulltest.github.io/en/posts/postman-installation/)
+##### Postman - API testing tool. [How to install Postman?](https://ifulltest.github.io/en/posts/postman-installation/)
 
-**Newman** - Postman API testing reports generating tool. [How to install Newman?](https://ifulltest.github.io/en/posts/newman-installation/)
+##### Newman - Postman API testing reports generating tool. [How to install Newman?](https://ifulltest.github.io/en/posts/newman-installation/)
 
-##### **Git Bash** - Transfers files between local and GitHub.  [How to install Git Bash?](https://ifulltest.github.io/en/posts/git-bash-installation/)
+##### Git Bash - Transfers files between local and GitHub.  [How to install Git Bash?](https://ifulltest.github.io/en/posts/git-bash-installation/)
 
-##### **GitHub** - Stores the repository of this practice.
+##### GitHub - Stores the repository of this practice.
 
-##### **JDK** - Jenkins runtime environment. [How to install JDK?](https://ifulltest.github.io/en/posts/jdk-installation/)
+##### JDK - Jenkins runtime environment. [How to install JDK?](https://ifulltest.github.io/en/posts/jdk-installation/)
 
-##### **Jenkins** - CICD tool. [How to install Jenkins?](https://ifulltest.github.io/en/posts/jenkins-installation/)
+##### Jenkins - CICD tool. [How to install Jenkins?](https://ifulltest.github.io/en/posts/jenkins-installation/)
 
-##### **Node.js** - back-end JavaScript runtime environment. [How to install Node.js?](https://ifulltest.github.io/en/posts/nodejs-installation/)
+##### Node.js - back-end JavaScript runtime environment. [How to install Node.js?](https://ifulltest.github.io/en/posts/nodejs-installation/)
 
 - #### Local working directory
 
@@ -117,7 +117,7 @@ Generating report by Collection Runner or Newman, and the Jenkins CI process
 
 
 
-## Fast way to start your testing
+## Fast track to start your testing
 
 - #### Initialization your local working folders
 
@@ -153,7 +153,7 @@ copy %POSTMAN_HOME%\postman_github\postman\collections\* %POSTMAN_HOME%\collecti
 
 ![](https://ifulltest.github.io/images/tm-readme-postman-import-2.webp)
 
-- #### Import Postman environment variables into your Postman
+- #### Import Postman environment variables to your Postman
 
 ![](https://ifulltest.github.io/images/tm-readme-postman-import-3.webp)
 
