@@ -2,7 +2,7 @@
 
 - #### [GitHub仓库入口](https://github.com/ifulltest/postman)
 
-- #### [仓库说明入口](https://ifulltest.github.io/postman/readme-zh-cn)
+- #### [仓库说明入口](https://ifulltest.github.io/postman/README-zh-cn)
 
 - #### 该仓库存储与 Trade Me API 自动化实践相关的文档。
 
@@ -94,11 +94,11 @@
 
 Trademe环境准备包括'沙箱前端用户注册'、'Trademe沙箱应用注册'、'Trademe沙箱授权'
 
-##### [Trademe沙箱前端用户注册](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#2register-a-tradme-sandbox-userhttpswwwtmsandboxconzmembersregisteraspx)
+##### [Trademe沙箱前端用户注册](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#2注册trademe沙箱用户点我httpswwwtmsandboxconzmembersregisteraspx)
 
-##### [Trademe 沙箱应用注册](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#3register-your-api-applicationhttpsdevelopertrademeconzapi-overviewregistering-an-application)
+##### [Trademe 沙箱应用注册](#3注册您的api应用点我httpsdevelopertrademeconzapi-overviewregistering-an-application)
 
-##### [Trademe 沙箱授权](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#4authenticationhttpsdevelopertrademeconzapi-overviewauthentication)
+##### [Trademe 沙箱授权](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#4认证点我httpsdevelopertrademeconzapi-overviewauthentication)
 
 - #### 将 Postman 集合文件和环境变量文件导入 Postman
 
