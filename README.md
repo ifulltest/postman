@@ -79,11 +79,11 @@ This practice picks 10 typical Trade Me APIs aiming to demonstrate the API autom
 
 ## Scripting Stage
 
-- #### Trade Me UI side
+- #### Trade Me typical transactions front-end UI and back-end API relationships
 
-##### Typical transactions front-end UI and back-end API relationships: [Trade Me-2-typical transactions](https://ifulltest.github.io/en/posts/tm-api-typical-transactions/)
+##### [Trade Me-2-typical transactions](https://ifulltest.github.io/en/posts/tm-api-typical-transactions/)
 
-- #### Trade Me API side
+- #### Trade Me API side scripts development and enhancement
 
 ##### 	[Trade Me-3-Retrieve general categories API testing](https://ifulltest.github.io/en/posts/tm-api-retrieve-general-categories/)
 

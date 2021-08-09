@@ -42,7 +42,7 @@
 
 - #### 本地工作目录
 
-##### Collection - Postman 和 Node.js 脚本文件
+##### Collections - Postman 和 Node.js 脚本文件
 
 ​	\- nodemailer.js: 通过此脚本向相关人员发送测试报告
 
@@ -76,11 +76,11 @@
 
 ## 脚本阶段
 
-- #### Trade Me UI 端
+- #### Trade Me 典型事务前端 UI 和后端 API 的关系
 
-##### 典型事务前端 UI 和后端 API 的关系：[Trade Me-2-典型交易](https://ifulltest.github.io/zh-cn/posts/tm-api-typical-transactions/)
+##### [Trade Me-2-典型交易](https://ifulltest.github.io/zh-cn/posts/tm-api-typical-transactions/)
 
-- #### Trade Me API 端
+- #### Trade Me API 端测试脚本开发与加强
 
 ##### 		[Trade Me-3-检索一般类别 API 测试](https://ifulltest.github.io/zh-cn/posts/tm-api-retrieve-general-categories/)
 
@@ -137,7 +137,7 @@ rem clone demo GitHub repository
 pushd %POSTMAN_HOME%\postman_github && git init && git clone https://github.com/ifulltest/postman.git
 ```
 
-- #### 将 GitHub 演示collections和data复制到本地工作目录
+- #### 将示例GitHub的collections和data复制到本地工作目录
 
 ```
 rem copy GitHub demo collections and data to your local working directory
@@ -156,7 +156,7 @@ copy %POSTMAN_HOME%\postman_github\postman\collections\* %POSTMAN_HOME%\collecti
 
 ![img](https://ifulltest.github.io/images/tm-readme-postman-import-4.webp)
 
-- #### 替换为您的 Postman 的“Authorization  - OAuth 1.0”上的身份验证信息。
+- #### 替换为您 Postman 上“Authorization  - OAuth 1.0”的身份验证信息。
 
 ##### 身份验证信息获取参考：[Trade Me 沙箱应用注册](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#3注册您的api应用点我httpsdevelopertrademeconzapi-overviewregistering-an-application) 和 [Trade Me 沙箱授权](https://ifulltest.github.io/zh-cn/posts/tm-api-first-demo/#4认证点我httpsdevelopertrademeconzapi-overviewauthentication)
 
