@@ -144,7 +144,7 @@ pushd %POSTMAN_HOME%\postman_github && git init && git clone https://github.com/
 
 ```markdown
 rem copy GitHub demo collections and data to your local working directory
-copy %POSTMAN_HOME%\postman_github\collections\* %POSTMAN_HOME%\collections\ && copy %POSTMAN_HOME%\postman_github\data\* %POSTMAN_HOME%\data\*
+copy %POSTMAN_HOME%\postman_github\postman\collections\* %POSTMAN_HOME%\collections\ && copy %POSTMAN_HOME%\postman_github\postman\data\* %POSTMAN_HOME%\data\*
 ```
 
 - #### Import collections into your Postman

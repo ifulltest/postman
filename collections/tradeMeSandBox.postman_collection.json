@@ -243,22 +243,22 @@
 					"oauth1": [
 						{
 							"key": "tokenSecret",
-							"value": "Your tokenSecret",
+							"value": "293BD08354D18D33871C4EBB02D67ACA",
 							"type": "string"
 						},
 						{
 							"key": "token",
-							"value": "Your token",
+							"value": "38B073E4F6C65F722A0CF964492EA6A2",
 							"type": "string"
 						},
 						{
 							"key": "consumerSecret",
-							"value": "Your consumerSecret",
+							"value": "0D8635F6A51F0EA381A8D97F5D7812E2",
 							"type": "string"
 						},
 						{
 							"key": "consumerKey",
-							"value": "Your consumerKey",
+							"value": "4B34BCCFD24CF3497EE36E54204AA7E2",
 							"type": "string"
 						},
 						{
@@ -459,7 +459,7 @@
 							"\r",
 							"    method: 'GET',\r",
 							"\r",
-							"    header:['Content-Type:application/json', 'Authorization:OAuth oauth_consumer_key=\"Your consumerKey\",oauth_token=\"Your token\",oauth_signature_method=\"PLAINTEXT\",oauth_timestamp=\"1623834029\",oauth_nonce=\"Zr5dzIAuVON\",oauth_version=\"1.0\",oauth_signature=\"Your consumerSecret%26Your tokenSecret\"'],\r",
+							"    header:['Content-Type:application/json', 'Authorization:OAuth oauth_consumer_key=\"4B34BCCFD24CF3497EE36E54204AA7E2\",oauth_token=\"38B073E4F6C65F722A0CF964492EA6A2\",oauth_signature_method=\"PLAINTEXT\",oauth_timestamp=\"1623834029\",oauth_nonce=\"Zr5dzIAuVON\",oauth_version=\"1.0\",oauth_signature=\"0D8635F6A51F0EA381A8D97F5D7812E2%26293BD08354D18D33871C4EBB02D67ACA\"'],\r",
 							"    \r",
 							"    body: {\r",
 							"    }\r",
@@ -562,7 +562,7 @@
 							"                    url: pm.environment.get(\"BaseUrl\") + '/v1/MyTradeMe/WatchList/' + WatchlistListingId[i] + '.JSON',\r",
 							"                    method: 'DELETE',\r",
 							"\r",
-							"                    header:['Content-Type:application/json', 'Authorization:OAuth oauth_consumer_key=\"Your consumerKey\",oauth_token=\"Your token\",oauth_signature_method=\"PLAINTEXT\",oauth_timestamp=\"1623834029\",oauth_nonce=\"Zr5dzIAuVON\",oauth_version=\"1.0\",oauth_signature=\"Your consumerSecret%26Your tokenSecret\"'],\r",
+							"                    header:['Content-Type:application/json', 'Authorization:OAuth oauth_consumer_key=\"4B34BCCFD24CF3497EE36E54204AA7E2\",oauth_token=\"38B073E4F6C65F722A0CF964492EA6A2\",oauth_signature_method=\"PLAINTEXT\",oauth_timestamp=\"1623834029\",oauth_nonce=\"Zr5dzIAuVON\",oauth_version=\"1.0\",oauth_signature=\"0D8635F6A51F0EA381A8D97F5D7812E2%26293BD08354D18D33871C4EBB02D67ACA\"'],\r",
 							"                    \r",
 							"                    body: {\r",
 							"                    }\r",
@@ -618,7 +618,7 @@
 							"\r",
 							"  method: 'GET',\r",
 							"\r",
-							"  header:['Content-Type:application/json', 'Authorization:OAuth oauth_consumer_key=\"Your consumerKey\",oauth_token=\"Your token\",oauth_signature_method=\"PLAINTEXT\",oauth_timestamp=\"1623834029\",oauth_nonce=\"Zr5dzIAuVON\",oauth_version=\"1.0\",oauth_signature=\"Your consumerSecret%26Your tokenSecret\"'],\r",
+							"  header:['Content-Type:application/json', 'Authorization:OAuth oauth_consumer_key=\"4B34BCCFD24CF3497EE36E54204AA7E2\",oauth_token=\"38B073E4F6C65F722A0CF964492EA6A2\",oauth_signature_method=\"PLAINTEXT\",oauth_timestamp=\"1623834029\",oauth_nonce=\"Zr5dzIAuVON\",oauth_version=\"1.0\",oauth_signature=\"0D8635F6A51F0EA381A8D97F5D7812E2%26293BD08354D18D33871C4EBB02D67ACA\"'],\r",
 							"\r",
 							"  body: {\r",
 							"  }\r",
@@ -685,22 +685,22 @@
 					"oauth1": [
 						{
 							"key": "tokenSecret",
-							"value": "Your tokenSecret",
+							"value": "293BD08354D18D33871C4EBB02D67ACA",
 							"type": "string"
 						},
 						{
 							"key": "token",
-							"value": "Your token",
+							"value": "38B073E4F6C65F722A0CF964492EA6A2",
 							"type": "string"
 						},
 						{
 							"key": "consumerSecret",
-							"value": "Your consumerSecret",
+							"value": "0D8635F6A51F0EA381A8D97F5D7812E2",
 							"type": "string"
 						},
 						{
 							"key": "consumerKey",
-							"value": "Your consumerKey",
+							"value": "4B34BCCFD24CF3497EE36E54204AA7E2",
 							"type": "string"
 						},
 						{
@@ -871,22 +871,22 @@
 					"oauth1": [
 						{
 							"key": "tokenSecret",
-							"value": "Your tokenSecret",
+							"value": "293BD08354D18D33871C4EBB02D67ACA",
 							"type": "string"
 						},
 						{
 							"key": "token",
-							"value": "Your token",
+							"value": "38B073E4F6C65F722A0CF964492EA6A2",
 							"type": "string"
 						},
 						{
 							"key": "consumerSecret",
-							"value": "Your consumerSecret",
+							"value": "0D8635F6A51F0EA381A8D97F5D7812E2",
 							"type": "string"
 						},
 						{
 							"key": "consumerKey",
-							"value": "Your consumerKey",
+							"value": "4B34BCCFD24CF3497EE36E54204AA7E2",
 							"type": "string"
 						},
 						{
@@ -1038,7 +1038,7 @@
 							"\r",
 							"  method: 'GET',\r",
 							"\r",
-							"  header:['Content-Type:application/json', 'Authorization:OAuth oauth_consumer_key=\"Your consumerKey\",oauth_token=\"Your token\",oauth_signature_method=\"PLAINTEXT\",oauth_timestamp=\"1623834029\",oauth_nonce=\"Zr5dzIAuVON\",oauth_version=\"1.0\",oauth_signature=\"Your consumerSecret%26Your tokenSecret\"'],\r",
+							"  header:['Content-Type:application/json', 'Authorization:OAuth oauth_consumer_key=\"4B34BCCFD24CF3497EE36E54204AA7E2\",oauth_token=\"38B073E4F6C65F722A0CF964492EA6A2\",oauth_signature_method=\"PLAINTEXT\",oauth_timestamp=\"1623834029\",oauth_nonce=\"Zr5dzIAuVON\",oauth_version=\"1.0\",oauth_signature=\"0D8635F6A51F0EA381A8D97F5D7812E2%26293BD08354D18D33871C4EBB02D67ACA\"'],\r",
 							"\r",
 							"  body: {\r",
 							"  }\r",
@@ -1129,7 +1129,7 @@
 							"\r",
 							"  method: 'GET',\r",
 							"\r",
-							"  header:['Content-Type:application/json', 'Authorization:OAuth oauth_consumer_key=\"Your consumerKey\",oauth_token=\"Your token\",oauth_signature_method=\"PLAINTEXT\",oauth_timestamp=\"1623834029\",oauth_nonce=\"Zr5dzIAuVON\",oauth_version=\"1.0\",oauth_signature=\"Your consumerSecret%26Your tokenSecret\"'],\r",
+							"  header:['Content-Type:application/json', 'Authorization:OAuth oauth_consumer_key=\"4B34BCCFD24CF3497EE36E54204AA7E2\",oauth_token=\"38B073E4F6C65F722A0CF964492EA6A2\",oauth_signature_method=\"PLAINTEXT\",oauth_timestamp=\"1623834029\",oauth_nonce=\"Zr5dzIAuVON\",oauth_version=\"1.0\",oauth_signature=\"0D8635F6A51F0EA381A8D97F5D7812E2%26293BD08354D18D33871C4EBB02D67ACA\"'],\r",
 							"\r",
 							"  body: {\r",
 							"  }\r",
@@ -1186,22 +1186,22 @@
 					"oauth1": [
 						{
 							"key": "tokenSecret",
-							"value": "Your tokenSecret",
+							"value": "293BD08354D18D33871C4EBB02D67ACA",
 							"type": "string"
 						},
 						{
 							"key": "token",
-							"value": "Your token",
+							"value": "38B073E4F6C65F722A0CF964492EA6A2",
 							"type": "string"
 						},
 						{
 							"key": "consumerSecret",
-							"value": "Your consumerSecret",
+							"value": "0D8635F6A51F0EA381A8D97F5D7812E2",
 							"type": "string"
 						},
 						{
 							"key": "consumerKey",
-							"value": "Your consumerKey",
+							"value": "4B34BCCFD24CF3497EE36E54204AA7E2",
 							"type": "string"
 						},
 						{
@@ -1406,22 +1406,22 @@
 					"oauth1": [
 						{
 							"key": "consumerKey",
-							"value": "Your consumerKey",
+							"value": "4B34BCCFD24CF3497EE36E54204AA7E2",
 							"type": "string"
 						},
 						{
 							"key": "consumerSecret",
-							"value": "Your consumerSecret",
+							"value": "0D8635F6A51F0EA381A8D97F5D7812E2",
 							"type": "string"
 						},
 						{
 							"key": "token",
-							"value": "Your token",
+							"value": "38B073E4F6C65F722A0CF964492EA6A2",
 							"type": "string"
 						},
 						{
 							"key": "tokenSecret",
-							"value": "Your tokenSecret",
+							"value": "293BD08354D18D33871C4EBB02D67ACA",
 							"type": "string"
 						},
 						{
@@ -1638,7 +1638,7 @@
 							"\r",
 							"    method: 'GET',\r",
 							"\r",
-							"    header:['Content-Type:application/json', 'Authorization:OAuth oauth_consumer_key=\"Your consumerKey\",oauth_token=\"Your token\",oauth_signature_method=\"PLAINTEXT\",oauth_timestamp=\"1623834029\",oauth_nonce=\"Zr5dzIAuVON\",oauth_version=\"1.0\",oauth_signature=\"Your consumerSecret%26Your tokenSecret\"'],\r",
+							"    header:['Content-Type:application/json', 'Authorization:OAuth oauth_consumer_key=\"4B34BCCFD24CF3497EE36E54204AA7E2\",oauth_token=\"38B073E4F6C65F722A0CF964492EA6A2\",oauth_signature_method=\"PLAINTEXT\",oauth_timestamp=\"1623834029\",oauth_nonce=\"Zr5dzIAuVON\",oauth_version=\"1.0\",oauth_signature=\"0D8635F6A51F0EA381A8D97F5D7812E2%26293BD08354D18D33871C4EBB02D67ACA\"'],\r",
 							"\r",
 							"    body: {\r",
 							"    }\r",
@@ -1731,7 +1731,7 @@
 							"\r",
 							"            method: 'DELETE',\r",
 							"\r",
-							"            header:['Content-Type:application/json', 'Authorization:OAuth oauth_consumer_key=\"Your consumerKey\",oauth_token=\"Your token\",oauth_signature_method=\"PLAINTEXT\",oauth_timestamp=\"1623834029\",oauth_nonce=\"Zr5dzIAuVON\",oauth_version=\"1.0\",oauth_signature=\"Your consumerSecret%26Your tokenSecret\"'],\r",
+							"            header:['Content-Type:application/json', 'Authorization:OAuth oauth_consumer_key=\"4B34BCCFD24CF3497EE36E54204AA7E2\",oauth_token=\"38B073E4F6C65F722A0CF964492EA6A2\",oauth_signature_method=\"PLAINTEXT\",oauth_timestamp=\"1623834029\",oauth_nonce=\"Zr5dzIAuVON\",oauth_version=\"1.0\",oauth_signature=\"0D8635F6A51F0EA381A8D97F5D7812E2%26293BD08354D18D33871C4EBB02D67ACA\"'],\r",
 							"\r",
 							"            body: {\r",
 							"            }\r",
@@ -1780,22 +1780,22 @@
 					"oauth1": [
 						{
 							"key": "tokenSecret",
-							"value": "Your tokenSecret",
+							"value": "293BD08354D18D33871C4EBB02D67ACA",
 							"type": "string"
 						},
 						{
 							"key": "token",
-							"value": "Your token",
+							"value": "38B073E4F6C65F722A0CF964492EA6A2",
 							"type": "string"
 						},
 						{
 							"key": "consumerSecret",
-							"value": "Your consumerSecret",
+							"value": "0D8635F6A51F0EA381A8D97F5D7812E2",
 							"type": "string"
 						},
 						{
 							"key": "consumerKey",
-							"value": "Your consumerKey",
+							"value": "4B34BCCFD24CF3497EE36E54204AA7E2",
 							"type": "string"
 						},
 						{
@@ -2000,22 +2000,22 @@
 					"oauth1": [
 						{
 							"key": "consumerKey",
-							"value": "Your consumerKey",
+							"value": "4B34BCCFD24CF3497EE36E54204AA7E2",
 							"type": "string"
 						},
 						{
 							"key": "consumerSecret",
-							"value": "Your consumerSecret",
+							"value": "0D8635F6A51F0EA381A8D97F5D7812E2",
 							"type": "string"
 						},
 						{
 							"key": "token",
-							"value": "Your token",
+							"value": "38B073E4F6C65F722A0CF964492EA6A2",
 							"type": "string"
 						},
 						{
 							"key": "tokenSecret",
-							"value": "Your tokenSecret",
+							"value": "293BD08354D18D33871C4EBB02D67ACA",
 							"type": "string"
 						},
 						{
@@ -2173,9 +2173,9 @@
 							"\r",
 							"    var ShippingOptions = jsonData.ShippingOptions;\r",
 							"\r",
-							"    var arrShippingId =[];\r",
+							"    var ShippingIds =[];\r",
 							"\r",
-							"    var arrMethod =[];\r",
+							"    var Methods =[];\r",
 							"\r",
 							"    if(jsonData.HasBuyNow == true){\r",
 							"\r",
@@ -2199,24 +2199,24 @@
 							"                    // Fetch random ShippingId only when ShippingMethod has no pick-up option\r",
 							"                    else{\r",
 							"\r",
-							"                        arrShippingId.push(ShippingOptions[i].ShippingId);\r",
+							"                        ShippingIds.push(ShippingOptions[i].ShippingId);\r",
 							"\r",
-							"                        arrMethod.push(ShippingOptions[i].Method);\r",
+							"                        Methods.push(ShippingOptions[i].Method);\r",
 							"\r",
-							"                        postman.setEnvironmentVariable('arrShippingIdCount', arrShippingId.length); \r",
+							"                        postman.setEnvironmentVariable('ShippingIdsCount', ShippingIds.length); \r",
 							"\r",
-							"                        postman.setEnvironmentVariable('arrShippingId', arrShippingId);                     \r",
+							"                        postman.setEnvironmentVariable('ShippingIds', ShippingIds);                     \r",
 							"                        \r",
 							"                        // If it has too many ShippingId, to get the randdom ShippingId should better not execute in the loop\r",
-							"                        var ShippingId=pm.environment.get(\"arrShippingId\").split(\",\");\r",
+							"                        var ShippingId=pm.environment.get(\"ShippingIds\").split(\",\");\r",
 							"\r",
-							"                        var arrShippingIdCount=pm.environment.get(\"arrShippingIdCount\");\r",
+							"                        var ShippingIdsCount=pm.environment.get(\"ShippingIdsCount\");\r",
 							"\r",
-							"                        var RandShippingOptions = Math.floor(Math.random() * Number(arrShippingIdCount));\r",
+							"                        var RandShippingOptions = Math.floor(Math.random() * Number(ShippingIdsCount));\r",
 							"\r",
-							"                        postman.setEnvironmentVariable('ShippingId', arrShippingId[RandShippingOptions]);\r",
+							"                        postman.setEnvironmentVariable('ShippingId', ShippingIds[RandShippingOptions]);\r",
 							"\r",
-							"                        postman.setEnvironmentVariable('Method', arrMethod[RandShippingOptions]);\r",
+							"                        postman.setEnvironmentVariable('Method', Methods[RandShippingOptions]);\r",
 							"\r",
 							"                    }\r",
 							"\r",
@@ -2254,22 +2254,22 @@
 					"oauth1": [
 						{
 							"key": "consumerKey",
-							"value": "Your consumerKey",
+							"value": "4B34BCCFD24CF3497EE36E54204AA7E2",
 							"type": "string"
 						},
 						{
 							"key": "consumerSecret",
-							"value": "Your consumerSecret",
+							"value": "0D8635F6A51F0EA381A8D97F5D7812E2",
 							"type": "string"
 						},
 						{
 							"key": "token",
-							"value": "Your token",
+							"value": "38B073E4F6C65F722A0CF964492EA6A2",
 							"type": "string"
 						},
 						{
 							"key": "tokenSecret",
-							"value": "Your tokenSecret",
+							"value": "293BD08354D18D33871C4EBB02D67ACA",
 							"type": "string"
 						},
 						{
@@ -2522,7 +2522,7 @@
 							"\r",
 							"  method: 'GET',\r",
 							"\r",
-							"  header:['Content-Type:application/json', 'Authorization:OAuth oauth_consumer_key=\"Your consumerKey\",oauth_token=\"Your token\",oauth_signature_method=\"PLAINTEXT\",oauth_timestamp=\"1623834029\",oauth_nonce=\"Zr5dzIAuVON\",oauth_version=\"1.0\",oauth_signature=\"Your consumerSecret%26Your tokenSecret\"'],\r",
+							"  header:['Content-Type:application/json', 'Authorization:OAuth oauth_consumer_key=\"4B34BCCFD24CF3497EE36E54204AA7E2\",oauth_token=\"38B073E4F6C65F722A0CF964492EA6A2\",oauth_signature_method=\"PLAINTEXT\",oauth_timestamp=\"1623834029\",oauth_nonce=\"Zr5dzIAuVON\",oauth_version=\"1.0\",oauth_signature=\"0D8635F6A51F0EA381A8D97F5D7812E2%26293BD08354D18D33871C4EBB02D67ACA\"'],\r",
 							"\r",
 							"  body: {\r",
 							"  }\r",
@@ -2620,22 +2620,22 @@
 					"oauth1": [
 						{
 							"key": "tokenSecret",
-							"value": "Your tokenSecret",
+							"value": "293BD08354D18D33871C4EBB02D67ACA",
 							"type": "string"
 						},
 						{
 							"key": "token",
-							"value": "Your token",
+							"value": "38B073E4F6C65F722A0CF964492EA6A2",
 							"type": "string"
 						},
 						{
 							"key": "consumerSecret",
-							"value": "Your consumerSecret",
+							"value": "0D8635F6A51F0EA381A8D97F5D7812E2",
 							"type": "string"
 						},
 						{
 							"key": "consumerKey",
-							"value": "Your consumerKey",
+							"value": "4B34BCCFD24CF3497EE36E54204AA7E2",
 							"type": "string"
 						},
 						{
@@ -2779,22 +2779,22 @@
 		"oauth1": [
 			{
 				"key": "tokenSecret",
-				"value": "Your tokenSecret",
+				"value": "293BD08354D18D33871C4EBB02D67ACA",
 				"type": "string"
 			},
 			{
 				"key": "token",
-				"value": "Your token",
+				"value": "38B073E4F6C65F722A0CF964492EA6A2",
 				"type": "string"
 			},
 			{
 				"key": "consumerSecret",
-				"value": "Your consumerSecret",
+				"value": "0D8635F6A51F0EA381A8D97F5D7812E2",
 				"type": "string"
 			},
 			{
 				"key": "consumerKey",
-				"value": "Your consumerKey",
+				"value": "4B34BCCFD24CF3497EE36E54204AA7E2",
 				"type": "string"
 			},
 			{

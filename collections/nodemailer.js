@@ -59,9 +59,9 @@ var transport = nodemailer.createTransport({
 	
     auth:{
 		
-        user: "sender email",
+        user: "0512gaoyuan@gmail.com",
 		
-        pass: "sender email password"
+        pass: "zweelcgbxyajagqa"
 		
     }
 	
@@ -69,9 +69,9 @@ var transport = nodemailer.createTransport({
 
 var mailOptions = {
 	
-    from: "sender email",
+    from: "0512gaoyuan@gmail.com",
 	
-    to: "receiver email",
+    to: "garygao.tester@gmail.com",
 	
     subject: "Daily env check: "+currentTime,
 	
