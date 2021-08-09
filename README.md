@@ -8,6 +8,10 @@ This practice picks 10 typical Trade Me APIs aiming to demonstrate the API autom
 
 - #### [Repository instructions](https://ifulltest.github.io/postman/)
 
+- #### Testing technical structure for this practice
+
+![](https://ifulltest.github.io/images/tm-api-technical-structure.webp)
+
 - #### Panorama for this practice
 
 ![](https://ifulltest.github.io/images/tm-api-automation-panorama.webp)

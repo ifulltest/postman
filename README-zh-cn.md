@@ -8,6 +8,10 @@
 
 - #### [仓库说明](https://ifulltest.github.io/postman/README-zh-cn)
 
+- #### 该实践的技术架构图
+
+![](https://ifulltest.github.io/images/tm-api-technical-structure.webp)
+
 - #### 该实践的全景图
 
 ![img](https://ifulltest.github.io/images/tm-api-automation-panorama.webp)
