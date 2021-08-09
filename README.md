@@ -1,8 +1,8 @@
-## TradeMe API Automation Practice Instructions
+## Trade Me API Automation Practice Instructions
 
-**[Trade Me](https://www.trademe.co.nz/)** is New Zealand's largest online auction and classifieds website.
+**[Trade Me](https://www.Trade Me.co.nz/)** is New Zealand's largest online auction and classifieds website.
 
-This practice picks 10 typical TradeMe APIs aiming to demonstrate the API automation testing and CI process.
+This practice picks 10 typical Trade Me APIs aiming to demonstrate the API automation testing and CI process.
 
 - #### [GitHub repository](https://github.com/ifulltest/postman)
 
@@ -14,15 +14,15 @@ This practice picks 10 typical TradeMe APIs aiming to demonstrate the API automa
 
 ## Preparation Stage
 
-- #### TradeMe UI side
+- #### Trade Me UI side
 
-##### [Trademe sandbox front-end user register](https://ifulltest.github.io/en/posts/tm-api-first-demo/#2register-a-tradme-sandbox-userhttpswwwtmsandboxconzmembersregisteraspx)
+##### [Trade Me sandbox front-end user register](https://ifulltest.github.io/en/posts/tm-api-first-demo/#2register-a-tradme-sandbox-userhttpswwwtmsandboxconzmembersregisteraspx)
 
-- #### TradeMe API side
+- #### Trade Me API side
 
-##### [Trademe sandbox application register](https://ifulltest.github.io/en/posts/tm-api-first-demo/#3register-your-api-applicationhttpsdevelopertrademeconzapi-overviewregistering-an-application)
+##### [Trade Me sandbox application register](https://ifulltest.github.io/en/posts/tm-api-first-demo/#3register-your-api-applicationhttpsdeveloperTrade Meconzapi-overviewregistering-an-application)
 
-##### [Trademe sandbox authorization](https://ifulltest.github.io/en/posts/tm-api-first-demo/#4authenticationhttpsdevelopertrademeconzapi-overviewauthentication)
+##### [Trade Me sandbox authorization](https://ifulltest.github.io/en/posts/tm-api-first-demo/#4authenticationhttpsdeveloperTrade Meconzapi-overviewauthentication)
 
 - #### Local environment preparations
 
@@ -47,9 +47,9 @@ This practice picks 10 typical TradeMe APIs aiming to demonstrate the API automa
 
 ​	- nodemailer.js - email stakeholder the testing reports by this script
 
-​	- tradeMeSandBox.postman_collection.json - Postman positive cases script
+​	- Trade MeSandBox.postman_collection.json - Postman positive cases script
 
-​	- tradeMeSandBox-Negative.postman_collection.json - Postman negative cases script
+​	- Trade MeSandBox-Negative.postman_collection.json - Postman negative cases script
 
 ![](https://ifulltest.github.io/images/tm-readme-collections.webp)
 
@@ -71,7 +71,7 @@ This practice picks 10 typical TradeMe APIs aiming to demonstrate the API automa
 
 ![](https://ifulltest.github.io/images/tm-readme-repository-structure1.webp)
 
-- #### Quick way to start your first API testing
+- #### Start your first API testing
 
 ##### [Trade Me-1-API testing first demo](https://ifulltest.github.io/en/posts/tm-api-first-demo/)
 
@@ -79,11 +79,11 @@ This practice picks 10 typical TradeMe APIs aiming to demonstrate the API automa
 
 ## Scripting Stage
 
-- #### TradeMe UI side
+- #### Trade Me UI side
 
 ##### [Typical transactions front-end UI and back-end API relationships](https://ifulltest.github.io/en/posts/tm-api-typical-transactions/)
 
-- #### TradeMe API side
+- #### Trade Me API side
 
 ##### 	[Trade Me-3-Retrieve general categories API testing](https://ifulltest.github.io/en/posts/tm-api-retrieve-general-categories/)
 
@@ -163,7 +163,11 @@ copy %POSTMAN_HOME%\postman_github\postman\collections\* %POSTMAN_HOME%\collecti
 
 ![](https://ifulltest.github.io/images/tm-readme-postman-auth-replace.webp)
 
+- #### Replace with your email-related info in the '%POSTMAN_HOME%\data\nodemailer.js' file
+
+![](https://ifulltest.github.io/images/tm-api-nodemailer-replace-info.webp)
+
 - #### Start your own API automation testing journey
 
-Till now, you can start to practice the API automation testing and CI process. **Good luck! :）**
+##### Till now, you can start to practice the API automation testing and CI process. **Good luck! :）**
 

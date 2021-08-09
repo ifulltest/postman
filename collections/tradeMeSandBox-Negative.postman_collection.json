@@ -284,12 +284,12 @@
 					"oauth1": [
 						{
 							"key": "consumerKey",
-							"value": "4B34BCCFD24CF3497EE36E54204AA7E2",
+							"value": "Your consumerKey",
 							"type": "string"
 						},
 						{
 							"key": "consumerSecret",
-							"value": "0D8635F6A51F0EA381A8D97F5D7812E2",
+							"value": "Your consumerSecret",
 							"type": "string"
 						},
 						{
@@ -299,7 +299,7 @@
 						},
 						{
 							"key": "tokenSecret",
-							"value": "293BD08354D18D33871C4EBB02D67ACA",
+							"value": "Your tokenSecret",
 							"type": "string"
 						},
 						{
@@ -452,7 +452,7 @@
 		"oauth1": [
 			{
 				"key": "tokenSecret",
-				"value": "293BD08354D18D33871C4EBB02D67ACA",
+				"value": "Your tokenSecret",
 				"type": "string"
 			},
 			{
@@ -462,12 +462,12 @@
 			},
 			{
 				"key": "consumerSecret",
-				"value": "0D8635F6A51F0EA381A8D97F5D7812E2",
+				"value": "Your consumerSecret",
 				"type": "string"
 			},
 			{
 				"key": "consumerKey",
-				"value": "4B34BCCFD24CF3497EE36E54204AA7E2",
+				"value": "Your consumerKey",
 				"type": "string"
 			},
 			{
