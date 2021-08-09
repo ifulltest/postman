@@ -81,7 +81,7 @@ This practice picks 10 typical Trade Me APIs aiming to demonstrate the API autom
 
 - #### Trade Me UI side
 
-##### [Typical transactions front-end UI and back-end API relationships](https://ifulltest.github.io/en/posts/tm-api-typical-transactions/)
+##### Typical transactions front-end UI and back-end API relationships: [Trade Me-2-typical transactions](https://ifulltest.github.io/en/posts/tm-api-typical-transactions/)
 
 - #### Trade Me API side
 

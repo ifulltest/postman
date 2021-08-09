@@ -78,7 +78,7 @@
 
 - #### Trade Me UI 端
 
-##### [典型事务前端 UI 和后端 API 的关系](https://ifulltest.github.io/zh-cn/posts/tm-api-typical-transactions/)
+##### 典型事务前端 UI 和后端 API 的关系：[Trade Me-2-典型交易](https://ifulltest.github.io/zh-cn/posts/tm-api-typical-transactions/)
 
 - #### Trade Me API 端
 
