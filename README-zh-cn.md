@@ -172,5 +172,5 @@ copy %POSTMAN_HOME%\postman_github\postman\collections\* %POSTMAN_HOME%\collecti
 
 - #### 开启您自己的 API 自动化测试之旅
 
-##### 到此为止，您就可以开始练习 API 自动化测试和 CI 流程了。**祝你好运！:)**
+##### 到此为止，您就可以开始实践 API 自动化测试和 CI 流程了。**祝你好运！:)**
 
