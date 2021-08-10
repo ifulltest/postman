@@ -12,7 +12,7 @@
 
 ![](https://ifulltest.github.io/images/tm-api-technical-structure.webp)
 
-- #### 该实践的全景图 ([看大图点我](https://ifulltest.github.io/images/tm-api-automation-panorama.webp))
+- #### 该实践的全景图 ([点我看大图](https://ifulltest.github.io/images/tm-api-automation-panorama.webp))
 
 ![img](https://ifulltest.github.io/images/tm-api-automation-panorama.webp)
 

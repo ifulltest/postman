@@ -12,7 +12,7 @@ This practice picks 10 typical Trade Me APIs aiming to demonstrate the API autom
 
 ![](https://ifulltest.github.io/images/tm-api-technical-structure.webp)
 
-- #### Panorama for this practice ([large image click here](https://ifulltest.github.io/images/tm-api-automation-panorama.webp))
+- #### Panorama for this practice ([large image here](https://ifulltest.github.io/images/tm-api-automation-panorama.webp))
 
 ![](https://ifulltest.github.io/images/tm-api-automation-panorama.webp)
 
