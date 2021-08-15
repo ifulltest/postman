@@ -1,0 +1,17 @@
+# Refers to below code Paste key information into your GitHub local repository the config file.
+# And replace username:personal token with your own.
+# This file of example local folder is located on "D:\Software\postman\postman_github\postman\.git".
+
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+ url = https://your username:your personal token@github.com/ifulltest/ifulltest.github.io.git
+ fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
