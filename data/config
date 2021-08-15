@@ -10,7 +10,7 @@
 	symlinks = false
 	ignorecase = true
 [remote "origin"]
- url = https://your username:your personal token@github.com/ifulltest/ifulltest.github.io.git
+ url = https://your username:your personal token@github.com/ifulltest/postman.git
  fetch = +refs/heads/*:refs/remotes/origin/*
 [branch "main"]
 	remote = origin
