@@ -1,0 +1,1053 @@
+newman
+
+tradeMeSandBox
+
+→ RetrieveGeneralCategories
+  GET https://api.tmsandbox.co.nz/v1/Categories.JSON?depth=1 [200 OK, 1.54KB, 242ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofGivenSubcategory
+  │  Start'
+  │ 'Subcategories counts to: 27'
+  │ 'All subcategories name listed below: '
+  │ [
+  │   'Trade Me Motors',
+  │   'Trade Me Property',
+  │   'Trade Me Jobs',
+  │   'Antiques & collectables',
+  │   'Art',
+  │   'Baby gear',
+  │   'Books',
+  │   'Building & renovation',
+  │   'Business, farming & industry',
+  │   'Clothing & Fashion',
+  │   'Computers',
+  │   'Crafts',
+  │   'Electronics & photography',
+  │   'Flatmates wanted',
+  │   'Gaming',
+  │   'Health & beauty',
+  │   'Home & living',
+  │   'Jewellery & watches',
+  │   'Mobile phones',
+  │   'Movies & TV',
+  │   'Music & instruments',
+  │   'Pets & animals',
+  │   'Pottery & glass',
+  │   'Services',
+  │   'Sports',
+  │   'Toys & models',
+  │   'Travel, events & activities'
+  │ ]
+  │ 'Subcategory - Antiques & collectables existed'
+  │ 'Post-Transaction: CheckingtheCountsofGivenSubcategory
+  │  Pass'
+  └
+  √  Checking all subcategories returned, and the given subcategory exists in
+
+→ RetrieveYourWatchlist
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/All.JSON [200 OK, 1.63KB, 66ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofWatchList Start'
+  │ {
+  │   TotalCount: 4,
+  │   Page: 1,
+  │   PageSize: 4,
+  │   List: [
+  │     {
+  │       ListingId: 2149298947,
+  │       Title: '2 x NT40 Tool Holders',
+  │       Category: '0010-0396-4033-4560-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1628466309857)/',
+  │       EndDate: '/Date(1629330309857)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1629321604292)/',
+  │       CategoryPath: '/Business-farming-industry/Indust
+  │ rial/Manufacturing-metalwork/Other',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/8187496.jpg',
+  │       PhotoId: 8187496,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Other',
+  │       Attributes: [],
+  │       Subtitle: 'SKYLARC’S WINDFLOW TECHNOLOGY ONLINE 
+  │ AUCTION',
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     },
+  │     {
+  │       ListingId: 2149298956,
+  │       Title: 'Milling Machine Face Cutter',
+  │       Category: '0010-0396-4033-4560-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1628466321873)/',
+  │       EndDate: '/Date(1629330321873)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1629321604292)/',
+  │       CategoryPath: '/Business-farming-industry/Indust
+  │ rial/Manufacturing-metalwork/Other',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/8187491.jpg',
+  │       PhotoId: 8187491,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Other',
+  │       Attributes: [],
+  │       Subtitle: 'SKYLARC’S WINDFLOW TECHNOLOGY ONLINE 
+  │ AUCTION',
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     },
+  │     {
+  │       ListingId: 2149299196,
+  │       Title: 'Miller Honeywell Söll Turntable Anchorag
+  │ e Eye',
+  │       Category: '0010-0396-4033-8843-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1628478120280)/',
+  │       EndDate: '/Date(1629342120280)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1629321604292)/',
+  │       CategoryPath: '/Business-farming-industry/Indust
+  │ rial/Manufacturing-metalwork/Helmets-safety-gear',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/8166517.jpg',
+  │       PhotoId: 8166517,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Helmets & safety gear',
+  │       Attributes: [],
+  │       Subtitle: 'SKYLARC’S WINDFLOW TECHNOLOGY ONLINE 
+  │ AUCTION',
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     },
+  │     {
+  │       ListingId: 2149299237,
+  │       Title: '2-Leg Lifting Chain Set, 7500kg Capacity
+  │ ',
+  │       Category: '0010-0396-8847-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1628478154783)/',
+  │       EndDate: '/Date(1629342154783)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1629321604292)/',
+  │       CategoryPath: '/Business-farming-industry/Indust
+  │ rial/Hoists-jacks',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/8027125.jpg',
+  │       PhotoId: 8027125,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Hoists & jacks',
+  │       Attributes: [],
+  │       Subtitle: 'SKYLARC’S WINDFLOW TECHNOLOGY ONLINE 
+  │ AUCTION',
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 4,
+  │       Category: '0010-',
+  │       Name: 'Business, farming & industry',
+  │       CategoryId: 10
+  │     }
+  │   ]
+  │ }
+  │ 'Found 4 item on the watch list'
+  │ 'Post-Transaction: CheckingtheCountsofWatchList Pass'
+  └
+  √  Checking if there are any items in the watch list
+
+→ RemoveAListingFromYourWatchlist
+  ┌
+  │ 'Pre-Transaction: RetrieveYourWatchlist Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 1.63KB, 73ms]
+  ┌
+  │ {
+  │   TotalCount: 4,
+  │   Page: 1,
+  │   PageSize: 4,
+  │   List: [
+  │     {
+  │       ListingId: 2149298947,
+  │       Title: '2 x NT40 Tool Holders',
+  │       Category: '0010-0396-4033-4560-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1628466309857)/',
+  │       EndDate: '/Date(1629330309857)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1629321604526)/',
+  │       CategoryPath: '/Business-farming-industry/Indust
+  │ rial/Manufacturing-metalwork/Other',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/8187496.jpg',
+  │       PhotoId: 8187496,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Other',
+  │       Attributes: [],
+  │       Subtitle: 'SKYLARC’S WINDFLOW TECHNOLOGY ONLINE 
+  │ AUCTION',
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     },
+  │     {
+  │       ListingId: 2149298956,
+  │       Title: 'Milling Machine Face Cutter',
+  │       Category: '0010-0396-4033-4560-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1628466321873)/',
+  │       EndDate: '/Date(1629330321873)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1629321604526)/',
+  │       CategoryPath: '/Business-farming-industry/Indust
+  │ rial/Manufacturing-metalwork/Other',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/8187491.jpg',
+  │       PhotoId: 8187491,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Other',
+  │       Attributes: [],
+  │       Subtitle: 'SKYLARC’S WINDFLOW TECHNOLOGY ONLINE 
+  │ AUCTION',
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     },
+  │     {
+  │       ListingId: 2149299196,
+  │       Title: 'Miller Honeywell Söll Turntable Anchorag
+  │ e Eye',
+  │       Category: '0010-0396-4033-8843-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1628478120280)/',
+  │       EndDate: '/Date(1629342120280)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1629321604526)/',
+  │       CategoryPath: '/Business-farming-industry/Indust
+  │ rial/Manufacturing-metalwork/Helmets-safety-gear',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/8166517.jpg',
+  │       PhotoId: 8166517,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Helmets & safety gear',
+  │       Attributes: [],
+  │       Subtitle: 'SKYLARC’S WINDFLOW TECHNOLOGY ONLINE 
+  │ AUCTION',
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     },
+  │     {
+  │       ListingId: 2149299237,
+  │       Title: '2-Leg Lifting Chain Set, 7500kg Capacity
+  │ ',
+  │       Category: '0010-0396-8847-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1628478154783)/',
+  │       EndDate: '/Date(1629342154783)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1629321604526)/',
+  │       CategoryPath: '/Business-farming-industry/Indust
+  │ rial/Hoists-jacks',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/8027125.jpg',
+  │       PhotoId: 8027125,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Hoists & jacks',
+  │       Attributes: [],
+  │       Subtitle: 'SKYLARC’S WINDFLOW TECHNOLOGY ONLINE 
+  │ AUCTION',
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 4,
+  │       Category: '0010-',
+  │       Name: 'Business, farming & industry',
+  │       CategoryId: 10
+  │     }
+  │   ]
+  │ }
+  │ 'All the can be deleted ListingId on the Watchlist: '
+  │ '2149298947,2149298956,2149299196,2149299237'
+  │ 'Pre-Transaction: RetrieveYourWatchlist Pass'
+  └
+  √  Get all ListingId on the Watchlist
+  ┌
+  │ 'Pre-Transaction: RemoveAListingFromYourWatchlist Star
+  │ t'
+  │ 'LastListingId: 2149299237'
+  └
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149298947.JSON   DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149298956.JSON   DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149299196.JSON [200 OK, 347B, 111ms]
+  √  Delete ListingId from the Watchlist, but leave the LastListingId: 2149299237
+[200 OK, 347B, 175ms]
+  √  Delete ListingId from the Watchlist, but leave the LastListingId: 2149299237
+[200 OK, 347B, 205ms]
+  √  Delete ListingId from the Watchlist, but leave the LastListingId: 2149299237
+  ┌
+  │ 'Pre-Transaction: RemoveAListingFromYourWatchlist Pass
+  │ '
+  └
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149299237.JSON [200 OK, 347B, 92ms]
+  ┌
+  │ 'Post-Transaction: RetrieveYourWatchlist Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 376B, 58ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: [],
+  │   FoundCategories: []
+  │ }
+  │ 'Current count of ListingId that can be deleted in the
+  │  watchlist: 0'
+  └
+  √  Checking LastListingId: 2149299237 has been deleted
+  ┌
+  │ 'Post-Transaction: RetrieveYourWatchlist Pass'
+  └
+
+→ RetrieveClosingSoonListings
+  GET https://api.tmsandbox.co.nz/v1/Listings/closing.JSON?rows=1000 [200 OK, 36.81KB, 322ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofClosingSoonListi
+  │ ngs Start'
+  │ 'Found 250 items in the Closing Soon Listings'
+  │ 'Post-Transaction: CheckingtheCountsofClosingSoonListi
+  │ ngs Pass'
+  └
+  √  Checking if there are any items in the Closing Soon Listings
+
+→ AddAListingToYourWatchlist
+  ┌
+  │ 'Pre-Transaction: RetrieveClosingSoonListings Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/Listings/closing.JSON?rows=1000 [200 OK, 36.81KB, 235ms]
+  √  Get all the closing soon ListingId
+  ┌
+  │ 'From 250 closing soon items randomly choose the: 2149
+  │ 299134 waiting to be added to the watchlist'
+  │ 'Pre-Transaction: RetrieveClosingSoonListings Pass'
+  └
+  POST https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149299134.JSON [200 OK, 347B, 128ms]
+  ┌
+  │ 'Post-Transaction: CheckingAddToWatchList Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 1.26KB, 55ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149299134,
+  │       Title: 'Assortment of Eye Bolts (40 Units)',
+  │       Category: '0010-0396-0520-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1628478048230)/',
+  │       EndDate: '/Date(1629342048230)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1629321608323)/',
+  │       CategoryPath: '/Business-farming-industry/Indust
+  │ rial/Other',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/8050911.jpg',
+  │       PhotoId: 8050911,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Other',
+  │       Attributes: [],
+  │       Subtitle: 'SKYLARC’S WINDFLOW TECHNOLOGY ONLINE 
+  │ AUCTION',
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0010-',
+  │       Name: 'Business, farming & industry',
+  │       CategoryId: 10
+  │     }
+  │   ]
+  │ }
+  │ 'ListingId 2149299134 has been added to the watchlist'
+  └
+  √  Checking ListingId 2149299134 has been added
+  ┌
+  │ 'Post-Transaction: CheckingAddToWatchList Pass'
+  └
+
+→ RetrieveYourWonItems
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 2.55KB, 85ms]
+  ┌
+  │ 'Post-Transaction: CheckingWonListHaveItems Start'
+  │ {
+  │   TotalCount: 4,
+  │   Page: 1,
+  │   PageSize: 4,
+  │   List: [
+  │     {
+  │       ListingId: 2149301695,
+  │       Title: 'Samsung Galaxy BV Weaving S9 Case',
+  │       Category: '0344-0899-1135-5537-',
+  │       StartPrice: 0,
+  │       StartDate: '/Date(1629179219467)/',
+  │       EndDate: '/Date(1629320837193)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1629321608526)/',
+  │       CategoryPath: '/Mobile-phones/Accessories/Cases-
+  │ covers/Samsung',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4676323.jpg',
+  │       PhotoId: 4676323,
+  │       Seller: {
+  │         MemberId: 4000334,
+  │         Nickname: 'paperclip4',
+  │         DateAddressVerified: '/Date(1338811200000)/',
+  │         DateJoined: '/Date(1338811200000)/',
+  │         Email: 'owen4@snipesoft.net.nz',
+  │         UniqueNegative: 0,
+  │         UniquePositive: 4,
+  │         FeedbackCount: 4,
+  │         IsAddressVerified: true
+  │       },
+  │       IsNew: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Samsung',
+  │       ReserveState: 3,
+  │       IsBuyNowOnly: true,
+  │       Quantity: 1,
+  │       IsFlatShippingCharge: true,
+  │       Options: [
+  │         {
+  │           Name: 'Colour',
+  │           Value: 'Black'
+  │         }
+  │       ],
+  │       ListingGroupId: 73736,
+  │       StatusDate: '/Date(0)/',
+  │       AuctionAttribute: '',
+  │       BuyerFeedbackPlaced: 0,
+  │       SellerFeedbackPlaced: 0,
+  │       DeliveryId: 0,
+  │       FpoDecisionViaMobile: false,
+  │       HasPaidByCreditCard: false,
+  │       InvoiceId: 0,
+  │       OfferId: 0,
+  │       PaymentInfo: 'NZ Bank Deposit',
+  │       Price: 12.99,
+  │       SelectedShipping: 'rural',
+  │       ShippingPrice: 9.99,
+  │       ShippingType: 4,
+  │       SoldDate: '/Date(1629320837193)/',
+  │       SoldType: 'BUYNOW',
+  │       PaymentInstructions: '',
+  │       PurchaseId: 26399,
+  │       ReferenceNumber: 'P26399',
+  │       SubtotalPrice: 12.99,
+  │       TotalShippingPrice: 9.99,
+  │       TotalSalePrice: 22.98,
+  │       TrackedParcels: [],
+  │       TaxSubTotal: 0,
+  │       HasPaidByDeferredPayment: false
+  │     },
+  │     {
+  │       ListingId: 2149301730,
+  │       Title: 'Mulligatawney and Jerrabomberra',
+  │       Category: '0344-0899-1135-5537-',
+  │       StartPrice: 0,
+  │       StartDate: '/Date(1629234445973)/',
+  │       EndDate: '/Date(1629320827880)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1629321608526)/',
+  │       CategoryPath: '/Mobile-phones/Accessories/Cases-
+  │ covers/Samsung',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/5407040.jpg',
+  │       PhotoId: 5407040,
+  │       Seller: {
+  │         MemberId: 4000433,
+  │         Nickname: 'junk1b',
+  │         DateAddressVerified: '/Date(1380798000000)/',
+  │         DateJoined: '/Date(1343044800000)/',
+  │         Email: 'junk1b@abcde.com',
+  │         UniqueNegative: 5,
+  │         UniquePositive: 16,
+  │         FeedbackCount: 11,
+  │         IsAddressVerified: true
+  │       },
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Samsung',
+  │       ReserveState: 3,
+  │       IsBuyNowOnly: true,
+  │       Quantity: 1,
+  │       StatusDate: '/Date(0)/',
+  │       AuctionAttribute: '',
+  │       BuyerFeedbackPlaced: 0,
+  │       SellerFeedbackPlaced: 0,
+  │       DeliveryId: 0,
+  │       FpoDecisionViaMobile: false,
+  │       HasPaidByCreditCard: false,
+  │       InvoiceId: 0,
+  │       OfferId: 0,
+  │       PaymentInfo: 'NZ Bank Deposit',
+  │       Price: 15,
+  │       SelectedShipping: 'Buyer to pick-up',
+  │       ShippingPrice: 0,
+  │       ShippingType: 2,
+  │       SoldDate: '/Date(1629320827880)/',
+  │       SoldType: 'BUYNOW',
+  │       PaymentInstructions: '',
+  │       PurchaseId: 26398,
+  │       ReferenceNumber: 'P26398',
+  │       SubtotalPrice: 15,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 15,
+  │       TrackedParcels: [],
+  │       TaxSubTotal: 0,
+  │       HasPaidByDeferredPayment: false
+  │     },
+  │     {
+  │       ListingId: 2149301732,
+  │       Title: 'Trike',
+  │       Category: '0347-0924-0162-',
+  │       StartPrice: 0,
+  │       StartDate: '/Date(1629234447163)/',
+  │       EndDate: '/Date(1629320817897)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1629321608526)/',
+  │       CategoryPath: '/Toys-models/Models/Other',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4550160.jpg',
+  │       PhotoId: 4550160,
+  │       Seller: {
+  │         MemberId: 4000433,
+  │         Nickname: 'junk1b',
+  │         DateAddressVerified: '/Date(1380798000000)/',
+  │         DateJoined: '/Date(1343044800000)/',
+  │         Email: 'junk1b@abcde.com',
+  │         UniqueNegative: 5,
+  │         UniquePositive: 16,
+  │         FeedbackCount: 11,
+  │         IsAddressVerified: true
+  │       },
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Other',
+  │       ReserveState: 3,
+  │       IsBuyNowOnly: true,
+  │       Quantity: 1,
+  │       Options: [
+  │         {
+  │           Name: 'Wheels',
+  │           Value: 'Two'
+  │         }
+  │       ],
+  │       ListingGroupId: 73744,
+  │       StatusDate: '/Date(0)/',
+  │       AuctionAttribute: '',
+  │       BuyerFeedbackPlaced: 0,
+  │       SellerFeedbackPlaced: 0,
+  │       DeliveryId: 0,
+  │       FpoDecisionViaMobile: false,
+  │       HasPaidByCreditCard: false,
+  │       InvoiceId: 0,
+  │       OfferId: 0,
+  │       PaymentInfo: 'NZ Bank Deposit',
+  │       Price: 19,
+  │       SelectedShipping: 'Buyer to pick-up',
+  │       ShippingPrice: 0,
+  │       ShippingType: 2,
+  │       SoldDate: '/Date(1629320817897)/',
+  │       SoldType: 'BUYNOW',
+  │       PaymentInstructions: '',
+  │       PurchaseId: 26397,
+  │       ReferenceNumber: 'P26397',
+  │       SubtotalPrice: 19,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 19,
+  │       TrackedParcels: [],
+  │       TaxSubTotal: 0,
+  │       HasPaidByDeferredPayment: false
+  │     },
+  │     {
+  │       ListingId: 2149301731,
+  │       Title: 'Cajun Smoked Dragons Breath J1B-GR6',
+  │       Category: '0187-2192-2676-',
+  │       StartPrice: 0,
+  │       StartDate: '/Date(1629234446663)/',
+  │       EndDate: '/Date(1629320430583)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1629321608526)/',
+  │       CategoryPath: '/Antiques-collectables/Art-deco-r
+  │ etro/Fashion-beauty',
+  │       Seller: {
+  │         MemberId: 4000433,
+  │         Nickname: 'junk1b',
+  │         DateAddressVerified: '/Date(1380798000000)/',
+  │         DateJoined: '/Date(1343044800000)/',
+  │         Email: 'junk1b@abcde.com',
+  │         UniqueNegative: 5,
+  │         UniquePositive: 16,
+  │         FeedbackCount: 11,
+  │         IsAddressVerified: true
+  │       },
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Fashion & beauty',
+  │       ReserveState: 3,
+  │       IsBuyNowOnly: true,
+  │       Quantity: 1,
+  │       Options: [
+  │         {
+  │           Name: 'size',
+  │           Value: 'small'
+  │         }
+  │       ],
+  │       ListingGroupId: 73743,
+  │       StatusDate: '/Date(0)/',
+  │       AuctionAttribute: '',
+  │       BuyerFeedbackPlaced: 0,
+  │       SellerFeedbackPlaced: 0,
+  │       DeliveryId: 0,
+  │       FpoDecisionViaMobile: false,
+  │       HasPaidByCreditCard: false,
+  │       InvoiceId: 0,
+  │       OfferId: 0,
+  │       PaymentInfo: 'NZ Bank Deposit',
+  │       Price: 18.99,
+  │       SelectedShipping: 'Buyer to pick-up',
+  │       ShippingPrice: 0,
+  │       ShippingType: 2,
+  │       SoldDate: '/Date(1629320430583)/',
+  │       SoldType: 'BUYNOW',
+  │       PaymentInstructions: '',
+  │       PurchaseId: 26396,
+  │       ReferenceNumber: 'P26396',
+  │       SubtotalPrice: 18.99,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 18.99,
+  │       TrackedParcels: [],
+  │       TaxSubTotal: 0,
+  │       HasPaidByDeferredPayment: false
+  │     }
+  │   ]
+  │ }
+  │ 'WonPurchaseId counts to: 4, the purchaseId: 26399,263
+  │ 98,26397,26396'
+  │ 'Post-Transaction: CheckingWonListHaveItems Pass'
+  └
+  √  CheckingWonListHasItems
+
+→ RemoveAPurchaseFromYourWonItemsList
+  ┌
+  │ 'Pre-Transaction: RemoveAPurchaseFromYourWonItemsList 
+  │ Start'
+  │ 'LastWonPurchaseId: 26396'
+  └
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/26399.JSON   DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/26398.JSON   DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/26397.JSON [200 OK, 347B, 81ms]
+  ┌
+  │ {
+  │   Success: true,
+  │   Description: 'Success'
+  │ }
+  └
+  √  Delete PurchaseId from the Wonlist, but leave the LastPurchaseId: 26396
+[200 OK, 347B, 94ms]
+  ┌
+  │ {
+  │   Success: true,
+  │   Description: 'Success'
+  │ }
+  └
+  √  Delete PurchaseId from the Wonlist, but leave the LastPurchaseId: 26396
+[200 OK, 347B, 107ms]
+  ┌
+  │ {
+  │   Success: true,
+  │   Description: 'Success'
+  │ }
+  └
+  √  Delete PurchaseId from the Wonlist, but leave the LastPurchaseId: 26396
+  ┌
+  │ 'Pre-Transaction: RemoveAPurchaseFromYourWonItemsList 
+  │ Pass'
+  └
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/26396.JSON [200 OK, 347B, 70ms]
+  ┌
+  │ {
+  │   Success: true,
+  │   Description: 'Success'
+  │ }
+  │ 'Post-Transaction: CheckingDeleteWonItems Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 355B, 77ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: []
+  │ }
+  │ 'Current items count on the won list: 0. All items hav
+  │ e been removed from the won list.'
+  │ 'Post-Transaction: CheckingDeleteWonItems Pass'
+  └
+  √  Checking LastWonPurchaseId: 26396 has been removed
+
+→ GeneralSearch
+  GET https://api.tmsandbox.co.nz/v1/Search/General.JSON?buy=All&rows=500&page=4 [200 OK, 747.95KB, 2.1s]
+  ┌
+  │ 'Post-Transaction: CheckingListingIdHasBuyNow Start'
+  │ 'Page: 4, total items: 500'
+  │ "'HasBuyNow' items counts to: 17, ListingId details: "
+  │ [
+  │   2149301046, 2149300238,
+  │   2149300242, 2149301405,
+  │   2149301406, 2149301408,
+  │   2149301409, 2149301695,
+  │   2149301696, 2149301697,
+  │   2149301698, 2149301714,
+  │   2149301730, 2149301731,
+  │   2149301732, 2149301733,
+  │   2149301744
+  │ ]
+  │ 'Get random SingleListingId: 2149300238'
+  │ 'Post-Transaction: CheckingListingIdHasBuyNow Pass'
+  └
+  √  GetListingIdHasBuyNow
+
+→ RetrieveTheDetailsOfASingleListing
+  GET https://api.tmsandbox.co.nz/v1/Listings/2149300238.JSON [200 OK, 1.69KB, 84ms]
+  ┌
+  │ 'Post-Transaction: CheckingSingleListingIdDetails Star
+  │ t'
+  │ {
+  │   ListingId: 2149300238,
+  │   Title: 'MP63-25 Auto-Twirling Spaghetti Fork Set',
+  │   Category: '0004-0371-0562-6745-',
+  │   StartPrice: 10,
+  │   BuyNowPrice: 20,
+  │   StartDate: '/Date(1628719816980)/',
+  │   EndDate: '/Date(1629324540000)/',
+  │   ListingLength: null,
+  │   HasGallery: true,
+  │   AsAt: '/Date(1629321613464)/',
+  │   CategoryPath: '/Home-living/Kitchen/Cutlery-utensils
+  │ /Cutlery',
+  │   PhotoId: 4548585,
+  │   RegionId: 1,
+  │   Region: 'Northland',
+  │   SuburbId: 120,
+  │   Suburb: 'Kerikeri',
+  │   HasReserve: true,
+  │   HasBuyNow: true,
+  │   NoteDate: '/Date(0)/',
+  │   CategoryName: 'Cutlery',
+  │   ReserveState: 2,
+  │   Attributes: [],
+  │   OpenHomes: [],
+  │   MinimumNextBidAmount: 10,
+  │   PriceDisplay: '$10.00',
+  │   AdditionalData: { BulletPoints: [], Tags: [] },
+  │   Member: {
+  │     MemberId: 4001915,
+  │     Nickname: 'myprodo63',
+  │     DateAddressVerified: '/Date(1414666800000)/',
+  │     DateJoined: '/Date(1414666800000)/',
+  │     UniqueNegative: 3,
+  │     UniquePositive: 29,
+  │     FeedbackCount: 26,
+  │     IsAddressVerified: true,
+  │     Suburb: 'Kerikeri',
+  │     Region: 'Northland',
+  │     IsAuthenticated: true,
+  │     IsInTrade: true
+  │   },
+  │   Body: 'Reserve = 16.50',
+  │   Photos: [
+  │     {
+  │       Key: 4548585,
+  │       Value: {
+  │         Thumbnail: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4548585.jpg',
+  │         List: 'https://images.tmsandbox.co.nz/photoser
+  │ ver/lv2/4548585.jpg',
+  │         Medium: 'https://images.tmsandbox.co.nz/photos
+  │ erver/med/4548585.jpg',
+  │         Gallery: 'https://images.tmsandbox.co.nz/photo
+  │ server/gv/4548585.jpg',
+  │         Large: 'https://images.tmsandbox.co.nz/photose
+  │ rver/tq/4548585.jpg',
+  │         FullSize: 'https://images.tmsandbox.co.nz/phot
+  │ oserver/full/4548585.jpg',
+  │         PhotoId: 4548585,
+  │         OriginalWidth: 500,
+  │         OriginalHeight: 500
+  │       }
+  │     }
+  │   ],
+  │   AllowsPickups: 1,
+  │   ShippingOptions: [
+  │     {
+  │       Type: 4,
+  │       Price: 1.69,
+  │       Method: 'Freight Forwarder 1',
+  │       ShippingId: 4
+  │     },
+  │     {
+  │       Type: 4,
+  │       Price: 2.68,
+  │       Method: 'Freight Forwarder 2',
+  │       ShippingId: 5
+  │     },
+  │     {
+  │       Type: 4,
+  │       Price: 3.48,
+  │       Method: 'Freight Forwarder 3',
+  │       ShippingId: 6
+  │     },
+  │     {
+  │       Type: 2,
+  │       Price: 0,
+  │       Method: 'I intend to pick-up',
+  │       ShippingId: 2
+  │     }
+  │   ],
+  │   PaymentOptions: 'NZ Bank Deposit',
+  │   DonationRecipient: {
+  │     CharityType: 1,
+  │     ImageSource: 'https://www.tmsandbox.co.nz/images/s
+  │ ell/kiwis-for-kiwi-logo-3x.png',
+  │     DarkModeImageSource: 'https://www.tmsandbox.co.nz/
+  │ images/sell/kiwis-for-kiwi-logo-3x.png',
+  │     Description: 'Kiwis for kiwi',
+  │     Tagline: 'Protecting kiwi and the places they live
+  │ .'
+  │   },
+  │   IsInTradeProtected: true,
+  │   CanAddToCart: false,
+  │   EmbeddedContent: {},
+  │   SupportsQuestionsAndAnswers: true,
+  │   PaymentMethods: [
+  │     {
+  │       Id: 1,
+  │       Name: 'NZ Bank Deposit'
+  │     }
+  │   ],
+  │   BoundaryImage: {
+  │     Thumbnail: null,
+  │     List: null,
+  │     Medium: null,
+  │     Gallery: null,
+  │     Large: null,
+  │     FullSize: null,
+  │     PhotoId: 0
+  │   },
+  │   RenderOptions: [ 2 ],
+  │   AreaOfBusiness: 1
+  │ }
+  │ 'ListingId: 2149300238, ShippingId: 2, and Method: I i
+  │ ntend to pick-up'
+  │ 'Post-Transaction: CheckingSingleListingIdDetails Pass
+  │ '
+  └
+  √  CheckingSingleListingIdDetails
+
+→ BuyAnAuctionUsingBuyNow
+  POST https://api.tmsandbox.co.nz/v1/Bidding/BuyNow.JSON [200 OK, 738B, 332ms]
+  ┌
+  │ 'Post-Transaction: CheckingBuyNow Start'
+  │ {
+  │   Success: true,
+  │   Description: 'Thanks for winning my auction.\r\n' +
+  │     '\r\n' +
+  │     'Please deposit payment (including shipping) into 
+  │ my bank account:\r\n' +
+  │     '\r\n' +
+  │     '[ENTER YOUR BANK ACCOUNT DETAILS HERE]\r\n' +
+  │     '\r\n' +
+  │     'Thanks for your purchase and please remember to p
+  │ lace feedback.\r\n' +
+  │     '\r\n' +
+  │     'Kind regards,\r\n' +
+  │     '\r\n' +
+  │     '[ENTER YOUR NAME HERE]\r\n',
+  │   StatusCode: 0,
+  │   PurchaseId: 26400
+  │ }
+  │ 'Get sucessful StatusCode: 0 (0-Success)'
+  │ 'Post-Transaction: CheckingBuyNow Pass'
+  └
+  √  CheckingBuyNowSuccess
+  ┌
+  │ 'Post-Transaction: CheckingPurchasedItemOnWonList Star
+  │ t'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 355B, 73ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: []
+  │ }
+  │ 'Not Found any PurchaseId and ListingId exist on the w
+  │ on list.'
+  │ 'Post-Transaction: CheckingPurchasedItemOnWonList Fail
+  │ ed'
+  └
+  √  Checking NewPurchasedListId existed in the won list
+
+┌─────────────────────────┬────────────────────┬───────────────────┐
+│                         │           executed │            failed │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│              iterations │                  1 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│                requests │                 22 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│            test-scripts │                 20 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│      prerequest-scripts │                 19 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│              assertions │                 19 │                 0 │
+├─────────────────────────┴────────────────────┴───────────────────┤
+│ total run duration: 10.3s                                        │
+├──────────────────────────────────────────────────────────────────┤
+│ total data received: 829.65KB (approx)                           │
+├──────────────────────────────────────────────────────────────────┤
+│ average response time: 225ms [min: 55ms, max: 2.1s, s.d.: 436ms] │
+└──────────────────────────────────────────────────────────────────┘
