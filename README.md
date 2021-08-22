@@ -1,6 +1,6 @@
 ## Trade Me API Automation Practice Instructions
 
-**[Trade Me](https://www.Trade Me.co.nz/)** is New Zealand's largest online auction and classifieds website.
+**[Trade Me](https://www.trademe.co.nz/)** is New Zealand's largest online auction and classifieds website.
 
 This practice picks 10 typical Trade Me APIs aiming to demonstrate the API automation testing and CI process.
 

@@ -1,6 +1,6 @@
 ## Trade Me API 自动化实践说明
 
-**[Trade Me](https://www.Trade Me.co.nz/)**是新西兰最大的在线拍卖和分类广告网站。
+**[Trade Me](https://www.trademe.co.nz/)**是新西兰最大的在线拍卖和分类广告网站。
 
 本实践选取了 10 个典型的 Trade Me API，旨在演示 API 自动化测试和 CI 流程。
 
