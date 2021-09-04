@@ -1,0 +1,808 @@
+newman
+
+i-full-tester1-TMSandBox-Pos
+
+→ RetrieveGeneralCategories
+  GET https://api.tmsandbox.co.nz/v1/Categories.JSON?depth=1 [200 OK, 1.54KB, 222ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofGivenSubcategory
+  │  Start'
+  │ 'Subcategories counts to: 27'
+  │ 'All subcategories name listed below: '
+  │ [
+  │   'Trade Me Motors',
+  │   'Trade Me Property',
+  │   'Trade Me Jobs',
+  │   'Antiques & collectables',
+  │   'Art',
+  │   'Baby gear',
+  │   'Books',
+  │   'Building & renovation',
+  │   'Business, farming & industry',
+  │   'Clothing & Fashion',
+  │   'Computers',
+  │   'Crafts',
+  │   'Electronics & photography',
+  │   'Flatmates wanted',
+  │   'Gaming',
+  │   'Health & beauty',
+  │   'Home & living',
+  │   'Jewellery & watches',
+  │   'Mobile phones',
+  │   'Movies & TV',
+  │   'Music & instruments',
+  │   'Pets & animals',
+  │   'Pottery & glass',
+  │   'Services',
+  │   'Sports',
+  │   'Toys & models',
+  │   'Travel, events & activities'
+  │ ]
+  │ 'Subcategory - Antiques & collectables existed'
+  │ 'Post-Transaction: CheckingtheCountsofGivenSubcategory
+  │  Pass'
+  └
+  √  Checking all subcategories returned, and the given subcategory exists in
+
+→ RetrieveYourWatchlist
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/All.JSON [200 OK, 1.19KB, 51ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofWatchList Start'
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149306082,
+  │       Title: 'Cobra Glassware',
+  │       Category: '0341-0881-4739-',
+  │       StartPrice: 11,
+  │       BuyNowPrice: 33,
+  │       StartDate: '/Date(1630594569950)/',
+  │       EndDate: '/Date(1630767369950)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1630765921069)/',
+  │       CategoryPath: '/Crafts/Jewellery-making-beading/
+  │ Crimps',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4549183.jpg',
+  │       PhotoId: 4549183,
+  │       RegionId: 1,
+  │       Region: 'Northland',
+  │       Suburb: 'Kerikeri',
+  │       HasBuyNow: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Crimps',
+  │       Attributes: [],
+  │       MinimumNextBidAmount: 11,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$11.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0341-',
+  │       Name: 'Crafts',
+  │       CategoryId: 341
+  │     }
+  │   ]
+  │ }
+  │ 'Found 1 item on the watch list'
+  │ 'Post-Transaction: CheckingtheCountsofWatchList Pass'
+  └
+  √  Checking if there are any items in the watch list
+
+→ RemoveAListingFromYourWatchlist
+  ┌
+  │ 'Pre-Transaction: RetrieveYourWatchlist Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 1.19KB, 50ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149306082,
+  │       Title: 'Cobra Glassware',
+  │       Category: '0341-0881-4739-',
+  │       StartPrice: 11,
+  │       BuyNowPrice: 33,
+  │       StartDate: '/Date(1630594569950)/',
+  │       EndDate: '/Date(1630767369950)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1630765921225)/',
+  │       CategoryPath: '/Crafts/Jewellery-making-beading/
+  │ Crimps',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4549183.jpg',
+  │       PhotoId: 4549183,
+  │       RegionId: 1,
+  │       Region: 'Northland',
+  │       Suburb: 'Kerikeri',
+  │       HasBuyNow: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Crimps',
+  │       Attributes: [],
+  │       MinimumNextBidAmount: 11,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$11.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0341-',
+  │       Name: 'Crafts',
+  │       CategoryId: 341
+  │     }
+  │   ]
+  │ }
+  │ 'All the can be deleted ListingId on the Watchlist: '
+  │ '2149306082'
+  │ 'Pre-Transaction: RetrieveYourWatchlist Pass'
+  └
+  √  Get all ListingId on the Watchlist
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149306082.JSON [200 OK, 347B, 80ms]
+  ┌
+  │ 'Post-Transaction: RetrieveYourWatchlist Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 376B, 46ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: [],
+  │   FoundCategories: []
+  │ }
+  │ 'Current count of ListingId that can be deleted in the
+  │  watchlist: 0'
+  └
+  √  Checking LastListingId: 2149306082 has been deleted
+  ┌
+  │ 'Post-Transaction: RetrieveYourWatchlist Pass'
+  └
+
+→ RetrieveClosingSoonListings
+  GET https://api.tmsandbox.co.nz/v1/Listings/closing.JSON?rows=1000 [200 OK, 37.53KB, 305ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofClosingSoonListi
+  │ ngs Start'
+  │ 'Found 250 items in the Closing Soon Listings'
+  │ 'Post-Transaction: CheckingtheCountsofClosingSoonListi
+  │ ngs Pass'
+  └
+  √  Checking if there are any items in the Closing Soon Listings
+
+→ AddAListingToYourWatchlist
+  ┌
+  │ 'Pre-Transaction: RetrieveClosingSoonListings Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/Listings/closing.JSON?rows=1000 [200 OK, 37.75KB, 213ms]
+  √  Get all the closing soon ListingId
+  ┌
+  │ 'From 250 closing soon items randomly choose the: 2149
+  │ 303971 waiting to be added to the watchlist'
+  │ 'Pre-Transaction: RetrieveClosingSoonListings Pass'
+  └
+  POST https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149303971.JSON [200 OK, 347B, 137ms]
+  ┌
+  │ 'Post-Transaction: CheckingAddToWatchList Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 1.23KB, 46ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149303971,
+  │       Title: 'Royal Air Force Vickers Vimy Bomber',
+  │       Category: '0347-0924-1193-7772-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1629976822783)/',
+  │       EndDate: '/Date(1630840822783)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1630765922553)/',
+  │       CategoryPath: '/Toys-models/Models/Aircraft/1:72
+  │ ',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/6642510.jpg',
+  │       PhotoId: 6642510,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: '1:72',
+  │       Attributes: [],
+  │       Subtitle: 'SKYLARC’S MASSIVE MODEL AUCTION',
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0347-',
+  │       Name: 'Toys & models',
+  │       CategoryId: 347
+  │     }
+  │   ]
+  │ }
+  │ 'ListingId 2149303971 has been added to the watchlist'
+  │ 'Post-Transaction: CheckingAddToWatchList Pass'
+  └
+  √  Checking ListingId 2149303971 has been added
+
+→ RetrieveYourWonItems
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 1.26KB, 51ms]
+  ┌
+  │ 'Post-Transaction: CheckingWonListHaveItems Start'
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149304808,
+  │       Title: 'Mug 06 J1A-1',
+  │       Category: '0005-0387-4994-6473-',
+  │       StartPrice: 0,
+  │       StartDate: '/Date(1630294450030)/',
+  │       EndDate: '/Date(1630757317107)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1630765922678)/',
+  │       CategoryPath: '/Sports/Camping/Hydration/Other',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4550469.jpg',
+  │       PhotoId: 4550469,
+  │       Seller: {
+  │         MemberId: 4000148,
+  │         Nickname: 'junk',
+  │         DateAddressVerified: '/Date(1380798000000)/',
+  │         DateJoined: '/Date(1319713200000)/',
+  │         Email: 'junk1@abcde.com',
+  │         UniqueNegative: 21,
+  │         UniquePositive: 48,
+  │         FeedbackCount: 27,
+  │         IsAddressVerified: true
+  │       },
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Other',
+  │       ReserveState: 3,
+  │       Subtitle: 'F10d1531',
+  │       IsBuyNowOnly: true,
+  │       Quantity: 1,
+  │       StatusDate: '/Date(0)/',
+  │       AuctionAttribute: '',
+  │       BuyerFeedbackPlaced: 0,
+  │       SellerFeedbackPlaced: 0,
+  │       DeliveryId: 0,
+  │       FpoDecisionViaMobile: false,
+  │       HasPaidByCreditCard: false,
+  │       InvoiceId: 0,
+  │       OfferId: 0,
+  │       PaymentInfo: 'NZ Bank Deposit',
+  │       Price: 13,
+  │       SelectedShipping: 'Buyer to pick-up',
+  │       ShippingPrice: 0,
+  │       ShippingType: 2,
+  │       SoldDate: '/Date(1630757317107)/',
+  │       SoldType: 'BUYNOW',
+  │       PaymentInstructions: '',
+  │       PurchaseId: 26450,
+  │       ReferenceNumber: 'P26450',
+  │       SubtotalPrice: 13,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 13,
+  │       TrackedParcels: [],
+  │       TaxSubTotal: 0,
+  │       HasPaidByDeferredPayment: false
+  │     }
+  │   ]
+  │ }
+  │ 'WonPurchaseId counts to: 1, the purchaseId: 26450'
+  │ 'Post-Transaction: CheckingWonListHaveItems Pass'
+  └
+  √  CheckingWonListHasItems
+
+→ RemoveAPurchaseFromYourWonItemsList
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/26450.JSON [200 OK, 347B, 56ms]
+  ┌
+  │ {
+  │   Success: true,
+  │   Description: 'Success'
+  │ }
+  │ 'Post-Transaction: CheckingDeleteWonItems Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 355B, 46ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: []
+  │ }
+  │ 'Current items count on the won list: 0. All items hav
+  │ e been removed from the won list.'
+  │ 'Post-Transaction: CheckingDeleteWonItems Pass'
+  └
+  √  Checking LastWonPurchaseId: 26450 has been removed
+
+→ GeneralSearch
+  GET https://api.tmsandbox.co.nz/v1/Search/General.JSON?buy=All&rows=500&page=5 [200 OK, 840.67KB, 2.7s]
+  ┌
+  │ 'Post-Transaction: CheckingListingIdHasBuyNow Start'
+  │ 'Page: 5, total items: 500'
+  │ "'HasBuyNow and BuyNowPrice <=20' items counts to: 12,
+  │  ListingId details: "
+  │ [
+  │   2149304560, 2149306077,
+  │   2149306078, 2149306086,
+  │   2149306087, 2149306175,
+  │   2149306176, 2149306177,
+  │   2149305885, 2149303668,
+  │   2149304808, 2149304838
+  │ ]
+  │ 'Get random SingleListingId: 2149306176'
+  │ 'Post-Transaction: CheckingListingIdHasBuyNow Pass'
+  └
+  √  GetListingIdHasBuyNow
+
+→ RetrieveTheDetailsOfASingleListing
+  GET https://api.tmsandbox.co.nz/v1/Listings/2149306176.JSON [200 OK, 3.04KB, 97ms]
+  ┌
+  │ 'Post-Transaction: CheckingSingleListingIdDetails Star
+  │ t'
+  │ {
+  │   ListingId: 2149306176,
+  │   Title: 'Samsung Galaxy BV Weaving S9 Case',
+  │   Category: '0344-0899-1135-5537-',
+  │   StartPrice: 0,
+  │   BuyNowPrice: 12.99,
+  │   StartDate: '/Date(1630609025940)/',
+  │   EndDate: '/Date(1630781825940)/',
+  │   ListingLength: null,
+  │   HasGallery: true,
+  │   AsAt: '/Date(1630765925991)/',
+  │   CategoryPath: '/Mobile-phones/Accessories/Cases-cove
+  │ rs/Samsung',
+  │   PhotoId: 4676325,
+  │   IsNew: true,
+  │   RegionId: 12,
+  │   Region: 'Wellington',
+  │   SuburbId: 63,
+  │   Suburb: 'Kapiti',
+  │   ViewCount: 2,
+  │   HasBuyNow: true,
+  │   NoteDate: '/Date(0)/',
+  │   CategoryName: 'Samsung',
+  │   ReserveState: 3,
+  │   Attributes: [
+  │     {
+  │       Name: 'Colour',
+  │       DisplayName: 'Colour',
+  │       Value: 'Blue',
+  │       Type: 4,
+  │       DisplayValue: 'Blue'
+  │     }
+  │   ],
+  │   OpenHomes: [],
+  │   IsBuyNowOnly: true,
+  │   HasMultiple: true,
+  │   IsFlatShippingCharge: true,
+  │   PriceDisplay: '$12.99 per item',
+  │   SKU: 'BASEUS Weaving S9 Blue Case WISAS9-BV15',
+  │   AvailableToBuy: '3',
+  │   ListingGroupId: 73999,
+  │   AdditionalData: { BulletPoints: [], Tags: [] },
+  │   UnansweredQuestionCount: 0,
+  │   Member: {
+  │     MemberId: 4000334,
+  │     Nickname: 'paperclip4',
+  │     DateAddressVerified: '/Date(1338811200000)/',
+  │     DateJoined: '/Date(1338811200000)/',
+  │     UniqueNegative: 0,
+  │     UniquePositive: 4,
+  │     FeedbackCount: 4,
+  │     IsAddressVerified: true,
+  │     Suburb: 'Kapiti',
+  │     Region: 'Wellington',
+  │     IsAuthenticated: true
+  │   },
+  │   Body: 'BASEUS BV Weaving Case Gel TPU Cover with Wea
+  │ ve Texture Design for Samsung Galaxy S9 - Brand New\r\
+  │ n' +
+  │     '\r\n' +
+  │     'This item available in 3 colours. Black,Red and B
+  │ lue.\r\n' +
+  │     '\r\n' +
+  │     '==  FEATURES  ==\r\n' +
+  │     '\r\n' +
+  │     'This Samsung Galaxy S9 Cover is Extremely thin an
+  │ d light, characterized by braid style design. \r\n' +
+  │     '\r\n' +
+  │     'This Samsung Galaxy S9 Cover not only a fashion a
+  │ ccessory, but also a guarantee of perfect protection.\
+  │ r\n' +
+  │     '\r\n' +
+  │     'Samsung Galaxy S9 Cover is made of the highest qu
+  │ ality plastic,while maintaining exceptional elasticity
+  │  and flexibility.\r\n' +
+  │     '\r\n' +
+  │     'Material of Samsung Galaxy S9 Cover is TPU Materi
+  │ al.\r\n' +
+  │     '\r\n' +
+  │     'Item is Flexible and resilient also Samsung Galax
+  │ y S9 Cover is High scratch and impact resistance.\r\n'
+  │  +
+  │     '\r\n' +
+  │     'Samsung Galaxy S9 Cover is an amazing phone cover
+  │  with unique design that not only provides great prote
+  │ ction from scratches, drops, and dirt, but also from o
+  │ verheating.\r\n' +
+  │     '\r\n' +
+  │     'Samsung Galaxy S9 Cover has raised lip around the
+  │  camera, independent buttons and precise cut-outs for 
+  │ easy access to all ports.\r\n' +
+  │     '\r\n' +
+  │     'The type of this Samsung Galaxy S9 Cover is Back 
+  │ cover.\r\n' +
+  │     '\r\n' +
+  │     'The brand of this attractive Samsung Galaxy S9 co
+  │ ver is BASEUS.\r\n' +
+  │     '\r\n' +
+  │     'The product Samsung Galaxy S9 Cover comes in a at
+  │ tractive packing.\r\n' +
+  │     '\r\n' +
+  │     '==  Contents  ==\r\n' +
+  │     '\r\n' +
+  │     '1 x Samsung Galaxy S9 Cover.\r\n' +
+  │     '\r\n' +
+  │     '** All of our Samsung Galaxy S9 Cover and all BAS
+  │ EUS products we sell are 100% genuine and have the scr
+  │ atch authentication on the back **\r\n' +
+  │     '** BASEUS products, this Samsung Galaxy S9 Cover 
+  │ and every other BASEUS product we sell comes with a 12
+  │  month warranty **',
+  │   Questions: {
+  │     TotalCount: 2,
+  │     Page: 1,
+  │     PageSize: 2,
+  │     List: [
+  │       {
+  │         ListingId: 2149306176,
+  │         ListingQuestionId: 358609,
+  │         Comment: 'this is a test universal auction com
+  │ ment 1',
+  │         CommentDate: '/Date(1630609213137)/',
+  │         IsSellerComment: true,
+  │         Answer: '',
+  │         AnswerDate: '/Date(0)/',
+  │         AskingMember: {
+  │           MemberId: 4000334,
+  │           Nickname: 'paperclip4',
+  │           DateAddressVerified: '/Date(1338811200000)/'
+  │ ,
+  │           DateJoined: '/Date(1338811200000)/',
+  │           UniqueNegative: 0,
+  │           UniquePositive: 4,
+  │           FeedbackCount: 4,
+  │           IsAddressVerified: true,
+  │           IsAuthenticated: true
+  │         }
+  │       },
+  │       {
+  │         ListingId: 2149306176,
+  │         ListingQuestionId: 358610,
+  │         Comment: 'this is a test universal auction com
+  │ ment 2',
+  │         CommentDate: '/Date(1630609306480)/',
+  │         IsSellerComment: true,
+  │         Answer: '',
+  │         AnswerDate: '/Date(0)/',
+  │         AskingMember: {
+  │           MemberId: 4000334,
+  │           Nickname: 'paperclip4',
+  │           DateAddressVerified: '/Date(1338811200000)/'
+  │ ,
+  │           DateJoined: '/Date(1338811200000)/',
+  │           UniqueNegative: 0,
+  │           UniquePositive: 4,
+  │           FeedbackCount: 4,
+  │           IsAddressVerified: true,
+  │           IsAuthenticated: true
+  │         }
+  │       }
+  │     ]
+  │   },
+  │   Photos: [
+  │     {
+  │       Key: 4676325,
+  │       Value: {
+  │         Thumbnail: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4676325.jpg',
+  │         List: 'https://images.tmsandbox.co.nz/photoser
+  │ ver/lv2/4676325.jpg',
+  │         Medium: 'https://images.tmsandbox.co.nz/photos
+  │ erver/med/4676325.jpg',
+  │         Gallery: 'https://images.tmsandbox.co.nz/photo
+  │ server/gv/4676325.jpg',
+  │         Large: 'https://images.tmsandbox.co.nz/photose
+  │ rver/tq/4676325.jpg',
+  │         FullSize: 'https://images.tmsandbox.co.nz/phot
+  │ oserver/full/4676325.jpg',
+  │         PhotoId: 4676325,
+  │         OriginalWidth: 801,
+  │         OriginalHeight: 767
+  │       }
+  │     },
+  │     {
+  │       Key: 4676328,
+  │       Value: {
+  │         Thumbnail: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4676328.jpg',
+  │         List: 'https://images.tmsandbox.co.nz/photoser
+  │ ver/lv2/4676328.jpg',
+  │         Medium: 'https://images.tmsandbox.co.nz/photos
+  │ erver/med/4676328.jpg',
+  │         Gallery: 'https://images.tmsandbox.co.nz/photo
+  │ server/gv/4676328.jpg',
+  │         Large: 'https://images.tmsandbox.co.nz/photose
+  │ rver/tq/4676328.jpg',
+  │         FullSize: 'https://images.tmsandbox.co.nz/phot
+  │ oserver/full/4676328.jpg',
+  │         PhotoId: 4676328,
+  │         OriginalWidth: 800,
+  │         OriginalHeight: 800
+  │       }
+  │     },
+  │     {
+  │       Key: 4676331,
+  │       Value: {
+  │         Thumbnail: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4676331.jpg',
+  │         List: 'https://images.tmsandbox.co.nz/photoser
+  │ ver/lv2/4676331.jpg',
+  │         Medium: 'https://images.tmsandbox.co.nz/photos
+  │ erver/med/4676331.jpg',
+  │         Gallery: 'https://images.tmsandbox.co.nz/photo
+  │ server/gv/4676331.jpg',
+  │         Large: 'https://images.tmsandbox.co.nz/photose
+  │ rver/tq/4676331.jpg',
+  │         FullSize: 'https://images.tmsandbox.co.nz/phot
+  │ oserver/full/4676331.jpg',
+  │         PhotoId: 4676331,
+  │         OriginalWidth: 801,
+  │         OriginalHeight: 801
+  │       }
+  │     },
+  │     {
+  │       Key: 4676334,
+  │       Value: {
+  │         Thumbnail: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4676334.jpg',
+  │         List: 'https://images.tmsandbox.co.nz/photoser
+  │ ver/lv2/4676334.jpg',
+  │         Medium: 'https://images.tmsandbox.co.nz/photos
+  │ erver/med/4676334.jpg',
+  │         Gallery: 'https://images.tmsandbox.co.nz/photo
+  │ server/gv/4676334.jpg',
+  │         Large: 'https://images.tmsandbox.co.nz/photose
+  │ rver/tq/4676334.jpg',
+  │         FullSize: 'https://images.tmsandbox.co.nz/phot
+  │ oserver/full/4676334.jpg',
+  │         PhotoId: 4676334,
+  │         OriginalWidth: 1200,
+  │         OriginalHeight: 1200
+  │       }
+  │     }
+  │   ],
+  │   AllowsPickups: 3,
+  │   ShippingOptions: [
+  │     {
+  │       Type: 4,
+  │       Price: 4.99,
+  │       Method: 'nationwide non-rural',
+  │       ShippingId: 4
+  │     },
+  │     {
+  │       Type: 4,
+  │       Price: 9.99,
+  │       Method: 'rural',
+  │       ShippingId: 5
+  │     },
+  │     {
+  │       Type: 4,
+  │       Price: 0,
+  │       Method: 'test free shipping',
+  │       ShippingId: 6
+  │     }
+  │   ],
+  │   PaymentOptions: 'NZ Bank Deposit',
+  │   CanAddToCart: false,
+  │   EmbeddedContent: {},
+  │   SupportsQuestionsAndAnswers: true,
+  │   PaymentMethods: [
+  │     { Id: 2, Name: 'Credit Card' },
+  │     {
+  │       Id: 1,
+  │       Name: 'NZ Bank Deposit'
+  │     }
+  │   ],
+  │   BoundaryImage: {
+  │     Thumbnail: null,
+  │     List: null,
+  │     Medium: null,
+  │     Gallery: null,
+  │     Large: null,
+  │     FullSize: null,
+  │     PhotoId: 0
+  │   },
+  │   RenderOptions: [ 2 ],
+  │   AreaOfBusiness: 1
+  │ }
+  │ 'ListingId: 2149306176, ShippingId: 4, and Method: nat
+  │ ionwide non-rural'
+  │ 'Post-Transaction: CheckingSingleListingIdDetails Pass
+  │ '
+  └
+  √  CheckingSingleListingIdDetails
+
+→ BuyAnAuctionUsingBuyNow
+  POST https://api.tmsandbox.co.nz/v1/Bidding/BuyNow.JSON [200 OK, 412B, 184ms]
+  ┌
+  │ 'Post-Transaction: CheckingBuyNow Start'
+  │ {
+  │   Success: true,
+  │   Description: "Seller's email owen4@snipesoft.net.nz"
+  │ ,
+  │   StatusCode: 0,
+  │   PurchaseId: 26451
+  │ }
+  │ 'Get sucessful StatusCode: 0 (0-Success)'
+  │ 'Post-Transaction: CheckingBuyNow Pass'
+  └
+  √  CheckingBuyNowSuccess
+  ┌
+  │ 'Post-Transaction: CheckingPurchasedItemOnWonList Star
+  │ t'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 1.36KB, 50ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149306176,
+  │       Title: 'Samsung Galaxy BV Weaving S9 Case',
+  │       Category: '0344-0899-1135-5537-',
+  │       StartPrice: 0,
+  │       StartDate: '/Date(1630609025940)/',
+  │       EndDate: '/Date(1630765926447)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1630765926382)/',
+  │       CategoryPath: '/Mobile-phones/Accessories/Cases-
+  │ covers/Samsung',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4676325.jpg',
+  │       PhotoId: 4676325,
+  │       Seller: {
+  │         MemberId: 4000334,
+  │         Nickname: 'paperclip4',
+  │         DateAddressVerified: '/Date(1338811200000)/',
+  │         DateJoined: '/Date(1338811200000)/',
+  │         Email: 'owen4@snipesoft.net.nz',
+  │         UniqueNegative: 0,
+  │         UniquePositive: 4,
+  │         FeedbackCount: 4,
+  │         IsAddressVerified: true
+  │       },
+  │       IsNew: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Samsung',
+  │       ReserveState: 3,
+  │       IsBuyNowOnly: true,
+  │       Quantity: 1,
+  │       IsFlatShippingCharge: true,
+  │       Options: [
+  │         {
+  │           Name: 'Colour',
+  │           Value: 'Blue'
+  │         }
+  │       ],
+  │       ListingGroupId: 73999,
+  │       StatusDate: '/Date(0)/',
+  │       AuctionAttribute: '',
+  │       BuyerFeedbackPlaced: 0,
+  │       SellerFeedbackPlaced: 0,
+  │       DeliveryId: 0,
+  │       FpoDecisionViaMobile: false,
+  │       HasPaidByCreditCard: false,
+  │       InvoiceId: 0,
+  │       OfferId: 0,
+  │       PaymentInfo: 'NZ Bank Deposit',
+  │       Price: 12.99,
+  │       SelectedShipping: 'nationwide non-rural',
+  │       ShippingPrice: 4.99,
+  │       ShippingType: 4,
+  │       SoldDate: '/Date(1630765926447)/',
+  │       SoldType: 'BUYNOW',
+  │       PaymentInstructions: '',
+  │       PurchaseId: 26451,
+  │       ReferenceNumber: 'P26451',
+  │       SubtotalPrice: 12.99,
+  │       TotalShippingPrice: 4.99,
+  │       TotalSalePrice: 17.98,
+  │       TrackedParcels: [],
+  │       TaxSubTotal: 0,
+  │       HasPaidByDeferredPayment: false
+  │     }
+  │   ]
+  │ }
+  │ 'Found PurchaseId 26451 and ListingId 2149306176 exist
+  │ s on the won list'
+  │ 'Post-Transaction: CheckingPurchasedItemOnWonList Pass
+  │ '
+  └
+  √  Checking NewPurchasedListId existed in the won list
+
+┌─────────────────────────┬────────────────────┬───────────────────┐
+│                         │           executed │            failed │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│              iterations │                  1 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│                requests │                 16 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│            test-scripts │                 20 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│      prerequest-scripts │                 19 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│              assertions │                 13 │                 0 │
+├─────────────────────────┴────────────────────┴───────────────────┤
+│ total run duration: 5.8s                                         │
+├──────────────────────────────────────────────────────────────────┤
+│ total data received: 923.69KB (approx)                           │
+├──────────────────────────────────────────────────────────────────┤
+│ average response time: 274ms [min: 46ms, max: 2.7s, s.d.: 645ms] │
+└──────────────────────────────────────────────────────────────────┘
