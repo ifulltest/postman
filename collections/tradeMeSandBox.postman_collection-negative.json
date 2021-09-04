@@ -1,1 +1,332 @@
-
+{
+	"info": {
+		"_postman_id": "536fb712-ed0d-4246-ba13-b947a1a65fa7",
+		"name": "i-full-tester1-TMSandBox-Neg",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RetrieveGeneralCategories",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Checking all subcategories returned, and the given subcategory exists in\", function () {\r",
+							"\r",
+							"    console.log(\"Post-Transaction: CheckingtheCountsofGivenSubcategory Start\");\r",
+							"\r",
+							"    var jsonData = pm.response.json();\r",
+							"\r",
+							"    var arr =[];\r",
+							"\r",
+							"    if (typeof(pm.response.json().Subcategories) !== \"undefined\"){\r",
+							"\r",
+							"        var Subcategories = jsonData.Subcategories;  \r",
+							"\r",
+							"        // Traverse all Subcategories from response, and find wheter a specific subcategory is in.\r",
+							"        for (i in Subcategories){\r",
+							"\r",
+							"            var Name = Subcategories[i].Name;\r",
+							"\r",
+							"            arr.push(Name);\r",
+							"\r",
+							"            if(Name == \"Antiques & collectables\"){\r",
+							"\r",
+							"                var SpecificSubcategories = Name;\r",
+							"\r",
+							"            }\r",
+							"        }\r",
+							"        \r",
+							"        console.log(\"Subcategories counts to: \" + jsonData.Subcategories.length);\r",
+							"\r",
+							"        console.log(\"All subcategories name listed below: \");\r",
+							"\r",
+							"        console.log(arr);\r",
+							"\r",
+							"        // checkpoint: whether subcategory - 'Antiques & collectables' exists in the response      \r",
+							"        if(typeof(SpecificSubcategories) !== \"undefined\" && SpecificSubcategories.length >= 1 ){\r",
+							"\r",
+							"            console.log(\"Subcategory - Antiques & collectables existed\");\r",
+							"\r",
+							"            console.log(\"Post-Transaction: CheckingtheCountsofGivenSubcategory Pass\");\r",
+							"            \r",
+							"        }\r",
+							"        else{\r",
+							"\r",
+							"            console.log(\"Subcategory - Antiques & collectables is not existed\");\r",
+							"\r",
+							"            console.log(\"Post-Transaction: CheckingtheCountsofGivenSubcategory Failed\");\r",
+							"\r",
+							"        }\r",
+							"     \r",
+							"    }\r",
+							"\r",
+							"    else{\r",
+							"\r",
+							"        console.log(pm.response.json());\r",
+							"\r",
+							"        console.log(\"Didn't catch the Subcategory field\");\r",
+							"        \r",
+							"        console.log(\"Post-Transaction: CheckingtheCountsofGivenSubcategory Failed\");\r",
+							"\r",
+							"    }\r",
+							"\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/v1/Categories.JSON?depth=-10",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"v1",
+						"Categories.JSON"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "depth",
+							"value": "-10"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "RetrieveGeneralCategories-Neg-depth=10",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/v1/Categories.JSON?depth=-10",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"v1",
+								"Categories.JSON"
+							],
+							"query": [
+								{
+									"key": "depth",
+									"value": "-10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "ETag",
+							"value": "\"g3y/pVZC5T1nk2zlLkqWnHyx+wM=\""
+						},
+						{
+							"key": "X-Correlation-ID",
+							"value": "b2104d4c-5f45-4f70-a2b5-4ab8591fef46"
+						},
+						{
+							"key": "X-Request-ID",
+							"value": "249b097d-c04f-4db5-adee-3b0ba449b645"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "ETag"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Jul 2021 05:00:40 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "71"
+						},
+						{
+							"key": "X-UA-Compatible",
+							"value": "IE=Edge"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Name\": \"Root\",\n    \"Number\": \"\",\n    \"Path\": \"\",\n    \"AreaOfBusiness\": 0,\n    \"IsLeaf\": false\n}"
+				},
+				{
+					"name": "RetrieveGeneralCategories",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/v1/Categories.JSON?depth=-10",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"v1",
+								"Categories.JSON"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "depth",
+									"value": "-10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "ETag",
+							"value": "\"g3y/pVZC5T1nk2zlLkqWnHyx+wM=\""
+						},
+						{
+							"key": "X-Correlation-ID",
+							"value": "b9c8985e-425c-452b-b0be-27a49179313a"
+						},
+						{
+							"key": "X-Request-ID",
+							"value": "421573a6-8adb-4538-8374-a061e8f1eb14"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "ETag"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 17 Aug 2021 09:00:51 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "71"
+						},
+						{
+							"key": "X-UA-Compatible",
+							"value": "IE=Edge"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Name\": \"Root\",\n    \"Number\": \"\",\n    \"Path\": \"\",\n    \"AreaOfBusiness\": 0,\n    \"IsLeaf\": false\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth1",
+		"oauth1": [
+			{
+				"key": "tokenSecret",
+				"value": "Your tokenSecret",
+				"type": "string"
+			},
+			{
+				"key": "token",
+				"value": "Your token",
+				"type": "string"
+			},
+			{
+				"key": "consumerSecret",
+				"value": "Your consumerSecret",
+				"type": "string"
+			},
+			{
+				"key": "consumerKey",
+				"value": "Your consumerKey",
+				"type": "string"
+			},
+			{
+				"key": "signatureMethod",
+				"value": "PLAINTEXT",
+				"type": "string"
+			},
+			{
+				"key": "addParamsToHeader",
+				"value": true,
+				"type": "boolean"
+			},
+			{
+				"key": "version",
+				"value": "1.0",
+				"type": "string"
+			},
+			{
+				"key": "addEmptyParamsToSign",
+				"value": false,
+				"type": "boolean"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
