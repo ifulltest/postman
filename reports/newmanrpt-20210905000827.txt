@@ -1,0 +1,690 @@
+newman
+
+i-full-tester1-TMSandBox-Pos
+
+→ RetrieveGeneralCategories
+  GET https://api.tmsandbox.co.nz/v1/Categories.JSON?depth=1 [200 OK, 1.54KB, 281ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofGivenSubcategory
+  │  Start'
+  │ 'Subcategories counts to: 27'
+  │ 'All subcategories name listed below: '
+  │ [
+  │   'Trade Me Motors',
+  │   'Trade Me Property',
+  │   'Trade Me Jobs',
+  │   'Antiques & collectables',
+  │   'Art',
+  │   'Baby gear',
+  │   'Books',
+  │   'Building & renovation',
+  │   'Business, farming & industry',
+  │   'Clothing & Fashion',
+  │   'Computers',
+  │   'Crafts',
+  │   'Electronics & photography',
+  │   'Flatmates wanted',
+  │   'Gaming',
+  │   'Health & beauty',
+  │   'Home & living',
+  │   'Jewellery & watches',
+  │   'Mobile phones',
+  │   'Movies & TV',
+  │   'Music & instruments',
+  │   'Pets & animals',
+  │   'Pottery & glass',
+  │   'Services',
+  │   'Sports',
+  │   'Toys & models',
+  │   'Travel, events & activities'
+  │ ]
+  │ 'Subcategory - Antiques & collectables existed'
+  │ 'Post-Transaction: CheckingtheCountsofGivenSubcategory
+  │  Pass'
+  └
+  √  Checking all subcategories returned, and the given subcategory exists in
+
+→ RetrieveYourWatchlist
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/All.JSON [200 OK, 1.23KB, 61ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofWatchList Start'
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149304495,
+  │       Title: 'German Messerschmitt Bf 109 Fighter',
+  │       Category: '0347-0924-1193-7772-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1630206268640)/',
+  │       EndDate: '/Date(1630811068640)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1630757312420)/',
+  │       CategoryPath: '/Toys-models/Models/Aircraft/1:72
+  │ ',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/6669569.jpg',
+  │       PhotoId: 6669569,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: '1:72',
+  │       Attributes: [],
+  │       Subtitle: 'SKYLARC’S MASSIVE MODEL AUCTION',
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0347-',
+  │       Name: 'Toys & models',
+  │       CategoryId: 347
+  │     }
+  │   ]
+  │ }
+  │ 'Found 1 item on the watch list'
+  │ 'Post-Transaction: CheckingtheCountsofWatchList Pass'
+  └
+  √  Checking if there are any items in the watch list
+
+→ RemoveAListingFromYourWatchlist
+  ┌
+  │ 'Pre-Transaction: RetrieveYourWatchlist Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 1.23KB, 50ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149304495,
+  │       Title: 'German Messerschmitt Bf 109 Fighter',
+  │       Category: '0347-0924-1193-7772-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1630206268640)/',
+  │       EndDate: '/Date(1630811068640)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1630757312623)/',
+  │       CategoryPath: '/Toys-models/Models/Aircraft/1:72
+  │ ',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/6669569.jpg',
+  │       PhotoId: 6669569,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: '1:72',
+  │       Attributes: [],
+  │       Subtitle: 'SKYLARC’S MASSIVE MODEL AUCTION',
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0347-',
+  │       Name: 'Toys & models',
+  │       CategoryId: 347
+  │     }
+  │   ]
+  │ }
+  │ 'All the can be deleted ListingId on the Watchlist: '
+  │ '2149304495'
+  │ 'Pre-Transaction: RetrieveYourWatchlist Pass'
+  └
+  √  Get all ListingId on the Watchlist
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149304495.JSON [200 OK, 347B, 77ms]
+  ┌
+  │ 'Post-Transaction: RetrieveYourWatchlist Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 376B, 49ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: [],
+  │   FoundCategories: []
+  │ }
+  │ 'Current count of ListingId that can be deleted in the
+  │  watchlist: 0'
+  └
+  √  Checking LastListingId: 2149304495 has been deleted
+  ┌
+  │ 'Post-Transaction: RetrieveYourWatchlist Pass'
+  └
+
+→ RetrieveClosingSoonListings
+  GET https://api.tmsandbox.co.nz/v1/Listings/closing.JSON?rows=1000 [200 OK, 37.67KB, 311ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofClosingSoonListi
+  │ ngs Start'
+  │ 'Found 250 items in the Closing Soon Listings'
+  │ 'Post-Transaction: CheckingtheCountsofClosingSoonListi
+  │ ngs Pass'
+  └
+  √  Checking if there are any items in the Closing Soon Listings
+
+→ AddAListingToYourWatchlist
+  ┌
+  │ 'Pre-Transaction: RetrieveClosingSoonListings Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/Listings/closing.JSON?rows=1000 [200 OK, 37.72KB, 227ms]
+  √  Get all the closing soon ListingId
+  ┌
+  │ 'From 250 closing soon items randomly choose the: 2149
+  │ 306082 waiting to be added to the watchlist'
+  │ 'Pre-Transaction: RetrieveClosingSoonListings Pass'
+  └
+  POST https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149306082.JSON [200 OK, 347B, 155ms]
+  ┌
+  │ 'Post-Transaction: CheckingAddToWatchList Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 1.19KB, 53ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149306082,
+  │       Title: 'Cobra Glassware',
+  │       Category: '0341-0881-4739-',
+  │       StartPrice: 11,
+  │       BuyNowPrice: 33,
+  │       StartDate: '/Date(1630594569950)/',
+  │       EndDate: '/Date(1630767369950)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1630757314092)/',
+  │       CategoryPath: '/Crafts/Jewellery-making-beading/
+  │ Crimps',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4549183.jpg',
+  │       PhotoId: 4549183,
+  │       RegionId: 1,
+  │       Region: 'Northland',
+  │       Suburb: 'Kerikeri',
+  │       HasBuyNow: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Crimps',
+  │       Attributes: [],
+  │       MinimumNextBidAmount: 11,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$11.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0341-',
+  │       Name: 'Crafts',
+  │       CategoryId: 341
+  │     }
+  │   ]
+  │ }
+  │ 'ListingId 2149306082 has been added to the watchlist'
+  │ 'Post-Transaction: CheckingAddToWatchList Pass'
+  └
+  √  Checking ListingId 2149306082 has been added
+
+→ RetrieveYourWonItems
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 1.27KB, 56ms]
+  ┌
+  │ 'Post-Transaction: CheckingWonListHaveItems Start'
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149306078,
+  │       Title: 'Mulligatawney and Jerrabomberra',
+  │       Category: '0344-0899-1135-5537-',
+  │       StartPrice: 0,
+  │       StartDate: '/Date(1630594559073)/',
+  │       EndDate: '/Date(1630756930780)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1630757314248)/',
+  │       CategoryPath: '/Mobile-phones/Accessories/Cases-
+  │ covers/Samsung',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/5407040.jpg',
+  │       PhotoId: 5407040,
+  │       Seller: {
+  │         MemberId: 4000433,
+  │         Nickname: 'junk1b',
+  │         DateAddressVerified: '/Date(1380798000000)/',
+  │         DateJoined: '/Date(1343044800000)/',
+  │         Email: 'junk1b@abcde.com',
+  │         UniqueNegative: 5,
+  │         UniquePositive: 16,
+  │         FeedbackCount: 11,
+  │         IsAddressVerified: true
+  │       },
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Samsung',
+  │       ReserveState: 3,
+  │       IsBuyNowOnly: true,
+  │       Quantity: 1,
+  │       StatusDate: '/Date(0)/',
+  │       AuctionAttribute: '',
+  │       BuyerFeedbackPlaced: 0,
+  │       SellerFeedbackPlaced: 0,
+  │       DeliveryId: 0,
+  │       FpoDecisionViaMobile: false,
+  │       HasPaidByCreditCard: false,
+  │       InvoiceId: 0,
+  │       OfferId: 0,
+  │       PaymentInfo: 'NZ Bank Deposit',
+  │       Price: 15,
+  │       SelectedShipping: 'Buyer to pick-up',
+  │       ShippingPrice: 0,
+  │       ShippingType: 2,
+  │       SoldDate: '/Date(1630756930780)/',
+  │       SoldType: 'BUYNOW',
+  │       PaymentInstructions: '',
+  │       PurchaseId: 26449,
+  │       ReferenceNumber: 'P26449',
+  │       SubtotalPrice: 15,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 15,
+  │       TrackedParcels: [],
+  │       TaxSubTotal: 0,
+  │       HasPaidByDeferredPayment: false
+  │     }
+  │   ]
+  │ }
+  │ 'WonPurchaseId counts to: 1, the purchaseId: 26449'
+  │ 'Post-Transaction: CheckingWonListHaveItems Pass'
+  └
+  √  CheckingWonListHasItems
+
+→ RemoveAPurchaseFromYourWonItemsList
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/26449.JSON [200 OK, 347B, 56ms]
+  ┌
+  │ {
+  │   Success: true,
+  │   Description: 'Success'
+  │ }
+  │ 'Post-Transaction: CheckingDeleteWonItems Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 355B, 45ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: []
+  │ }
+  │ 'Current items count on the won list: 0. All items hav
+  │ e been removed from the won list.'
+  │ 'Post-Transaction: CheckingDeleteWonItems Pass'
+  └
+  √  Checking LastWonPurchaseId: 26449 has been removed
+
+→ GeneralSearch
+  GET https://api.tmsandbox.co.nz/v1/Search/General.JSON?buy=All&rows=500&page=5 [200 OK, 840.13KB, 1690ms]
+  ┌
+  │ 'Post-Transaction: CheckingListingIdHasBuyNow Start'
+  │ 'Page: 5, total items: 500'
+  │ "'HasBuyNow and BuyNowPrice <=20' items counts to: 12,
+  │  ListingId details: "
+  │ [
+  │   2149304560, 2149306077,
+  │   2149306078, 2149306086,
+  │   2149306087, 2149306175,
+  │   2149306176, 2149306177,
+  │   2149305885, 2149303668,
+  │   2149304808, 2149304838
+  │ ]
+  │ 'Get random SingleListingId: 2149304808'
+  │ 'Post-Transaction: CheckingListingIdHasBuyNow Pass'
+  └
+  √  GetListingIdHasBuyNow
+
+→ RetrieveTheDetailsOfASingleListing
+  GET https://api.tmsandbox.co.nz/v1/Listings/2149304808.JSON [200 OK, 2.19KB, 86ms]
+  ┌
+  │ 'Post-Transaction: CheckingSingleListingIdDetails Star
+  │ t'
+  │ {
+  │   ListingId: 2149304808,
+  │   Title: 'Mug 06 J1A-1',
+  │   Category: '0005-0387-4994-6473-',
+  │   StartPrice: 0,
+  │   BuyNowPrice: 13,
+  │   StartDate: '/Date(1630294450030)/',
+  │   EndDate: '/Date(1630899060000)/',
+  │   ListingLength: null,
+  │   HasGallery: true,
+  │   AsAt: '/Date(1630757316717)/',
+  │   CategoryPath: '/Sports/Camping/Hydration/Other',
+  │   PhotoId: 4550469,
+  │   RegionId: 16,
+  │   Region: 'Canterbury',
+  │   SuburbId: 86,
+  │   Suburb: 'Christchurch City',
+  │   ViewCount: 3,
+  │   HasBuyNow: true,
+  │   NoteDate: '/Date(0)/',
+  │   CategoryName: 'Other',
+  │   ReserveState: 3,
+  │   Attributes: [],
+  │   OpenHomes: [],
+  │   Subtitle: 'F10d1531',
+  │   IsBuyNowOnly: true,
+  │   HasMultiple: true,
+  │   IsFlatShippingCharge: true,
+  │   PriceDisplay: '$13.00 per item',
+  │   SKU: 'MUG-06',
+  │   AvailableToBuy: '7',
+  │   AdditionalData: { BulletPoints: [], Tags: [] },
+  │   UnansweredQuestionCount: 0,
+  │   Member: {
+  │     MemberId: 4000148,
+  │     Nickname: 'junk',
+  │     DateAddressVerified: '/Date(1380798000000)/',
+  │     DateJoined: '/Date(1319713200000)/',
+  │     Email: 'junk1@abcde.com',
+  │     UniqueNegative: 21,
+  │     UniquePositive: 48,
+  │     FeedbackCount: 27,
+  │     IsAddressVerified: true,
+  │     Suburb: 'Christchurch City',
+  │     Region: 'Canterbury',
+  │     IsAuthenticated: true,
+  │     IsInTrade: true,
+  │     IsTopSeller: true
+  │   },
+  │   Body: 'Specialty product formulated from the latest 
+  │ technology.\r\n' +
+  │     'Product Junk44-006 comes with a 2 year warranty.\
+  │ r\n' +
+  │     'Reserve = 40.00',
+  │   Questions: {
+  │     TotalCount: 1,
+  │     Page: 1,
+  │     PageSize: 1,
+  │     List: [
+  │       {
+  │         ListingId: 2149304808,
+  │         ListingQuestionId: 358474,
+  │         Comment: 'Voted worst Junk of all time by the 
+  │ anarchy branch of Time Travelers Unlimited.\n' +
+  │           "Voted second best worst junk by the Alzheim
+  │ er's branch of Grey Power 2020 or was that 1984?",
+  │         CommentDate: '/Date(1630295658790)/',
+  │         IsSellerComment: true,
+  │         Answer: '',
+  │         AnswerDate: '/Date(0)/',
+  │         AskingMember: {
+  │           MemberId: 4000148,
+  │           Nickname: 'junk',
+  │           DateAddressVerified: '/Date(1380798000000)/'
+  │ ,
+  │           DateJoined: '/Date(1319713200000)/',
+  │           UniqueNegative: 21,
+  │           UniquePositive: 48,
+  │           FeedbackCount: 27,
+  │           IsAddressVerified: true,
+  │           IsAuthenticated: true
+  │         }
+  │       }
+  │     ]
+  │   },
+  │   Photos: [
+  │     {
+  │       Key: 4550469,
+  │       Value: {
+  │         Thumbnail: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4550469.jpg',
+  │         List: 'https://images.tmsandbox.co.nz/photoser
+  │ ver/lv2/4550469.jpg',
+  │         Medium: 'https://images.tmsandbox.co.nz/photos
+  │ erver/med/4550469.jpg',
+  │         Gallery: 'https://images.tmsandbox.co.nz/photo
+  │ server/gv/4550469.jpg',
+  │         Large: 'https://images.tmsandbox.co.nz/photose
+  │ rver/tq/4550469.jpg',
+  │         FullSize: 'https://images.tmsandbox.co.nz/phot
+  │ oserver/full/4550469.jpg',
+  │         PhotoId: 4550469,
+  │         OriginalWidth: 500,
+  │         OriginalHeight: 452
+  │       }
+  │     }
+  │   ],
+  │   AllowsPickups: 1,
+  │   ShippingOptions: [
+  │     {
+  │       Type: 4,
+  │       Price: 2.5,
+  │       Method: 'Snail Mail',
+  │       ShippingId: 4
+  │     },
+  │     {
+  │       Type: 4,
+  │       Price: 7.77,
+  │       Method: 'Pony Express',
+  │       ShippingId: 5
+  │     },
+  │     {
+  │       Type: 2,
+  │       Price: 0,
+  │       Method: 'I intend to pick-up',
+  │       ShippingId: 2
+  │     }
+  │   ],
+  │   PaymentOptions: 'NZ Bank Deposit',
+  │   Sales: [
+  │     {
+  │       PurchaseId: 26427,
+  │       ReferenceNumber: 'P26427',
+  │       SoldDate: '/Date(1630656404390)/',
+  │       Method: 1,
+  │       SelectedShipping: 'Buyer to pick-up',
+  │       ShippingType: 2,
+  │       QuantitySold: 1,
+  │       Price: 13,
+  │       SubtotalPrice: 13,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 13,
+  │       TaxSubTotals: []
+  │     },
+  │     {
+  │       PurchaseId: 26441,
+  │       ReferenceNumber: 'P26441',
+  │       SoldDate: '/Date(1630730714670)/',
+  │       Method: 1,
+  │       SelectedShipping: 'Buyer to pick-up',
+  │       ShippingType: 2,
+  │       QuantitySold: 1,
+  │       Price: 13,
+  │       SubtotalPrice: 13,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 13,
+  │       TaxSubTotals: []
+  │     }
+  │   ],
+  │   IsInTradeProtected: true,
+  │   CanAddToCart: false,
+  │   EmbeddedContent: {},
+  │   SupportsQuestionsAndAnswers: true,
+  │   PaymentMethods: [
+  │     {
+  │       Id: 1,
+  │       Name: 'NZ Bank Deposit'
+  │     }
+  │   ],
+  │   BoundaryImage: {
+  │     Thumbnail: null,
+  │     List: null,
+  │     Medium: null,
+  │     Gallery: null,
+  │     Large: null,
+  │     FullSize: null,
+  │     PhotoId: 0
+  │   },
+  │   RenderOptions: [ 2 ],
+  │   AreaOfBusiness: 1
+  │ }
+  │ 'ListingId: 2149304808, ShippingId: 2, and Method: I i
+  │ ntend to pick-up'
+  │ 'Post-Transaction: CheckingSingleListingIdDetails Pass
+  │ '
+  └
+  √  CheckingSingleListingIdDetails
+
+→ BuyAnAuctionUsingBuyNow
+  POST https://api.tmsandbox.co.nz/v1/Bidding/BuyNow.JSON [200 OK, 404B, 182ms]
+  ┌
+  │ 'Post-Transaction: CheckingBuyNow Start'
+  │ {
+  │   Success: true,
+  │   Description: "Seller's email junk1@abcde.com",
+  │   StatusCode: 0,
+  │   PurchaseId: 26450
+  │ }
+  │ 'Get sucessful StatusCode: 0 (0-Success)'
+  │ 'Post-Transaction: CheckingBuyNow Pass'
+  └
+  √  CheckingBuyNowSuccess
+  ┌
+  │ 'Post-Transaction: CheckingPurchasedItemOnWonList Star
+  │ t'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 1.26KB, 50ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149304808,
+  │       Title: 'Mug 06 J1A-1',
+  │       Category: '0005-0387-4994-6473-',
+  │       StartPrice: 0,
+  │       StartDate: '/Date(1630294450030)/',
+  │       EndDate: '/Date(1630757317107)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1630757317139)/',
+  │       CategoryPath: '/Sports/Camping/Hydration/Other',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4550469.jpg',
+  │       PhotoId: 4550469,
+  │       Seller: {
+  │         MemberId: 4000148,
+  │         Nickname: 'junk',
+  │         DateAddressVerified: '/Date(1380798000000)/',
+  │         DateJoined: '/Date(1319713200000)/',
+  │         Email: 'junk1@abcde.com',
+  │         UniqueNegative: 21,
+  │         UniquePositive: 48,
+  │         FeedbackCount: 27,
+  │         IsAddressVerified: true
+  │       },
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Other',
+  │       ReserveState: 3,
+  │       Subtitle: 'F10d1531',
+  │       IsBuyNowOnly: true,
+  │       Quantity: 1,
+  │       StatusDate: '/Date(0)/',
+  │       AuctionAttribute: '',
+  │       BuyerFeedbackPlaced: 0,
+  │       SellerFeedbackPlaced: 0,
+  │       DeliveryId: 0,
+  │       FpoDecisionViaMobile: false,
+  │       HasPaidByCreditCard: false,
+  │       InvoiceId: 0,
+  │       OfferId: 0,
+  │       PaymentInfo: 'NZ Bank Deposit',
+  │       Price: 13,
+  │       SelectedShipping: 'Buyer to pick-up',
+  │       ShippingPrice: 0,
+  │       ShippingType: 2,
+  │       SoldDate: '/Date(1630757317107)/',
+  │       SoldType: 'BUYNOW',
+  │       PaymentInstructions: '',
+  │       PurchaseId: 26450,
+  │       ReferenceNumber: 'P26450',
+  │       SubtotalPrice: 13,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 13,
+  │       TrackedParcels: [],
+  │       TaxSubTotal: 0,
+  │       HasPaidByDeferredPayment: false
+  │     }
+  │   ]
+  │ }
+  │ 'Found PurchaseId 26450 and ListingId 2149304808 exist
+  │ s on the won list'
+  │ 'Post-Transaction: CheckingPurchasedItemOnWonList Pass
+  │ '
+  └
+  √  Checking NewPurchasedListId existed in the won list
+
+┌─────────────────────────┬─────────────────────┬────────────────────┐
+│                         │            executed │             failed │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              iterations │                   1 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│                requests │                  16 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│            test-scripts │                  20 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│      prerequest-scripts │                  19 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              assertions │                  13 │                  0 │
+├─────────────────────────┴─────────────────────┴────────────────────┤
+│ total run duration: 5.4s                                           │
+├────────────────────────────────────────────────────────────────────┤
+│ total data received: 922.36KB (approx)                             │
+├────────────────────────────────────────────────────────────────────┤
+│ average response time: 214ms [min: 45ms, max: 1690ms, s.d.: 390ms] │
+└────────────────────────────────────────────────────────────────────┘
