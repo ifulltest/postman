@@ -1,6 +1,6 @@
 # Refers to below code Paste key information into your GitHub local repository the config file.
 # And replace username:personal token with your own.
-# This file of example local folder is located on "D:\Software\postman\postman_github\postman\.git".
+# This file of example local folder is located on "%POSTMAN_HOME%\postman_github\postman\.git".
 
 [core]
 	repositoryformatversion = 0
