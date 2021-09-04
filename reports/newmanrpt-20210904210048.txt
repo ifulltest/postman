@@ -1,0 +1,761 @@
+newman
+
+i-full-tester1-TMSandBox-Pos
+
+→ RetrieveGeneralCategories
+  GET https://api.tmsandbox.co.nz/v1/Categories.JSON?depth=1 [200 OK, 1.54KB, 11.3s]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofGivenSubcategory
+  │  Start'
+  │ 'Subcategories counts to: 27'
+  │ 'All subcategories name listed below: '
+  │ [
+  │   'Trade Me Motors',
+  │   'Trade Me Property',
+  │   'Trade Me Jobs',
+  │   'Antiques & collectables',
+  │   'Art',
+  │   'Baby gear',
+  │   'Books',
+  │   'Building & renovation',
+  │   'Business, farming & industry',
+  │   'Clothing & Fashion',
+  │   'Computers',
+  │   'Crafts',
+  │   'Electronics & photography',
+  │   'Flatmates wanted',
+  │   'Gaming',
+  │   'Health & beauty',
+  │   'Home & living',
+  │   'Jewellery & watches',
+  │   'Mobile phones',
+  │   'Movies & TV',
+  │   'Music & instruments',
+  │   'Pets & animals',
+  │   'Pottery & glass',
+  │   'Services',
+  │   'Sports',
+  │   'Toys & models',
+  │   'Travel, events & activities'
+  │ ]
+  │ 'Subcategory - Antiques & collectables existed'
+  │ 'Post-Transaction: CheckingtheCountsofGivenSubcategory
+  │  Pass'
+  └
+  √  Checking all subcategories returned, and the given subcategory exists in
+
+→ RetrieveYourWatchlist
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/All.JSON [200 OK, 1.27KB, 51ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofWatchList Start'
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149303746,
+  │       Title: 'Metabo Angle Grinder',
+  │       Category: '0010-0396-4033-8839-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1629930506503)/',
+  │       EndDate: '/Date(1630794506503)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1630746063762)/',
+  │       CategoryPath: '/Business-farming-industry/Indust
+  │ rial/Manufacturing-metalwork/Grinders',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/5309880.jpg',
+  │       PhotoId: 5309880,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Grinders',
+  │       Attributes: [],
+  │       Subtitle: "SKYLARC'S BRADKEN FOUNDRY AUCTION",
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0010-',
+  │       Name: 'Business, farming & industry',
+  │       CategoryId: 10
+  │     }
+  │   ]
+  │ }
+  │ 'Found 1 item on the watch list'
+  │ 'Post-Transaction: CheckingtheCountsofWatchList Pass'
+  └
+  √  Checking if there are any items in the watch list
+
+→ RemoveAListingFromYourWatchlist
+  ┌
+  │ 'Pre-Transaction: RetrieveYourWatchlist Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 1.27KB, 47ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149303746,
+  │       Title: 'Metabo Angle Grinder',
+  │       Category: '0010-0396-4033-8839-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1629930506503)/',
+  │       EndDate: '/Date(1630794506503)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1630746063903)/',
+  │       CategoryPath: '/Business-farming-industry/Indust
+  │ rial/Manufacturing-metalwork/Grinders',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/5309880.jpg',
+  │       PhotoId: 5309880,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Grinders',
+  │       Attributes: [],
+  │       Subtitle: "SKYLARC'S BRADKEN FOUNDRY AUCTION",
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0010-',
+  │       Name: 'Business, farming & industry',
+  │       CategoryId: 10
+  │     }
+  │   ]
+  │ }
+  │ 'All the can be deleted ListingId on the Watchlist: '
+  │ '2149303746'
+  │ 'Pre-Transaction: RetrieveYourWatchlist Pass'
+  └
+  √  Get all ListingId on the Watchlist
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149303746.JSON [200 OK, 347B, 71ms]
+  ┌
+  │ 'Post-Transaction: RetrieveYourWatchlist Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 376B, 42ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: [],
+  │   FoundCategories: []
+  │ }
+  │ 'Current count of ListingId that can be deleted in the
+  │  watchlist: 0'
+  └
+  √  Checking LastListingId: 2149303746 has been deleted
+  ┌
+  │ 'Post-Transaction: RetrieveYourWatchlist Pass'
+  └
+
+→ RetrieveClosingSoonListings
+  GET https://api.tmsandbox.co.nz/v1/Listings/closing.JSON?rows=1000 [200 OK, 37.77KB, 320ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofClosingSoonListi
+  │ ngs Start'
+  │ 'Found 250 items in the Closing Soon Listings'
+  │ 'Post-Transaction: CheckingtheCountsofClosingSoonListi
+  │ ngs Pass'
+  └
+  √  Checking if there are any items in the Closing Soon Listings
+
+→ AddAListingToYourWatchlist
+  ┌
+  │ 'Pre-Transaction: RetrieveClosingSoonListings Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/Listings/closing.JSON?rows=1000 [200 OK, 37.85KB, 214ms]
+  √  Get all the closing soon ListingId
+  ┌
+  │ 'From 250 closing soon items randomly choose the: 2149
+  │ 303948 waiting to be added to the watchlist'
+  │ 'Pre-Transaction: RetrieveClosingSoonListings Pass'
+  └
+  POST https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149303948.JSON [200 OK, 347B, 110ms]
+  ┌
+  │ 'Post-Transaction: CheckingAddToWatchList Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 1.24KB, 49ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149303948,
+  │       Title: 'US Air Force Convair F-106 Delta Dart Fi
+  │ ghter',
+  │       Category: '0347-0924-1193-7772-',
+  │       StartPrice: 1,
+  │       StartDate: '/Date(1629958167357)/',
+  │       EndDate: '/Date(1630822167357)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1630746065293)/',
+  │       CategoryPath: '/Toys-models/Models/Aircraft/1:72
+  │ ',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/6636928.jpg',
+  │       PhotoId: 6636928,
+  │       RegionId: 16,
+  │       Region: 'Canterbury',
+  │       Suburb: 'Christchurch City',
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: '1:72',
+  │       Attributes: [],
+  │       Subtitle: 'SKYLARC’S MASSIVE MODEL AUCTION',
+  │       MinimumNextBidAmount: 1,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$1.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0347-',
+  │       Name: 'Toys & models',
+  │       CategoryId: 347
+  │     }
+  │   ]
+  │ }
+  │ 'ListingId 2149303948 has been added to the watchlist'
+  │ 'Post-Transaction: CheckingAddToWatchList Pass'
+  └
+  √  Checking ListingId 2149303948 has been added
+
+→ RetrieveYourWonItems
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 1.29KB, 48ms]
+  ┌
+  │ 'Post-Transaction: CheckingWonListHaveItems Start'
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149305885,
+  │       Title: 'Product Junk Furball 39-B-002 1B B - MQL
+  │  x7',
+  │       Category: '0341-0886-1763-',
+  │       StartPrice: 0,
+  │       StartDate: '/Date(1630530614007)/',
+  │       EndDate: '/Date(1630744420717)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1630746065434)/',
+  │       CategoryPath: '/Crafts/Scrapbooking/Other',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4549838.jpg',
+  │       PhotoId: 4549838,
+  │       Seller: {
+  │         MemberId: 4000433,
+  │         Nickname: 'junk1b',
+  │         DateAddressVerified: '/Date(1380798000000)/',
+  │         DateJoined: '/Date(1343044800000)/',
+  │         Email: 'junk1b@abcde.com',
+  │         UniqueNegative: 5,
+  │         UniquePositive: 16,
+  │         FeedbackCount: 11,
+  │         IsAddressVerified: true
+  │       },
+  │       IsNew: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Other',
+  │       ReserveState: 3,
+  │       Subtitle: 'J1B F3d0909',
+  │       IsBuyNowOnly: true,
+  │       Quantity: 1,
+  │       StatusDate: '/Date(0)/',
+  │       AuctionAttribute: '',
+  │       BuyerFeedbackPlaced: 0,
+  │       SellerFeedbackPlaced: 0,
+  │       DeliveryId: 0,
+  │       FpoDecisionViaMobile: false,
+  │       HasPaidByCreditCard: false,
+  │       InvoiceId: 0,
+  │       OfferId: 0,
+  │       PaymentInfo: 'NZ Bank Deposit',
+  │       Price: 6.97,
+  │       SelectedShipping: 'Buyer to pick-up',
+  │       ShippingPrice: 0,
+  │       ShippingType: 2,
+  │       SoldDate: '/Date(1630744420717)/',
+  │       SoldType: 'BUYNOW',
+  │       PaymentInstructions: '',
+  │       PurchaseId: 26444,
+  │       ReferenceNumber: 'P26444',
+  │       SubtotalPrice: 6.97,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 6.97,
+  │       TrackedParcels: [],
+  │       TaxSubTotal: 0,
+  │       HasPaidByDeferredPayment: false
+  │     }
+  │   ]
+  │ }
+  │ 'WonPurchaseId counts to: 1, the purchaseId: 26444'
+  │ 'Post-Transaction: CheckingWonListHaveItems Pass'
+  └
+  √  CheckingWonListHasItems
+
+→ RemoveAPurchaseFromYourWonItemsList
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/26444.JSON [200 OK, 347B, 63ms]
+  ┌
+  │ {
+  │   Success: true,
+  │   Description: 'Success'
+  │ }
+  │ 'Post-Transaction: CheckingDeleteWonItems Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 355B, 46ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: []
+  │ }
+  │ 'Current items count on the won list: 0. All items hav
+  │ e been removed from the won list.'
+  │ 'Post-Transaction: CheckingDeleteWonItems Pass'
+  └
+  √  Checking LastWonPurchaseId: 26444 has been removed
+
+→ GeneralSearch
+  GET https://api.tmsandbox.co.nz/v1/Search/General.JSON?buy=All&rows=500&page=5 [200 OK, 838KB, 2.7s]
+  ┌
+  │ 'Post-Transaction: CheckingListingIdHasBuyNow Start'
+  │ 'Page: 5, total items: 500'
+  │ "'HasBuyNow and BuyNowPrice <=20' items counts to: 13,
+  │  ListingId details: "
+  │ [
+  │   2149304560, 2149306077,
+  │   2149306078, 2149306086,
+  │   2149306087, 2149306175,
+  │   2149306176, 2149306177,
+  │   2149305885, 2149303668,
+  │   2149304662, 2149304808,
+  │   2149304838
+  │ ]
+  │ 'Get random SingleListingId: 2149306077'
+  │ 'Post-Transaction: CheckingListingIdHasBuyNow Pass'
+  └
+  √  GetListingIdHasBuyNow
+
+→ RetrieveTheDetailsOfASingleListing
+  GET https://api.tmsandbox.co.nz/v1/Listings/2149306077.JSON [200 OK, 2.42KB, 104ms]
+  ┌
+  │ 'Post-Transaction: CheckingSingleListingIdDetails Star
+  │ t'
+  │ {
+  │   ListingId: 2149306077,
+  │   Title: 'Cajun Smoked Dragons Breath J1B-GR8',
+  │   Category: '0187-2192-2676-',
+  │   StartPrice: 0,
+  │   BuyNowPrice: 18.99,
+  │   StartDate: '/Date(1630594558433)/',
+  │   EndDate: '/Date(1630767358433)/',
+  │   ListingLength: null,
+  │   HasGallery: true,
+  │   AsAt: '/Date(1630746068825)/',
+  │   CategoryPath: '/Antiques-collectables/Art-deco-retro
+  │ /Fashion-beauty',
+  │   PhotoId: 4734609,
+  │   RegionId: 19,
+  │   Region: 'Southland',
+  │   SuburbId: 113,
+  │   Suburb: 'Invercargill',
+  │   ViewCount: 3,
+  │   HasBuyNow: true,
+  │   NoteDate: '/Date(0)/',
+  │   CategoryName: 'Fashion & beauty',
+  │   ReserveState: 3,
+  │   Attributes: [
+  │     {
+  │       Name: 'at2',
+  │       DisplayName: 'at2',
+  │       Value: 'a',
+  │       Type: 4,
+  │       EncodedValue: 'a',
+  │       DisplayValue: 'a'
+  │     },
+  │     {
+  │       Name: 'size',
+  │       DisplayName: 'size',
+  │       Value: 's',
+  │       Type: 4,
+  │       DisplayValue: 's'
+  │     },
+  │     {
+  │       Name: 'col',
+  │       DisplayName: 'col',
+  │       Value: 'red',
+  │       Type: 4,
+  │       DisplayValue: 'red'
+  │     }
+  │   ],
+  │   OpenHomes: [],
+  │   IsBuyNowOnly: true,
+  │   HasMultiple: true,
+  │   IsFlatShippingCharge: true,
+  │   PriceDisplay: '$18.99 per item',
+  │   SKU: 'CAJUN-004',
+  │   AvailableToBuy: '2',
+  │   ListingGroupId: 73996,
+  │   AdditionalData: { BulletPoints: [], Tags: [] },
+  │   UnansweredQuestionCount: 0,
+  │   Member: {
+  │     MemberId: 4000433,
+  │     Nickname: 'junk1b',
+  │     DateAddressVerified: '/Date(1380798000000)/',
+  │     DateJoined: '/Date(1343044800000)/',
+  │     Email: 'junk1b@abcde.com',
+  │     UniqueNegative: 5,
+  │     UniquePositive: 16,
+  │     FeedbackCount: 11,
+  │     IsAddressVerified: true,
+  │     Suburb: 'Invercargill',
+  │     Region: 'Southland',
+  │     IsAuthenticated: true,
+  │     IsInTrade: true
+  │   },
+  │   Body: 'Cajun smoked in a vacuum sealed brick oven...
+  │ \r\n' +
+  │     '\r\n' +
+  │     'wibble \r\n' +
+  │     '\r\n' +
+  │     'wobble\r\n' +
+  │     '\r\n' +
+  │     'more random\r\n' +
+  │     '\r\n' +
+  │     '\r\n' +
+  │     '\r\n' +
+  │     'stuff here',
+  │   Questions: {
+  │     TotalCount: 1,
+  │     Page: 1,
+  │     PageSize: 1,
+  │     List: [
+  │       {
+  │         ListingId: 2149306077,
+  │         ListingQuestionId: 358594,
+  │         Comment: 'test new listing',
+  │         CommentDate: '/Date(1630594701523)/',
+  │         IsSellerComment: true,
+  │         Answer: '',
+  │         AnswerDate: '/Date(0)/',
+  │         AskingMember: {
+  │           MemberId: 4000433,
+  │           Nickname: 'junk1b',
+  │           DateAddressVerified: '/Date(1380798000000)/'
+  │ ,
+  │           DateJoined: '/Date(1343044800000)/',
+  │           UniqueNegative: 5,
+  │           UniquePositive: 16,
+  │           FeedbackCount: 11,
+  │           IsAddressVerified: true,
+  │           IsAuthenticated: true
+  │         }
+  │       }
+  │     ]
+  │   },
+  │   Photos: [
+  │     {
+  │       Key: 4734609,
+  │       Value: {
+  │         Thumbnail: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4734609.jpg',
+  │         List: 'https://images.tmsandbox.co.nz/photoser
+  │ ver/lv2/4734609.jpg',
+  │         Medium: 'https://images.tmsandbox.co.nz/photos
+  │ erver/med/4734609.jpg',
+  │         Gallery: 'https://images.tmsandbox.co.nz/photo
+  │ server/gv/4734609.jpg',
+  │         Large: 'https://images.tmsandbox.co.nz/photose
+  │ rver/tq/4734609.jpg',
+  │         FullSize: 'https://images.tmsandbox.co.nz/phot
+  │ oserver/full/4734609.jpg',
+  │         PhotoId: 4734609,
+  │         OriginalWidth: 550,
+  │         OriginalHeight: 650
+  │       }
+  │     },
+  │     {
+  │       Key: 4734610,
+  │       Value: {
+  │         Thumbnail: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4734610.jpg',
+  │         List: 'https://images.tmsandbox.co.nz/photoser
+  │ ver/lv2/4734610.jpg',
+  │         Medium: 'https://images.tmsandbox.co.nz/photos
+  │ erver/med/4734610.jpg',
+  │         Gallery: 'https://images.tmsandbox.co.nz/photo
+  │ server/gv/4734610.jpg',
+  │         Large: 'https://images.tmsandbox.co.nz/photose
+  │ rver/tq/4734610.jpg',
+  │         FullSize: 'https://images.tmsandbox.co.nz/phot
+  │ oserver/full/4734610.jpg',
+  │         PhotoId: 4734610,
+  │         OriginalWidth: 421,
+  │         OriginalHeight: 500
+  │       }
+  │     }
+  │   ],
+  │   AllowsPickups: 1,
+  │   ShippingOptions: [
+  │     {
+  │       Type: 4,
+  │       Price: 1.11,
+  │       Method: 'Urban',
+  │       ShippingId: 4
+  │     },
+  │     {
+  │       Type: 4,
+  │       Price: 5.55,
+  │       Method: 'Rural',
+  │       ShippingId: 5
+  │     },
+  │     {
+  │       Type: 2,
+  │       Price: 0,
+  │       Method: 'I intend to pick-up',
+  │       ShippingId: 2
+  │     }
+  │   ],
+  │   PaymentOptions: 'NZ Bank Deposit',
+  │   Sales: [
+  │     {
+  │       PurchaseId: 26432,
+  │       ReferenceNumber: 'P26432',
+  │       SoldDate: '/Date(1630703180080)/',
+  │       Method: 1,
+  │       SelectedShipping: 'Buyer to pick-up',
+  │       ShippingType: 2,
+  │       QuantitySold: 1,
+  │       Price: 18.99,
+  │       SubtotalPrice: 18.99,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 18.99,
+  │       TaxSubTotals: []
+  │     },
+  │     {
+  │       PurchaseId: 26436,
+  │       ReferenceNumber: 'P26436',
+  │       SoldDate: '/Date(1630728481103)/',
+  │       Method: 1,
+  │       SelectedShipping: 'Buyer to pick-up',
+  │       ShippingType: 2,
+  │       QuantitySold: 1,
+  │       Price: 18.99,
+  │       SubtotalPrice: 18.99,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 18.99,
+  │       TaxSubTotals: []
+  │     }
+  │   ],
+  │   DonationRecipient: {
+  │     CharityType: 1,
+  │     ImageSource: 'https://www.tmsandbox.co.nz/images/s
+  │ ell/kiwis-for-kiwi-logo-3x.png',
+  │     DarkModeImageSource: 'https://www.tmsandbox.co.nz/
+  │ images/sell/kiwis-for-kiwi-logo-3x.png',
+  │     Description: 'Kiwis for kiwi',
+  │     Tagline: 'Protecting kiwi and the places they live
+  │ .'
+  │   },
+  │   IsInTradeProtected: true,
+  │   CanAddToCart: false,
+  │   EmbeddedContent: {},
+  │   SupportsQuestionsAndAnswers: true,
+  │   PaymentMethods: [
+  │     {
+  │       Id: 1,
+  │       Name: 'NZ Bank Deposit'
+  │     }
+  │   ],
+  │   BoundaryImage: {
+  │     Thumbnail: null,
+  │     List: null,
+  │     Medium: null,
+  │     Gallery: null,
+  │     Large: null,
+  │     FullSize: null,
+  │     PhotoId: 0
+  │   },
+  │   RenderOptions: [ 2 ],
+  │   AreaOfBusiness: 1
+  │ }
+  │ 'ListingId: 2149306077, ShippingId: 2, and Method: I i
+  │ ntend to pick-up'
+  │ 'Post-Transaction: CheckingSingleListingIdDetails Pass
+  │ '
+  └
+  √  CheckingSingleListingIdDetails
+
+→ BuyAnAuctionUsingBuyNow
+  POST https://api.tmsandbox.co.nz/v1/Bidding/BuyNow.JSON [200 OK, 405B, 193ms]
+  ┌
+  │ 'Post-Transaction: CheckingBuyNow Start'
+  │ {
+  │   Success: true,
+  │   Description: "Seller's email junk1b@abcde.com",
+  │   StatusCode: 0,
+  │   PurchaseId: 26445
+  │ }
+  │ 'Get sucessful StatusCode: 0 (0-Success)'
+  │ 'Post-Transaction: CheckingBuyNow Pass'
+  └
+  √  CheckingBuyNowSuccess
+  ┌
+  │ 'Post-Transaction: CheckingPurchasedItemOnWonList Star
+  │ t'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 1.34KB, 53ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149306077,
+  │       Title: 'Cajun Smoked Dragons Breath J1B-GR8',
+  │       Category: '0187-2192-2676-',
+  │       StartPrice: 0,
+  │       StartDate: '/Date(1630594558433)/',
+  │       EndDate: '/Date(1630746069150)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1630746069278)/',
+  │       CategoryPath: '/Antiques-collectables/Art-deco-r
+  │ etro/Fashion-beauty',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4734609.jpg',
+  │       PhotoId: 4734609,
+  │       Seller: {
+  │         MemberId: 4000433,
+  │         Nickname: 'junk1b',
+  │         DateAddressVerified: '/Date(1380798000000)/',
+  │         DateJoined: '/Date(1343044800000)/',
+  │         Email: 'junk1b@abcde.com',
+  │         UniqueNegative: 5,
+  │         UniquePositive: 16,
+  │         FeedbackCount: 11,
+  │         IsAddressVerified: true
+  │       },
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Fashion & beauty',
+  │       ReserveState: 3,
+  │       IsBuyNowOnly: true,
+  │       Quantity: 1,
+  │       Options: [
+  │         {
+  │           Name: 'size',
+  │           Value: 's'
+  │         },
+  │         {
+  │           Name: 'col',
+  │           Value: 'red'
+  │         }
+  │       ],
+  │       ListingGroupId: 73996,
+  │       StatusDate: '/Date(0)/',
+  │       AuctionAttribute: '',
+  │       BuyerFeedbackPlaced: 0,
+  │       SellerFeedbackPlaced: 0,
+  │       DeliveryId: 0,
+  │       FpoDecisionViaMobile: false,
+  │       HasPaidByCreditCard: false,
+  │       InvoiceId: 0,
+  │       OfferId: 0,
+  │       PaymentInfo: 'NZ Bank Deposit',
+  │       Price: 18.99,
+  │       SelectedShipping: 'Buyer to pick-up',
+  │       ShippingPrice: 0,
+  │       ShippingType: 2,
+  │       SoldDate: '/Date(1630746069150)/',
+  │       SoldType: 'BUYNOW',
+  │       PaymentInstructions: '',
+  │       PurchaseId: 26445,
+  │       ReferenceNumber: 'P26445',
+  │       SubtotalPrice: 18.99,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 18.99,
+  │       TrackedParcels: [],
+  │       TaxSubTotal: 0,
+  │       HasPaidByDeferredPayment: false
+  │     }
+  │   ]
+  │ }
+  │ 'Found PurchaseId 26445 and ListingId 2149306077 exist
+  │ s on the won list'
+  │ 'Post-Transaction: CheckingPurchasedItemOnWonList Pass
+  │ '
+  └
+  √  Checking NewPurchasedListId existed in the won list
+
+┌─────────────────────────┬────────────────────┬───────────────────┐
+│                         │           executed │            failed │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│              iterations │                  1 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│                requests │                 16 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│            test-scripts │                 20 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│      prerequest-scripts │                 19 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│              assertions │                 13 │                 0 │
+├─────────────────────────┴────────────────────┴───────────────────┤
+│ total run duration: 17.1s                                        │
+├──────────────────────────────────────────────────────────────────┤
+│ total data received: 920.92KB (approx)                           │
+├──────────────────────────────────────────────────────────────────┤
+│ average response time: 969ms [min: 42ms, max: 11.3s, s.d.: 2.7s] │
+└──────────────────────────────────────────────────────────────────┘
