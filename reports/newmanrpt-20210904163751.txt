@@ -1,0 +1,623 @@
+newman
+
+i-full-tester1-TMSandBox-Pos
+
+→ RetrieveGeneralCategories
+  GET https://api.tmsandbox.co.nz/v1/Categories.JSON?depth=1 [200 OK, 1.54KB, 199ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofGivenSubcategory
+  │  Start'
+  │ 'Subcategories counts to: 27'
+  │ 'All subcategories name listed below: '
+  │ [
+  │   'Trade Me Motors',
+  │   'Trade Me Property',
+  │   'Trade Me Jobs',
+  │   'Antiques & collectables',
+  │   'Art',
+  │   'Baby gear',
+  │   'Books',
+  │   'Building & renovation',
+  │   'Business, farming & industry',
+  │   'Clothing & Fashion',
+  │   'Computers',
+  │   'Crafts',
+  │   'Electronics & photography',
+  │   'Flatmates wanted',
+  │   'Gaming',
+  │   'Health & beauty',
+  │   'Home & living',
+  │   'Jewellery & watches',
+  │   'Mobile phones',
+  │   'Movies & TV',
+  │   'Music & instruments',
+  │   'Pets & animals',
+  │   'Pottery & glass',
+  │   'Services',
+  │   'Sports',
+  │   'Toys & models',
+  │   'Travel, events & activities'
+  │ ]
+  │ 'Subcategory - Antiques & collectables existed'
+  │ 'Post-Transaction: CheckingtheCountsofGivenSubcategory
+  │  Pass'
+  └
+  √  Checking all subcategories returned, and the given subcategory exists in
+
+→ RetrieveYourWatchlist
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/All.JSON [200 OK, 1.24KB, 56ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofWatchList Start'
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149304576,
+  │       Title: "Devil's Corkscrew",
+  │       Category: '0004-9133-9149-9151-',
+  │       StartPrice: 11,
+  │       BuyNowPrice: 19,
+  │       StartDate: '/Date(1630248802967)/',
+  │       EndDate: '/Date(1630767202967)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1630730275991)/',
+  │       CategoryPath: '/Home-living/Wine/Wine-accessorie
+  │ s/Corkscrews',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4549769.jpg',
+  │       PhotoId: 4549769,
+  │       RegionId: 1,
+  │       Region: 'Northland',
+  │       Suburb: 'Kerikeri',
+  │       HasReserve: true,
+  │       HasBuyNow: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Corkscrews',
+  │       ReserveState: 2,
+  │       Attributes: [],
+  │       MinimumNextBidAmount: 11,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$11.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0004-',
+  │       Name: 'Home & living',
+  │       CategoryId: 4
+  │     }
+  │   ]
+  │ }
+  │ 'Found 1 item on the watch list'
+  │ 'Post-Transaction: CheckingtheCountsofWatchList Pass'
+  └
+  √  Checking if there are any items in the watch list
+
+→ RemoveAListingFromYourWatchlist
+  ┌
+  │ 'Pre-Transaction: RetrieveYourWatchlist Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 1.24KB, 48ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149304576,
+  │       Title: "Devil's Corkscrew",
+  │       Category: '0004-9133-9149-9151-',
+  │       StartPrice: 11,
+  │       BuyNowPrice: 19,
+  │       StartDate: '/Date(1630248802967)/',
+  │       EndDate: '/Date(1630767202967)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1630730276179)/',
+  │       CategoryPath: '/Home-living/Wine/Wine-accessorie
+  │ s/Corkscrews',
+  │       PictureHref: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4549769.jpg',
+  │       PhotoId: 4549769,
+  │       RegionId: 1,
+  │       Region: 'Northland',
+  │       Suburb: 'Kerikeri',
+  │       HasReserve: true,
+  │       HasBuyNow: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Corkscrews',
+  │       ReserveState: 2,
+  │       Attributes: [],
+  │       MinimumNextBidAmount: 11,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$11.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0004-',
+  │       Name: 'Home & living',
+  │       CategoryId: 4
+  │     }
+  │   ]
+  │ }
+  │ 'All the can be deleted ListingId on the Watchlist: '
+  │ '2149304576'
+  │ 'Pre-Transaction: RetrieveYourWatchlist Pass'
+  └
+  √  Get all ListingId on the Watchlist
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149304576.JSON [200 OK, 347B, 75ms]
+  ┌
+  │ 'Post-Transaction: RetrieveYourWatchlist Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 376B, 48ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: [],
+  │   FoundCategories: []
+  │ }
+  │ 'Current count of ListingId that can be deleted in the
+  │  watchlist: 0'
+  └
+  √  Checking LastListingId: 2149304576 has been deleted
+  ┌
+  │ 'Post-Transaction: RetrieveYourWatchlist Pass'
+  └
+
+→ RetrieveClosingSoonListings
+  GET https://api.tmsandbox.co.nz/v1/Listings/closing.JSON?rows=1000 [200 OK, 37.37KB, 240ms]
+  ┌
+  │ 'Post-Transaction: CheckingtheCountsofClosingSoonListi
+  │ ngs Start'
+  │ 'Found 250 items in the Closing Soon Listings'
+  │ 'Post-Transaction: CheckingtheCountsofClosingSoonListi
+  │ ngs Pass'
+  └
+  √  Checking if there are any items in the Closing Soon Listings
+
+→ AddAListingToYourWatchlist
+  ┌
+  │ 'Pre-Transaction: RetrieveClosingSoonListings Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/Listings/closing.JSON?rows=1000 [200 OK, 37.29KB, 217ms]
+  √  Get all the closing soon ListingId
+  ┌
+  │ 'From 250 closing soon items randomly choose the: 2149
+  │ 304802 waiting to be added to the watchlist'
+  │ 'Pre-Transaction: RetrieveClosingSoonListings Pass'
+  └
+  POST https://api.tmsandbox.co.nz/v1/MyTradeMe/WatchList/2149304802.JSON [200 OK, 347B, 130ms]
+  ┌
+  │ 'Post-Transaction: CheckingAddToWatchList Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Watchlist/All.JSON [200 OK, 1.08KB, 47ms]
+  ┌
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149304802,
+  │       Title: 'test list',
+  │       Category: '0351-7056-',
+  │       StartPrice: 2,
+  │       BuyNowPrice: 2,
+  │       StartDate: '/Date(1630294014430)/',
+  │       EndDate: '/Date(1630812414430)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1630730277413)/',
+  │       CategoryPath: '/Baby-gear/Baby-monitors',
+  │       IsNew: true,
+  │       RegionId: 12,
+  │       Region: 'Wellington',
+  │       Suburb: 'Kapiti',
+  │       HasBuyNow: true,
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Baby monitors',
+  │       Attributes: [],
+  │       MinimumNextBidAmount: 2,
+  │       IsOnWatchList: true,
+  │       PriceDisplay: '$2.00',
+  │       AdditionalData: {
+  │         BulletPoints: [],
+  │         Tags: []
+  │       },
+  │       IsDealer: false,
+  │       IsLeading: false,
+  │       IsOutbid: false,
+  │       IsInCart: false,
+  │       MemberBidShippingOption: 0
+  │     }
+  │   ],
+  │   FoundCategories: [
+  │     {
+  │       Count: 1,
+  │       Category: '0351-',
+  │       Name: 'Baby gear',
+  │       CategoryId: 351
+  │     }
+  │   ]
+  │ }
+  │ 'ListingId 2149304802 has been added to the watchlist'
+  │ 'Post-Transaction: CheckingAddToWatchList Pass'
+  └
+  √  Checking ListingId 2149304802 has been added
+
+→ RetrieveYourWonItems
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 1.28KB, 50ms]
+  ┌
+  │ 'Post-Transaction: CheckingWonListHaveItems Start'
+  │ {
+  │   TotalCount: 1,
+  │   Page: 1,
+  │   PageSize: 1,
+  │   List: [
+  │     {
+  │       ListingId: 2149306084,
+  │       Title: 'Cajun Smoked Dragons Breath J1B-GR6',
+  │       Category: '0187-2192-2676-',
+  │       StartPrice: 0,
+  │       StartDate: '/Date(1630594572010)/',
+  │       EndDate: '/Date(1630730089860)/',
+  │       ListingLength: null,
+  │       AsAt: '/Date(1630730277538)/',
+  │       CategoryPath: '/Antiques-collectables/Art-deco-r
+  │ etro/Fashion-beauty',
+  │       Seller: {
+  │         MemberId: 4000433,
+  │         Nickname: 'junk1b',
+  │         DateAddressVerified: '/Date(1380798000000)/',
+  │         DateJoined: '/Date(1343044800000)/',
+  │         Email: 'junk1b@abcde.com',
+  │         UniqueNegative: 5,
+  │         UniquePositive: 16,
+  │         FeedbackCount: 11,
+  │         IsAddressVerified: true
+  │       },
+  │       Note: '',
+  │       NoteDate: '/Date(0)/',
+  │       CategoryName: 'Fashion & beauty',
+  │       ReserveState: 3,
+  │       IsBuyNowOnly: true,
+  │       Quantity: 1,
+  │       Options: [
+  │         {
+  │           Name: 'size',
+  │           Value: 'small'
+  │         }
+  │       ],
+  │       ListingGroupId: 73997,
+  │       StatusDate: '/Date(0)/',
+  │       AuctionAttribute: '260`TV|3636532900189546652`0'
+  │ ,
+  │       BuyerFeedbackPlaced: 0,
+  │       SellerFeedbackPlaced: 0,
+  │       DeliveryId: 0,
+  │       FpoDecisionViaMobile: false,
+  │       HasPaidByCreditCard: false,
+  │       InvoiceId: 0,
+  │       OfferId: 0,
+  │       PaymentInfo: 'NZ Bank Deposit',
+  │       Price: 18.99,
+  │       SelectedShipping: 'Buyer to pick-up',
+  │       ShippingPrice: 0,
+  │       ShippingType: 2,
+  │       SoldDate: '/Date(1630730089860)/',
+  │       SoldType: 'BUYNOW',
+  │       PaymentInstructions: '',
+  │       PurchaseId: 26439,
+  │       ReferenceNumber: 'P26439',
+  │       SubtotalPrice: 18.99,
+  │       TotalShippingPrice: 0,
+  │       TotalSalePrice: 18.99,
+  │       TrackedParcels: [],
+  │       TaxSubTotal: 0,
+  │       HasPaidByDeferredPayment: false
+  │     }
+  │   ]
+  │ }
+  │ 'WonPurchaseId counts to: 1, the purchaseId: 26439'
+  │ 'Post-Transaction: CheckingWonListHaveItems Pass'
+  └
+  √  CheckingWonListHasItems
+
+→ RemoveAPurchaseFromYourWonItemsList
+  DELETE https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/26439.JSON [200 OK, 347B, 58ms]
+  ┌
+  │ {
+  │   Success: true,
+  │   Description: 'Success'
+  │ }
+  │ 'Post-Transaction: CheckingDeleteWonItems Start'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 355B, 43ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: []
+  │ }
+  │ 'Current items count on the won list: 0. All items hav
+  │ e been removed from the won list.'
+  │ 'Post-Transaction: CheckingDeleteWonItems Pass'
+  └
+  √  Checking LastWonPurchaseId: 26439 has been removed
+
+→ GeneralSearch
+  GET https://api.tmsandbox.co.nz/v1/Search/General.JSON?buy=All&rows=500&page=5 [200 OK, 828.05KB, 1467ms]
+  ┌
+  │ 'Post-Transaction: CheckingListingIdHasBuyNow Start'
+  │ 'Page: 5, total items: 500'
+  │ "'HasBuyNow and BuyNowPrice <=20' items counts to: 16,
+  │  ListingId details: "
+  │ [
+  │   2149304560, 2149306077,
+  │   2149306078, 2149306086,
+  │   2149306087, 2149304598,
+  │   2149306095, 2149306175,
+  │   2149306176, 2149306177,
+  │   2149305885, 2149303668,
+  │   2149304662, 2149304664,
+  │   2149304808, 2149304838
+  │ ]
+  │ 'Get random SingleListingId: 2149304598'
+  │ 'Post-Transaction: CheckingListingIdHasBuyNow Pass'
+  └
+  √  GetListingIdHasBuyNow
+
+→ RetrieveTheDetailsOfASingleListing
+  GET https://api.tmsandbox.co.nz/v1/Listings/2149304598.JSON [200 OK, 2.03KB, 75ms]
+  ┌
+  │ 'Post-Transaction: CheckingSingleListingIdDetails Star
+  │ t'
+  │ {
+  │   ListingId: 2149304598,
+  │   Title: 'Au de Toilette 76 by Junk 1C',
+  │   Category: '0004-1511-2375-8259-',
+  │   StartPrice: 5,
+  │   BuyNowPrice: 9.57,
+  │   StartDate: '/Date(1630249096677)/',
+  │   EndDate: '/Date(1630767496677)/',
+  │   ListingLength: null,
+  │   HasGallery: true,
+  │   AsAt: '/Date(1630730279585)/',
+  │   CategoryPath: '/Home-living/Home-décor/Ornaments-scu
+  │ lptures/Pixies-fairies',
+  │   PhotoId: 4550688,
+  │   RegionId: 16,
+  │   Region: 'Canterbury',
+  │   SuburbId: 86,
+  │   Suburb: 'Christchurch City',
+  │   HasReserve: true,
+  │   HasBuyNow: true,
+  │   NoteDate: '/Date(0)/',
+  │   CategoryName: 'Pixies & fairies',
+  │   ReserveState: 2,
+  │   Attributes: [],
+  │   OpenHomes: [],
+  │   Subtitle: 'J1C F6d - FPO address verified',
+  │   MinimumNextBidAmount: 5,
+  │   PriceDisplay: '$5.00',
+  │   SKU: 'PERFUME-76',
+  │   AdditionalData: { BulletPoints: [], Tags: [] },
+  │   UnansweredQuestionCount: 0,
+  │   Member: {
+  │     MemberId: 4000435,
+  │     Nickname: 'junk1c',
+  │     DateAddressVerified: '/Date(1380798000000)/',
+  │     DateJoined: '/Date(1343131200000)/',
+  │     UniqueNegative: 6,
+  │     UniquePositive: 27,
+  │     FeedbackCount: 21,
+  │     IsAddressVerified: true,
+  │     Suburb: 'Christchurch City',
+  │     Region: 'Canterbury',
+  │     IsAuthenticated: true
+  │   },
+  │   Body: 'r=8.00',
+  │   Questions: {
+  │     TotalCount: 1,
+  │     Page: 1,
+  │     PageSize: 1,
+  │     List: [
+  │       {
+  │         ListingId: 2149304598,
+  │         ListingQuestionId: 358441,
+  │         Comment: 'Junk 1C provides the finest junk thi
+  │ s side of the Milky Way. \n' +
+  │           'Voted number 1 by all visiting Klingons.',
+  │         CommentDate: '/Date(1630250914470)/',
+  │         IsSellerComment: true,
+  │         Answer: '',
+  │         AnswerDate: '/Date(0)/',
+  │         AskingMember: {
+  │           MemberId: 4000435,
+  │           Nickname: 'junk1c',
+  │           DateAddressVerified: '/Date(1380798000000)/'
+  │ ,
+  │           DateJoined: '/Date(1343131200000)/',
+  │           UniqueNegative: 6,
+  │           UniquePositive: 27,
+  │           FeedbackCount: 21,
+  │           IsAddressVerified: true,
+  │           IsAuthenticated: true
+  │         }
+  │       }
+  │     ]
+  │   },
+  │   Photos: [
+  │     {
+  │       Key: 4550688,
+  │       Value: {
+  │         Thumbnail: 'https://images.tmsandbox.co.nz/pho
+  │ toserver/thumb/4550688.jpg',
+  │         List: 'https://images.tmsandbox.co.nz/photoser
+  │ ver/lv2/4550688.jpg',
+  │         Medium: 'https://images.tmsandbox.co.nz/photos
+  │ erver/med/4550688.jpg',
+  │         Gallery: 'https://images.tmsandbox.co.nz/photo
+  │ server/gv/4550688.jpg',
+  │         Large: 'https://images.tmsandbox.co.nz/photose
+  │ rver/tq/4550688.jpg',
+  │         FullSize: 'https://images.tmsandbox.co.nz/phot
+  │ oserver/full/4550688.jpg',
+  │         PhotoId: 4550688,
+  │         OriginalWidth: 453,
+  │         OriginalHeight: 500
+  │       }
+  │     }
+  │   ],
+  │   AllowsPickups: 1,
+  │   ShippingOptions: [
+  │     {
+  │       Type: 4,
+  │       Price: 9.5,
+  │       Method: 'Northern Islands (C)',
+  │       ShippingId: 4
+  │     },
+  │     {
+  │       Type: 4,
+  │       Price: 13.75,
+  │       Method: 'Southern Islands (P)',
+  │       ShippingId: 5
+  │     },
+  │     {
+  │       Type: 4,
+  │       Price: 29.6,
+  │       Method: 'International (C)',
+  │       ShippingId: 6
+  │     },
+  │     {
+  │       Type: 4,
+  │       Price: 14.25,
+  │       Method: 'Remote Islands (P)',
+  │       ShippingId: 7
+  │     },
+  │     {
+  │       Type: 2,
+  │       Price: 0,
+  │       Method: 'I intend to pick-up',
+  │       ShippingId: 2
+  │     }
+  │   ],
+  │   PaymentOptions: 'NZ Bank Deposit',
+  │   DonationRecipient: {
+  │     CharityType: 2,
+  │     ImageSource: 'https://www.tmsandbox.co.nz/images/s
+  │ ell/plunket-logo-3x.png',
+  │     DarkModeImageSource: 'https://www.tmsandbox.co.nz/
+  │ images/sell/plunket-logo-3x.png',
+  │     Description: 'Plunket',
+  │     Tagline: 'A major provider of well child health se
+  │ rvices in NZ.'
+  │   },
+  │   CanAddToCart: false,
+  │   EmbeddedContent: {},
+  │   SupportsQuestionsAndAnswers: true,
+  │   PaymentMethods: [
+  │     {
+  │       Id: 1,
+  │       Name: 'NZ Bank Deposit'
+  │     }
+  │   ],
+  │   BoundaryImage: {
+  │     Thumbnail: null,
+  │     List: null,
+  │     Medium: null,
+  │     Gallery: null,
+  │     Large: null,
+  │     FullSize: null,
+  │     PhotoId: 0
+  │   },
+  │   RenderOptions: [ 2 ],
+  │   AreaOfBusiness: 1
+  │ }
+  │ 'ListingId: 2149304598, ShippingId: 2, and Method: I i
+  │ ntend to pick-up'
+  │ 'Post-Transaction: CheckingSingleListingIdDetails Pass
+  │ '
+  └
+  √  CheckingSingleListingIdDetails
+
+→ BuyAnAuctionUsingBuyNow
+  POST https://api.tmsandbox.co.nz/v1/Bidding/BuyNow.JSON [200 OK, 405B, 151ms]
+  ┌
+  │ 'Post-Transaction: CheckingBuyNow Start'
+  │ {
+  │   Success: true,
+  │   Description: "Seller's email junk1c@abcde.com",
+  │   StatusCode: 0,
+  │   PurchaseId: 26440
+  │ }
+  │ 'Get sucessful StatusCode: 0 (0-Success)'
+  │ 'Post-Transaction: CheckingBuyNow Pass'
+  └
+  √  CheckingBuyNowSuccess
+  ┌
+  │ 'Post-Transaction: CheckingPurchasedItemOnWonList Star
+  │ t'
+  └
+  GET https://api.tmsandbox.co.nz/v1/MyTradeMe/Won/All.JSON [200 OK, 355B, 48ms]
+  ┌
+  │ {
+  │   TotalCount: 0,
+  │   Page: 1,
+  │   PageSize: 0,
+  │   List: []
+  │ }
+  │ 'Not Found any PurchaseId and ListingId exist on the w
+  │ on list.'
+  │ 'Post-Transaction: CheckingPurchasedItemOnWonList Fail
+  │ ed'
+  └
+  √  Checking NewPurchasedListId existed in the won list
+
+┌─────────────────────────┬─────────────────────┬────────────────────┐
+│                         │            executed │             failed │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              iterations │                   1 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│                requests │                  16 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│            test-scripts │                  20 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│      prerequest-scripts │                  19 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              assertions │                  13 │                  0 │
+├─────────────────────────┴─────────────────────┴────────────────────┤
+│ total run duration: 4.4s                                           │
+├────────────────────────────────────────────────────────────────────┤
+│ total data received: 908.47KB (approx)                             │
+├────────────────────────────────────────────────────────────────────┤
+│ average response time: 184ms [min: 43ms, max: 1467ms, s.d.: 337ms] │
+└────────────────────────────────────────────────────────────────────┘
